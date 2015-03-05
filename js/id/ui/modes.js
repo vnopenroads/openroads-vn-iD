@@ -1,8 +1,8 @@
 iD.ui.Modes = function(context) {
     var modes = [
         iD.modes.AddPoint(context),
-        iD.modes.AddLine(context),
-        iD.modes.AddArea(context)];
+        iD.modes.AddLine(context)];
+        //iD.modes.AddArea(context)];
 
     function editable() {
         return context.editable() && context.mode().id !== 'save';
@@ -14,7 +14,7 @@ iD.ui.Modes = function(context) {
 
        buttons.enter().append('button')
            .attr('tabindex', -1)
-           .attr('class', function(mode) { return mode.id + ' add-button col4'; })
+           .attr('class', function(mode) { return mode.id + ' add-button col6'; })
            .on('click.mode-buttons', function(mode) {
                if (mode.id === context.mode().id) {
                    context.enter(iD.modes.Browse(context));
