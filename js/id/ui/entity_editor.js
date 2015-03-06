@@ -71,11 +71,12 @@ iD.ui.EntityEditor = function(context) {
         $enter.append('div')
             .attr('class', 'inspector-border raw-tag-editor inspector-inner');
 
-        $enter.append('div')
-            .attr('class', 'inspector-border raw-member-editor inspector-inner');
+        // Don't draw relations editor, as it's not supported.
+        //$enter.append('div')
+            //.attr('class', 'inspector-border raw-member-editor inspector-inner');
 
-        $enter.append('div')
-            .attr('class', 'raw-membership-editor inspector-inner');
+        //$enter.append('div')
+            //.attr('class', 'raw-membership-editor inspector-inner');
 
         selection.selectAll('.preset-reset')
             .on('click', function() {
@@ -106,15 +107,17 @@ iD.ui.EntityEditor = function(context) {
                 .tags(tags)
                 .state(state));
 
-        if (entity.type === 'relation') {
-            $body.select('.raw-member-editor')
-                .style('display', 'block')
-                .call(iD.ui.RawMemberEditor(context)
-                    .entityID(id));
-        } else {
-            $body.select('.raw-member-editor')
-                .style('display', 'none');
-        }
+        // Disregard logic for showing relations, as
+        // the database doesn't support it.
+        //if (entity.type === 'relation') {
+            //$body.select('.raw-member-editor')
+                //.style('display', 'block')
+                //.call(iD.ui.RawMemberEditor(context)
+                    //.entityID(id));
+        //} else {
+            //$body.select('.raw-member-editor')
+                //.style('display', 'none');
+        //}
 
         $body.select('.raw-membership-editor')
             .call(iD.ui.RawMembershipEditor(context)
