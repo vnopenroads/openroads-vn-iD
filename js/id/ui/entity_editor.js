@@ -66,10 +66,11 @@ iD.ui.EntityEditor = function(context) {
             .call(reference.body);
 
         $enter.append('div')
-            .attr('class', 'inspector-border inspector-preset');
+            //.attr('class', 'inspector-border raw-tag-editor inspector-inner');
+            .attr('class', 'raw-tag-editor inspector-inner');
 
         $enter.append('div')
-            .attr('class', 'inspector-border raw-tag-editor inspector-inner');
+            .attr('class', 'inspector-border inspector-preset');
 
         // Don't draw relations editor, as it's not supported.
         //$enter.append('div')
