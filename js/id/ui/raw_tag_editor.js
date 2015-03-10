@@ -17,9 +17,11 @@ iD.ui.RawTagEditor = function(context) {
 
         function toggled(expanded) {
             context.storage('raw_tag_editor.expanded', expanded);
-            if (expanded) {
-                selection.node().parentNode.scrollTop += 200;
-            }
+
+            // TODO no longer need this, as it's not at the bottom of the page
+            //if (expanded) {
+                //selection.node().parentNode.scrollTop += 200;
+            //}
         }
     }
 

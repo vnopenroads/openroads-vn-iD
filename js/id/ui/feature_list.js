@@ -164,7 +164,8 @@ iD.ui.FeatureList = function(context) {
                 .style('display', (value.length && !results.length) ? 'block' : 'none');
 
             list.selectAll('.geocode-item')
-                .style('display', (value && geocodeResults === undefined) ? 'block' : 'none');
+                //.style('display', (value && geocodeResults === undefined) ? 'block' : 'none');
+                .style('display', 'none');
 
             list.selectAll('.feature-list-item')
                 .data([-1])
