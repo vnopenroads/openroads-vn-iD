@@ -1,26 +1,10 @@
 en:
   presets:
     categories:
-      category-building:
-        name: Building
-      category-golf:
-        name: Golf
-      category-landuse:
-        name: Land Use
       category-path:
         name: Path
-      category-rail:
-        name: Rail
-      category-restriction:
-        name: Restriction
       category-road:
         name: Road
-      category-route:
-        name: Route
-      category-water-area:
-        name: Water
-      category-water-line:
-        name: Water
     fields:
       access:
         label: Access
@@ -941,108 +925,6 @@ en:
       building:
         name: Building
         terms: "<translate with synonyms or related terms for 'Building', separated by commas>"
-      building/apartments:
-        name: Apartments
-        terms: "<translate with synonyms or related terms for 'Apartments', separated by commas>"
-      building/barn:
-        name: Barn
-        terms: "<translate with synonyms or related terms for 'Barn', separated by commas>"
-      building/bunker:
-        name: Bunker
-        terms: "<translate with synonyms or related terms for 'Bunker', separated by commas>"
-      building/cabin:
-        name: Cabin
-        terms: "<translate with synonyms or related terms for 'Cabin', separated by commas>"
-      building/cathedral:
-        name: Cathedral
-        terms: "<translate with synonyms or related terms for 'Cathedral', separated by commas>"
-      building/chapel:
-        name: Chapel
-        terms: "<translate with synonyms or related terms for 'Chapel', separated by commas>"
-      building/church:
-        name: Church
-        terms: "<translate with synonyms or related terms for 'Church', separated by commas>"
-      building/college:
-        name: College Building
-        terms: "<translate with synonyms or related terms for 'College Building', separated by commas>"
-      building/commercial:
-        name: Commercial Building
-        terms: "<translate with synonyms or related terms for 'Commercial Building', separated by commas>"
-      building/construction:
-        name: Building Under Construction
-        terms: "<translate with synonyms or related terms for 'Building Under Construction', separated by commas>"
-      building/detached:
-        name: Detached Home
-        terms: "<translate with synonyms or related terms for 'Detached Home', separated by commas>"
-      building/dormitory:
-        name: Dormitory
-        terms: "<translate with synonyms or related terms for 'Dormitory', separated by commas>"
-      building/entrance:
-        name: Entrance/Exit
-        terms: "<translate with synonyms or related terms for 'Entrance/Exit', separated by commas>"
-      building/garage:
-        name: Garage
-        terms: "<translate with synonyms or related terms for 'Garage', separated by commas>"
-      building/garages:
-        name: Garages
-        terms: "<translate with synonyms or related terms for 'Garages', separated by commas>"
-      building/greenhouse:
-        name: Greenhouse
-        terms: "<translate with synonyms or related terms for 'Greenhouse', separated by commas>"
-      building/hospital:
-        name: Hospital Building
-        terms: "<translate with synonyms or related terms for 'Hospital Building', separated by commas>"
-      building/hotel:
-        name: Hotel Building
-        terms: "<translate with synonyms or related terms for 'Hotel Building', separated by commas>"
-      building/house:
-        name: House
-        terms: "<translate with synonyms or related terms for 'House', separated by commas>"
-      building/hut:
-        name: Hut
-        terms: "<translate with synonyms or related terms for 'Hut', separated by commas>"
-      building/industrial:
-        name: Industrial Building
-        terms: "<translate with synonyms or related terms for 'Industrial Building', separated by commas>"
-      building/kindergarten:
-        name: Preschool/Kindergarten Building
-        terms: "<translate with synonyms or related terms for 'Preschool/Kindergarten Building', separated by commas>"
-      building/public:
-        name: Public Building
-        terms: "<translate with synonyms or related terms for 'Public Building', separated by commas>"
-      building/residential:
-        name: Residential Building
-        terms: "<translate with synonyms or related terms for 'Residential Building', separated by commas>"
-      building/retail:
-        name: Retail Building
-        terms: "<translate with synonyms or related terms for 'Retail Building', separated by commas>"
-      building/roof:
-        name: Roof
-        terms: "<translate with synonyms or related terms for 'Roof', separated by commas>"
-      building/school:
-        name: School Building
-        terms: "<translate with synonyms or related terms for 'School Building', separated by commas>"
-      building/shed:
-        name: Shed
-        terms: "<translate with synonyms or related terms for 'Shed', separated by commas>"
-      building/stable:
-        name: Stable
-        terms: "<translate with synonyms or related terms for 'Stable', separated by commas>"
-      building/static_caravan:
-        name: Static Mobile Home
-        terms: "<translate with synonyms or related terms for 'Static Mobile Home', separated by commas>"
-      building/terrace:
-        name: Row Houses
-        terms: "<translate with synonyms or related terms for 'Row Houses', separated by commas>"
-      building/train_station:
-        name: Train Station
-        terms: "<translate with synonyms or related terms for 'Train Station', separated by commas>"
-      building/university:
-        name: University Building
-        terms: "<translate with synonyms or related terms for 'University Building', separated by commas>"
-      building/warehouse:
-        name: Warehouse
-        terms: "<translate with synonyms or related terms for 'Warehouse', separated by commas>"
       craft:
         name: Craft
         terms: "<translate with synonyms or related terms for 'Craft', separated by commas>"
@@ -1211,30 +1093,6 @@ en:
       ford:
         name: Ford
         terms: "<translate with synonyms or related terms for 'Ford', separated by commas>"
-      golf/bunker:
-        name: Sand Trap
-        terms: "<translate with synonyms or related terms for 'Sand Trap', separated by commas>"
-      golf/fairway:
-        name: Fairway
-        terms: "<translate with synonyms or related terms for 'Fairway', separated by commas>"
-      golf/green:
-        name: Putting Green
-        terms: "<translate with synonyms or related terms for 'Putting Green', separated by commas>"
-      golf/hole:
-        name: Golf Hole
-        terms: "<translate with synonyms or related terms for 'Golf Hole', separated by commas>"
-      golf/lateral_water_hazard:
-        name: Lateral Water Hazard
-        terms: "<translate with synonyms or related terms for 'Lateral Water Hazard', separated by commas>"
-      golf/rough:
-        name: Rough
-        terms: "<translate with synonyms or related terms for 'Rough', separated by commas>"
-      golf/tee:
-        name: Tee Box
-        terms: "<translate with synonyms or related terms for 'Tee Box', separated by commas>"
-      golf/water_hazard:
-        name: Water Hazard
-        terms: "<translate with synonyms or related terms for 'Water Hazard', separated by commas>"
       highway:
         name: Highway
         terms: "<translate with synonyms or related terms for 'Highway', separated by commas>"
@@ -1388,69 +1246,6 @@ en:
       landuse:
         name: Landuse
         terms: "<translate with synonyms or related terms for 'Landuse', separated by commas>"
-      landuse/allotments:
-        name: Allotments
-        terms: "<translate with synonyms or related terms for 'Allotments', separated by commas>"
-      landuse/basin:
-        name: Basin
-        terms: "<translate with synonyms or related terms for 'Basin', separated by commas>"
-      landuse/cemetery:
-        name: Cemetery
-        terms: "<translate with synonyms or related terms for 'Cemetery', separated by commas>"
-      landuse/churchyard:
-        name: Churchyard
-        terms: "<translate with synonyms or related terms for 'Churchyard', separated by commas>"
-      landuse/commercial:
-        name: Commercial Area
-        terms: "<translate with synonyms or related terms for 'Commercial Area', separated by commas>"
-      landuse/construction:
-        name: Construction
-        terms: "<translate with synonyms or related terms for 'Construction', separated by commas>"
-      landuse/farm:
-        name: Farmland
-        terms: "<translate with synonyms or related terms for 'Farmland', separated by commas>"
-      landuse/farmland:
-        name: Farmland
-        terms: "<translate with synonyms or related terms for 'Farmland', separated by commas>"
-      landuse/farmyard:
-        name: Farmyard
-        terms: "<translate with synonyms or related terms for 'Farmyard', separated by commas>"
-      landuse/forest:
-        name: Forest
-        terms: "<translate with synonyms or related terms for 'Forest', separated by commas>"
-      landuse/garages:
-        name: Garages
-        terms: "<translate with synonyms or related terms for 'Garages', separated by commas>"
-      landuse/grass:
-        name: Grass
-        terms: "<translate with synonyms or related terms for 'Grass', separated by commas>"
-      landuse/industrial:
-        name: Industrial Area
-        terms: "<translate with synonyms or related terms for 'Industrial Area', separated by commas>"
-      landuse/landfill:
-        name: Landfill
-        terms: "<translate with synonyms or related terms for 'Landfill', separated by commas>"
-      landuse/meadow:
-        name: Meadow
-        terms: "<translate with synonyms or related terms for 'Meadow', separated by commas>"
-      landuse/military:
-        name: Military Area
-        terms: "<translate with synonyms or related terms for 'Military Area', separated by commas>"
-      landuse/orchard:
-        name: Orchard
-        terms: "<translate with synonyms or related terms for 'Orchard', separated by commas>"
-      landuse/quarry:
-        name: Quarry
-        terms: "<translate with synonyms or related terms for 'Quarry', separated by commas>"
-      landuse/residential:
-        name: Residential Area
-        terms: "<translate with synonyms or related terms for 'Residential Area', separated by commas>"
-      landuse/retail:
-        name: Retail Area
-        terms: "<translate with synonyms or related terms for 'Retail Area', separated by commas>"
-      landuse/vineyard:
-        name: Vineyard
-        terms: "<translate with synonyms or related terms for 'Vineyard', separated by commas>"
       leisure:
         name: Leisure
         terms: "<translate with synonyms or related terms for 'Leisure', separated by commas>"
@@ -1637,15 +1432,6 @@ en:
       natural/water:
         name: Water
         terms: "<translate with synonyms or related terms for 'Water', separated by commas>"
-      natural/water/lake:
-        name: Lake
-        terms: "<translate with synonyms or related terms for 'Lake', separated by commas>"
-      natural/water/pond:
-        name: Pond
-        terms: "<translate with synonyms or related terms for 'Pond', separated by commas>"
-      natural/water/reservoir:
-        name: Reservoir
-        terms: "<translate with synonyms or related terms for 'Reservoir', separated by commas>"
       natural/wetland:
         name: Wetland
         terms: "<translate with synonyms or related terms for 'Wetland', separated by commas>"
@@ -1787,45 +1573,6 @@ en:
       railway:
         name: Railway
         terms: "<translate with synonyms or related terms for 'Railway', separated by commas>"
-      railway/abandoned:
-        name: Abandoned Railway
-        terms: "<translate with synonyms or related terms for 'Abandoned Railway', separated by commas>"
-      railway/disused:
-        name: Disused Railway
-        terms: "<translate with synonyms or related terms for 'Disused Railway', separated by commas>"
-      railway/funicular:
-        name: Funicular
-        terms: "<translate with synonyms or related terms for 'Funicular', separated by commas>"
-      railway/halt:
-        name: Railway Halt
-        terms: "<translate with synonyms or related terms for 'Railway Halt', separated by commas>"
-      railway/level_crossing:
-        name: Level Crossing
-        terms: "<translate with synonyms or related terms for 'Level Crossing', separated by commas>"
-      railway/monorail:
-        name: Monorail
-        terms: "<translate with synonyms or related terms for 'Monorail', separated by commas>"
-      railway/narrow_gauge:
-        name: Narrow Gauge Rail
-        terms: "<translate with synonyms or related terms for 'Narrow Gauge Rail', separated by commas>"
-      railway/platform:
-        name: Railway Platform
-        terms: "<translate with synonyms or related terms for 'Railway Platform', separated by commas>"
-      railway/rail:
-        name: Rail
-        terms: "<translate with synonyms or related terms for 'Rail', separated by commas>"
-      railway/station:
-        name: Railway Station
-        terms: "<translate with synonyms or related terms for 'Railway Station', separated by commas>"
-      railway/subway:
-        name: Subway
-        terms: "<translate with synonyms or related terms for 'Subway', separated by commas>"
-      railway/subway_entrance:
-        name: Subway Entrance
-        terms: "<translate with synonyms or related terms for 'Subway Entrance', separated by commas>"
-      railway/tram:
-        name: Tram
-        terms: "<translate with synonyms or related terms for 'Tram', separated by commas>"
       relation:
         name: Relation
         terms: "<translate with synonyms or related terms for 'Relation', separated by commas>"
@@ -2237,63 +1984,9 @@ en:
       type/restriction:
         name: Restriction
         terms: "<translate with synonyms or related terms for 'Restriction', separated by commas>"
-      type/restriction/no_left_turn:
-        name: No Left Turn
-        terms: "<translate with synonyms or related terms for 'No Left Turn', separated by commas>"
-      type/restriction/no_right_turn:
-        name: No Right Turn
-        terms: "<translate with synonyms or related terms for 'No Right Turn', separated by commas>"
-      type/restriction/no_straight_on:
-        name: No Straight On
-        terms: "<translate with synonyms or related terms for 'No Straight On', separated by commas>"
-      type/restriction/no_u_turn:
-        name: No U-turn
-        terms: "<translate with synonyms or related terms for 'No U-turn', separated by commas>"
-      type/restriction/only_left_turn:
-        name: Left Turn Only
-        terms: "<translate with synonyms or related terms for 'Left Turn Only', separated by commas>"
-      type/restriction/only_right_turn:
-        name: Right Turn Only
-        terms: "<translate with synonyms or related terms for 'Right Turn Only', separated by commas>"
-      type/restriction/only_straight_on:
-        name: No Turns
-        terms: "<translate with synonyms or related terms for 'No Turns', separated by commas>"
       type/route:
         name: Route
         terms: "<translate with synonyms or related terms for 'Route', separated by commas>"
-      type/route/bicycle:
-        name: Cycle Route
-        terms: "<translate with synonyms or related terms for 'Cycle Route', separated by commas>"
-      type/route/bus:
-        name: Bus Route
-        terms: "<translate with synonyms or related terms for 'Bus Route', separated by commas>"
-      type/route/detour:
-        name: Detour Route
-        terms: "<translate with synonyms or related terms for 'Detour Route', separated by commas>"
-      type/route/ferry:
-        name: Ferry Route
-        terms: "<translate with synonyms or related terms for 'Ferry Route', separated by commas>"
-      type/route/foot:
-        name: Foot Route
-        terms: "<translate with synonyms or related terms for 'Foot Route', separated by commas>"
-      type/route/hiking:
-        name: Hiking Route
-        terms: "<translate with synonyms or related terms for 'Hiking Route', separated by commas>"
-      type/route/pipeline:
-        name: Pipeline Route
-        terms: "<translate with synonyms or related terms for 'Pipeline Route', separated by commas>"
-      type/route/power:
-        name: Power Route
-        terms: "<translate with synonyms or related terms for 'Power Route', separated by commas>"
-      type/route/road:
-        name: Road Route
-        terms: "<translate with synonyms or related terms for 'Road Route', separated by commas>"
-      type/route/train:
-        name: Train Route
-        terms: "<translate with synonyms or related terms for 'Train Route', separated by commas>"
-      type/route/tram:
-        name: Tram Route
-        terms: "<translate with synonyms or related terms for 'Tram Route', separated by commas>"
       type/route_master:
         name: Route Master
         terms: "<translate with synonyms or related terms for 'Route Master', separated by commas>"
@@ -2303,27 +1996,3 @@ en:
       waterway:
         name: Waterway
         terms: "<translate with synonyms or related terms for 'Waterway', separated by commas>"
-      waterway/canal:
-        name: Canal
-        terms: "<translate with synonyms or related terms for 'Canal', separated by commas>"
-      waterway/dam:
-        name: Dam
-        terms: "<translate with synonyms or related terms for 'Dam', separated by commas>"
-      waterway/ditch:
-        name: Ditch
-        terms: "<translate with synonyms or related terms for 'Ditch', separated by commas>"
-      waterway/drain:
-        name: Drain
-        terms: "<translate with synonyms or related terms for 'Drain', separated by commas>"
-      waterway/river:
-        name: River
-        terms: "<translate with synonyms or related terms for 'River', separated by commas>"
-      waterway/riverbank:
-        name: Riverbank
-        terms: "<translate with synonyms or related terms for 'Riverbank', separated by commas>"
-      waterway/stream:
-        name: Stream
-        terms: "<translate with synonyms or related terms for 'Stream', separated by commas>"
-      waterway/weir:
-        name: Weir
-        terms: "<translate with synonyms or related terms for 'Weir', separated by commas>"
