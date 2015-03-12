@@ -1,6 +1,8 @@
 {
     "icon": "highway-track",
     "fields": [
+        "or_rdclass",
+        "or_condition",
         "surface",
         "width",
         "structure",

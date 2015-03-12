@@ -745,6 +745,44 @@
         "type": "text",
         "label": "Operator"
     },
+    "or_condition": {
+        "key": "or_condition",
+        "type": "combo",
+        "label": "Road condition",
+        "keys": [
+            "bad",
+            "poor",
+            "fair",
+            "good"
+        ],
+        "strings": {
+            "options": {
+                "bad": "Bad",
+                "poor": "Poor",
+                "fair": "Fair",
+                "good": "Good"
+            }
+        }
+    },
+    "or_rdclass": {
+        "key": "or_rdclass",
+        "type": "combo",
+        "label": "Road class",
+        "keys": [
+            "national",
+            "provincial",
+            "municipal",
+            "barangay"
+        ],
+        "strings": {
+            "options": {
+                "national": "National",
+                "provincial": "Provincial",
+                "municipal": "Municipal",
+                "barangay": "Barangay"
+            }
+        }
+    },
     "par": {
         "key": "par",
         "type": "number",

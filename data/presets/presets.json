@@ -3254,6 +3254,8 @@
     "highway/living_street": {
         "icon": "highway-living-street",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3283,6 +3285,8 @@
     "highway/motorway": {
         "icon": "highway-motorway",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway_yes",
             "maxspeed",
             "structure",
@@ -3315,6 +3319,8 @@
     "highway/motorway_link": {
         "icon": "highway-motorway-link",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway_yes",
             "maxspeed",
             "structure",
@@ -3338,6 +3344,8 @@
     "highway/path": {
         "icon": "highway-path",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "surface",
             "width",
             "structure",
@@ -3387,6 +3395,8 @@
     "highway/primary": {
         "icon": "highway-primary",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3407,6 +3417,8 @@
     "highway/primary_link": {
         "icon": "highway-primary-link",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3455,6 +3467,8 @@
     "highway/residential": {
         "icon": "highway-residential",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3487,6 +3501,8 @@
     "highway/road": {
         "icon": "highway-road",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3505,6 +3521,8 @@
     "highway/secondary": {
         "icon": "highway-secondary",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3525,6 +3543,8 @@
     "highway/secondary_link": {
         "icon": "highway-secondary-link",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3548,6 +3568,8 @@
     "highway/service": {
         "icon": "highway-service",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "service",
             "oneway",
             "maxspeed",
@@ -3716,6 +3738,8 @@
     "highway/tertiary": {
         "icon": "highway-tertiary",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3736,6 +3760,8 @@
     "highway/tertiary_link": {
         "icon": "highway-tertiary-link",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3759,6 +3785,8 @@
     "highway/track": {
         "icon": "highway-track",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "surface",
             "width",
             "structure",
@@ -3799,6 +3827,8 @@
     "highway/trunk": {
         "icon": "highway-trunk",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3819,6 +3849,8 @@
     "highway/trunk_link": {
         "icon": "highway-trunk-link",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",
@@ -3855,6 +3887,8 @@
     "highway/unclassified": {
         "icon": "highway-unclassified",
         "fields": [
+            "or_rdclass",
+            "or_condition",
             "oneway",
             "maxspeed",
             "structure",

@@ -1,6 +1,8 @@
 {
     "icon": "highway-motorway-link",
     "fields": [
+        "or_rdclass",
+        "or_condition",
         "oneway_yes",
         "maxspeed",
         "structure",

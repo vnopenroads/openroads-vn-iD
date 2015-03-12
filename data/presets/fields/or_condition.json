@@ -1,0 +1,19 @@
+{
+    "key": "or_condition",
+    "type": "combo",
+    "label": "Road condition",
+    "keys": [
+        "bad",
+        "poor",
+        "fair",
+        "good"
+    ],
+    "strings": {
+        "options": {
+            "bad": "Bad",
+            "poor": "Poor",
+            "fair": "Fair",
+            "good": "Good"
+        }
+    }
+}

@@ -1,6 +1,8 @@
 {
     "icon": "highway-trunk",
     "fields": [
+        "or_rdclass",
+        "or_condition",
         "oneway",
         "maxspeed",
         "structure",

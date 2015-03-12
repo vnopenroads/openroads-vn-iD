@@ -352,6 +352,20 @@ en:
         label: Hours
       operator:
         label: Operator
+      or_condition:
+        label: Road condition
+        options:
+          bad: Bad
+          poor: Poor
+          fair: Fair
+          good: Good
+      or_rdclass:
+        label: Road class
+        options:
+          national: National
+          provincial: Provincial
+          municipal: Municipal
+          barangay: Barangay
       par:
         label: Par
         placeholder: "3, 4, 5..."
