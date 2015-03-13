@@ -510,35 +510,11 @@
     },
     "presets": {
         "categories": {
-            "category-building": {
-                "name": "Building"
-            },
-            "category-golf": {
-                "name": "Golf"
-            },
-            "category-landuse": {
-                "name": "Land Use"
-            },
             "category-path": {
                 "name": "Path"
             },
-            "category-rail": {
-                "name": "Rail"
-            },
-            "category-restriction": {
-                "name": "Restriction"
-            },
             "category-road": {
                 "name": "Road"
-            },
-            "category-route": {
-                "name": "Route"
-            },
-            "category-water-area": {
-                "name": "Water"
-            },
-            "category-water-line": {
-                "name": "Water"
             }
         },
         "fields": {
@@ -1011,6 +987,24 @@
             },
             "operator": {
                 "label": "Operator"
+            },
+            "or_condition": {
+                "label": "Road condition",
+                "options": {
+                    "bad": "Bad",
+                    "poor": "Poor",
+                    "fair": "Fair",
+                    "good": "Good"
+                }
+            },
+            "or_rdclass": {
+                "label": "Road class",
+                "options": {
+                    "national": "National",
+                    "provincial": "Provincial",
+                    "municipal": "Municipal",
+                    "barangay": "Barangay"
+                }
             },
             "par": {
                 "label": "Par",
@@ -1776,142 +1770,6 @@
                 "name": "Building",
                 "terms": ""
             },
-            "building/apartments": {
-                "name": "Apartments",
-                "terms": ""
-            },
-            "building/barn": {
-                "name": "Barn",
-                "terms": ""
-            },
-            "building/bunker": {
-                "name": "Bunker",
-                "terms": ""
-            },
-            "building/cabin": {
-                "name": "Cabin",
-                "terms": ""
-            },
-            "building/cathedral": {
-                "name": "Cathedral",
-                "terms": ""
-            },
-            "building/chapel": {
-                "name": "Chapel",
-                "terms": ""
-            },
-            "building/church": {
-                "name": "Church",
-                "terms": ""
-            },
-            "building/college": {
-                "name": "College Building",
-                "terms": "university"
-            },
-            "building/commercial": {
-                "name": "Commercial Building",
-                "terms": ""
-            },
-            "building/construction": {
-                "name": "Building Under Construction",
-                "terms": ""
-            },
-            "building/detached": {
-                "name": "Detached Home",
-                "terms": ""
-            },
-            "building/dormitory": {
-                "name": "Dormitory",
-                "terms": ""
-            },
-            "building/entrance": {
-                "name": "Entrance/Exit",
-                "terms": ""
-            },
-            "building/garage": {
-                "name": "Garage",
-                "terms": ""
-            },
-            "building/garages": {
-                "name": "Garages",
-                "terms": ""
-            },
-            "building/greenhouse": {
-                "name": "Greenhouse",
-                "terms": ""
-            },
-            "building/hospital": {
-                "name": "Hospital Building",
-                "terms": ""
-            },
-            "building/hotel": {
-                "name": "Hotel Building",
-                "terms": ""
-            },
-            "building/house": {
-                "name": "House",
-                "terms": ""
-            },
-            "building/hut": {
-                "name": "Hut",
-                "terms": ""
-            },
-            "building/industrial": {
-                "name": "Industrial Building",
-                "terms": ""
-            },
-            "building/kindergarten": {
-                "name": "Preschool/Kindergarten Building",
-                "terms": "kindergarden,pre-school"
-            },
-            "building/public": {
-                "name": "Public Building",
-                "terms": ""
-            },
-            "building/residential": {
-                "name": "Residential Building",
-                "terms": ""
-            },
-            "building/retail": {
-                "name": "Retail Building",
-                "terms": ""
-            },
-            "building/roof": {
-                "name": "Roof",
-                "terms": ""
-            },
-            "building/school": {
-                "name": "School Building",
-                "terms": "academy,elementary school,middle school,high school"
-            },
-            "building/shed": {
-                "name": "Shed",
-                "terms": ""
-            },
-            "building/stable": {
-                "name": "Stable",
-                "terms": ""
-            },
-            "building/static_caravan": {
-                "name": "Static Mobile Home",
-                "terms": ""
-            },
-            "building/terrace": {
-                "name": "Row Houses",
-                "terms": ""
-            },
-            "building/train_station": {
-                "name": "Train Station",
-                "terms": ""
-            },
-            "building/university": {
-                "name": "University Building",
-                "terms": "college"
-            },
-            "building/warehouse": {
-                "name": "Warehouse",
-                "terms": ""
-            },
             "craft": {
                 "name": "Craft",
                 "terms": ""
@@ -2136,38 +1994,6 @@
                 "name": "Ford",
                 "terms": ""
             },
-            "golf/bunker": {
-                "name": "Sand Trap",
-                "terms": "hazard,bunker"
-            },
-            "golf/fairway": {
-                "name": "Fairway",
-                "terms": ""
-            },
-            "golf/green": {
-                "name": "Putting Green",
-                "terms": ""
-            },
-            "golf/hole": {
-                "name": "Golf Hole",
-                "terms": ""
-            },
-            "golf/lateral_water_hazard": {
-                "name": "Lateral Water Hazard",
-                "terms": ""
-            },
-            "golf/rough": {
-                "name": "Rough",
-                "terms": ""
-            },
-            "golf/tee": {
-                "name": "Tee Box",
-                "terms": "teeing ground"
-            },
-            "golf/water_hazard": {
-                "name": "Water Hazard",
-                "terms": ""
-            },
             "highway": {
                 "name": "Highway",
                 "terms": ""
@@ -2370,90 +2196,6 @@
             },
             "landuse": {
                 "name": "Landuse",
-                "terms": ""
-            },
-            "landuse/allotments": {
-                "name": "Allotments",
-                "terms": ""
-            },
-            "landuse/basin": {
-                "name": "Basin",
-                "terms": ""
-            },
-            "landuse/cemetery": {
-                "name": "Cemetery",
-                "terms": ""
-            },
-            "landuse/churchyard": {
-                "name": "Churchyard",
-                "terms": ""
-            },
-            "landuse/commercial": {
-                "name": "Commercial Area",
-                "terms": ""
-            },
-            "landuse/construction": {
-                "name": "Construction",
-                "terms": ""
-            },
-            "landuse/farm": {
-                "name": "Farmland",
-                "terms": ""
-            },
-            "landuse/farmland": {
-                "name": "Farmland",
-                "terms": ""
-            },
-            "landuse/farmyard": {
-                "name": "Farmyard",
-                "terms": ""
-            },
-            "landuse/forest": {
-                "name": "Forest",
-                "terms": "tree"
-            },
-            "landuse/garages": {
-                "name": "Garages",
-                "terms": ""
-            },
-            "landuse/grass": {
-                "name": "Grass",
-                "terms": ""
-            },
-            "landuse/industrial": {
-                "name": "Industrial Area",
-                "terms": ""
-            },
-            "landuse/landfill": {
-                "name": "Landfill",
-                "terms": "dump"
-            },
-            "landuse/meadow": {
-                "name": "Meadow",
-                "terms": ""
-            },
-            "landuse/military": {
-                "name": "Military Area",
-                "terms": ""
-            },
-            "landuse/orchard": {
-                "name": "Orchard",
-                "terms": ""
-            },
-            "landuse/quarry": {
-                "name": "Quarry",
-                "terms": ""
-            },
-            "landuse/residential": {
-                "name": "Residential Area",
-                "terms": ""
-            },
-            "landuse/retail": {
-                "name": "Retail Area",
-                "terms": ""
-            },
-            "landuse/vineyard": {
-                "name": "Vineyard",
                 "terms": ""
             },
             "leisure": {
@@ -2704,18 +2446,6 @@
                 "name": "Water",
                 "terms": ""
             },
-            "natural/water/lake": {
-                "name": "Lake",
-                "terms": "lakelet,loch,mere"
-            },
-            "natural/water/pond": {
-                "name": "Pond",
-                "terms": "lakelet,millpond,tarn,pool,mere"
-            },
-            "natural/water/reservoir": {
-                "name": "Reservoir",
-                "terms": ""
-            },
             "natural/wetland": {
                 "name": "Wetland",
                 "terms": ""
@@ -2903,58 +2633,6 @@
             "railway": {
                 "name": "Railway",
                 "terms": ""
-            },
-            "railway/abandoned": {
-                "name": "Abandoned Railway",
-                "terms": ""
-            },
-            "railway/disused": {
-                "name": "Disused Railway",
-                "terms": ""
-            },
-            "railway/funicular": {
-                "name": "Funicular",
-                "terms": "venicular,cliff railway,cable car,cable railway,funicular railway"
-            },
-            "railway/halt": {
-                "name": "Railway Halt",
-                "terms": "break,interrupt,rest,wait,interruption"
-            },
-            "railway/level_crossing": {
-                "name": "Level Crossing",
-                "terms": "crossing,railroad crossing,railway crossing,grade crossing,road through railroad,train crossing"
-            },
-            "railway/monorail": {
-                "name": "Monorail",
-                "terms": ""
-            },
-            "railway/narrow_gauge": {
-                "name": "Narrow Gauge Rail",
-                "terms": "narrow gauge railway,narrow gauge railroad"
-            },
-            "railway/platform": {
-                "name": "Railway Platform",
-                "terms": ""
-            },
-            "railway/rail": {
-                "name": "Rail",
-                "terms": ""
-            },
-            "railway/station": {
-                "name": "Railway Station",
-                "terms": "train station,station"
-            },
-            "railway/subway": {
-                "name": "Subway",
-                "terms": ""
-            },
-            "railway/subway_entrance": {
-                "name": "Subway Entrance",
-                "terms": ""
-            },
-            "railway/tram": {
-                "name": "Tram",
-                "terms": "streetcar"
             },
             "relation": {
                 "name": "Relation",
@@ -3504,80 +3182,8 @@
                 "name": "Restriction",
                 "terms": ""
             },
-            "type/restriction/no_left_turn": {
-                "name": "No Left Turn",
-                "terms": ""
-            },
-            "type/restriction/no_right_turn": {
-                "name": "No Right Turn",
-                "terms": ""
-            },
-            "type/restriction/no_straight_on": {
-                "name": "No Straight On",
-                "terms": ""
-            },
-            "type/restriction/no_u_turn": {
-                "name": "No U-turn",
-                "terms": ""
-            },
-            "type/restriction/only_left_turn": {
-                "name": "Left Turn Only",
-                "terms": ""
-            },
-            "type/restriction/only_right_turn": {
-                "name": "Right Turn Only",
-                "terms": ""
-            },
-            "type/restriction/only_straight_on": {
-                "name": "No Turns",
-                "terms": ""
-            },
             "type/route": {
                 "name": "Route",
-                "terms": ""
-            },
-            "type/route/bicycle": {
-                "name": "Cycle Route",
-                "terms": ""
-            },
-            "type/route/bus": {
-                "name": "Bus Route",
-                "terms": ""
-            },
-            "type/route/detour": {
-                "name": "Detour Route",
-                "terms": ""
-            },
-            "type/route/ferry": {
-                "name": "Ferry Route",
-                "terms": ""
-            },
-            "type/route/foot": {
-                "name": "Foot Route",
-                "terms": ""
-            },
-            "type/route/hiking": {
-                "name": "Hiking Route",
-                "terms": ""
-            },
-            "type/route/pipeline": {
-                "name": "Pipeline Route",
-                "terms": ""
-            },
-            "type/route/power": {
-                "name": "Power Route",
-                "terms": ""
-            },
-            "type/route/road": {
-                "name": "Road Route",
-                "terms": ""
-            },
-            "type/route/train": {
-                "name": "Train Route",
-                "terms": ""
-            },
-            "type/route/tram": {
-                "name": "Tram Route",
                 "terms": ""
             },
             "type/route_master": {
@@ -3590,38 +3196,6 @@
             },
             "waterway": {
                 "name": "Waterway",
-                "terms": ""
-            },
-            "waterway/canal": {
-                "name": "Canal",
-                "terms": ""
-            },
-            "waterway/dam": {
-                "name": "Dam",
-                "terms": ""
-            },
-            "waterway/ditch": {
-                "name": "Ditch",
-                "terms": ""
-            },
-            "waterway/drain": {
-                "name": "Drain",
-                "terms": ""
-            },
-            "waterway/river": {
-                "name": "River",
-                "terms": "beck,branch,brook,course,creek,estuary,rill,rivulet,run,runnel,stream,tributary,watercourse"
-            },
-            "waterway/riverbank": {
-                "name": "Riverbank",
-                "terms": ""
-            },
-            "waterway/stream": {
-                "name": "Stream",
-                "terms": "beck,branch,brook,burn,course,creek,current,drift,flood,flow,freshet,race,rill,rindle,rivulet,run,runnel,rush,spate,spritz,surge,tide,torrent,tributary,watercourse"
-            },
-            "waterway/weir": {
-                "name": "Weir",
                 "terms": ""
             }
         }

@@ -1,6 +1,8 @@
 {
     "icon": "highway-tertiary",
     "fields": [
+        "or_rdclass",
+        "or_condition",
         "oneway",
         "maxspeed",
         "structure",

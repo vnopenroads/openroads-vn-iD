@@ -1,21 +1,9 @@
 {
     "area": [
-        "category-landuse",
-        "category-building",
-        "category-water-area",
-        "leisure/park",
-        "amenity/hospital",
-        "amenity/place_of_worship",
-        "amenity/cafe",
-        "amenity/restaurant",
-        "area"
     ],
     "line": [
         "category-road",
-        "category-rail",
         "category-path",
-        "category-water-line",
-        "power/line",
         "line"
     ],
     "point": [
@@ -40,10 +28,5 @@
         "vertex"
     ],
     "relation": [
-        "category-route",
-        "category-restriction",
-        "type/boundary",
-        "type/multipolygon",
-        "relation"
     ]
 }
