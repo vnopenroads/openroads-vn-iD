@@ -2,6 +2,8 @@ iD.Connection = function() {
 
     var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
         url = 'http://www.openstreetmap.org',
+        openroads = 'https://fast-dawn-4805.herokuapp.com',
+        testUrl = 'http://localhost:1337',
         connection = {},
         inflight = {},
         loadedTiles = {},
@@ -22,9 +24,10 @@ iD.Connection = function() {
         off;
 
     connection.changesetURL = function(changesetId) {
-        return url + '/changeset/' + changesetId;
+        return openroads + '/changesets/' + changesetId;
     };
 
+    // TODO this endpoint hasn't been implemented yet.
     connection.changesetsURL = function(center, zoom) {
         var precision = Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2));
         return url + '/history#map=' +
@@ -34,9 +37,10 @@ iD.Connection = function() {
     };
 
     connection.entityURL = function(entity) {
-        return url + '/' + entity.type + '/' + entity.osmId();
+        return openroads + '/' + entity.type + 's/' + entity.osmId();
     };
 
+    // TODO endpoint also hasn't been implemented yet
     connection.userURL = function(username) {
         return url + '/user/' + username;
     };
@@ -53,7 +57,7 @@ iD.Connection = function() {
             osmID = iD.Entity.id.toOSM(id);
 
         connection.loadFromURL(
-            url + '/api/0.6/' + type + '/' + osmID + (type !== 'node' ? '/full' : ''),
+            openroads + '/xml/' + type + '/' + osmID + (type !== 'node' ? '/full' : ''),
             function(err, entities) {
                 event.load(err, {data: entities});
                 if (callback) callback(err, entities && _.find(entities, function(e) { return e.id === id; }));
@@ -157,7 +161,7 @@ iD.Connection = function() {
     connection.authenticated = function() {
         return oauth.authenticated();
     };
-
+iD
     // Generate Changeset XML. Returns a string.
     connection.changesetJXON = function(tags) {
         return {
@@ -166,8 +170,8 @@ iD.Connection = function() {
                     tag: _.map(tags, function(value, key) {
                         return { '@k': key, '@v': value };
                     }),
-                    '@version': 0.3,
-                    '@generator': 'iD'
+                    '@version': 0.1,
+                    '@generator': 'openroads-iD'
                 }
             }
         };
@@ -196,8 +200,8 @@ iD.Connection = function() {
 
         return {
             osmChange: {
-                '@version': 0.3,
-                '@generator': 'iD',
+                '@version': 0.1,
+                '@generator': 'openroads-iD',
                 'create': nest(changes.created.map(rep), ['node', 'way', 'relation']),
                 'modify': nest(changes.modified.map(rep), ['node', 'way', 'relation']),
                 'delete': _.extend(nest(changes.deleted.map(rep), ['relation', 'way', 'node']), {'@if-unused': true})
@@ -219,28 +223,25 @@ iD.Connection = function() {
     };
 
     connection.putChangeset = function(changes, comment, imageryUsed, callback) {
-        oauth.xhr({
-                method: 'PUT',
-                path: '/api/0.6/changeset/create',
-                options: { header: { 'Content-Type': 'text/xml' } },
-                content: JXON.stringify(connection.changesetJXON(connection.changesetTags(comment, imageryUsed)))
-            }, function(err, changeset_id) {
-                if (err) return callback(err);
-                oauth.xhr({
-                    method: 'POST',
-                    path: '/api/0.6/changeset/' + changeset_id + '/upload',
-                    options: { header: { 'Content-Type': 'text/xml' } },
-                    content: JXON.stringify(connection.osmChangeJXON(changeset_id, changes))
-                }, function(err) {
-                    if (err) return callback(err);
-                    oauth.xhr({
-                        method: 'PUT',
-                        path: '/api/0.6/changeset/' + changeset_id + '/close'
-                    }, function(err) {
-                        callback(err, changeset_id);
-                    });
-                });
+        qwest.put(openroads + '/changeset/create', {
+            uid: userDetails.id,
+            user: userDetails.user,
+            comment: comment
+        }, {
+            responseType: 'json',
+        }).then(function(changeset) {
+            qwest.post(openroads + '/changeset/' + changeset.id + '/upload', {
+                xmlString: JXON.stringify(connection.osmChangeJXON(changeset.id, changes))
+            }, {
+                responseType: 'text'
+            }).then(function(response) {
+                callback(response.changeset.id);
+            }).catch(function(error) {
+                callback(error);
             });
+        }).catch(function(error) {
+            callback(error);
+        });
     };
 
     var userDetails;
@@ -271,6 +272,7 @@ iD.Connection = function() {
             callback(undefined, userDetails);
         }
 
+        // To reiterate, we are still using OSM oauth for this portion of the code.
         oauth.xhr({ method: 'GET', path: '/api/0.6/user/details' }, done);
     };
 
@@ -279,6 +281,8 @@ iD.Connection = function() {
             var apiStatus = capabilities.getElementsByTagName('status');
             callback(undefined, apiStatus[0].getAttribute('api'));
         }
+
+        // TODO this endpoint doesn't exist yet.
         d3.xml(url + '/api/capabilities').get()
             .on('load', done)
             .on('error', callback);
@@ -321,7 +325,7 @@ iD.Connection = function() {
             });
 
         function bboxUrl(tile) {
-            return url + '/api/0.6/map?bbox=' + tile.extent.toParam();
+            return openroads + '/xml/map?bbox=' + tile.extent.toParam();
         }
 
         _.filter(inflight, function(v, i) {
