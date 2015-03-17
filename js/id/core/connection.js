@@ -233,7 +233,7 @@ iD
             qwest.post(openroads + '/changeset/' + changeset.id + '/upload', {
                 xmlString: JXON.stringify(connection.osmChangeJXON(changeset.id, changes))
             }, {
-                responseType: 'text'
+                responseType: 'json'
             }).then(function(response) {
                 callback(response.changeset.id);
             }).catch(function(error) {
