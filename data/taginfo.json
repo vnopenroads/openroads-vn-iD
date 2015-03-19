@@ -471,142 +471,6 @@
             "key": "building"
         },
         {
-            "key": "building",
-            "value": "apartments"
-        },
-        {
-            "key": "building",
-            "value": "barn"
-        },
-        {
-            "key": "building",
-            "value": "bunker"
-        },
-        {
-            "key": "building",
-            "value": "cabin"
-        },
-        {
-            "key": "building",
-            "value": "cathedral"
-        },
-        {
-            "key": "building",
-            "value": "chapel"
-        },
-        {
-            "key": "building",
-            "value": "church"
-        },
-        {
-            "key": "building",
-            "value": "college"
-        },
-        {
-            "key": "building",
-            "value": "commercial"
-        },
-        {
-            "key": "building",
-            "value": "construction"
-        },
-        {
-            "key": "building",
-            "value": "detached"
-        },
-        {
-            "key": "building",
-            "value": "dormitory"
-        },
-        {
-            "key": "building",
-            "value": "entrance"
-        },
-        {
-            "key": "building",
-            "value": "garage"
-        },
-        {
-            "key": "building",
-            "value": "garages"
-        },
-        {
-            "key": "building",
-            "value": "greenhouse"
-        },
-        {
-            "key": "building",
-            "value": "hospital"
-        },
-        {
-            "key": "building",
-            "value": "hotel"
-        },
-        {
-            "key": "building",
-            "value": "house"
-        },
-        {
-            "key": "building",
-            "value": "hut"
-        },
-        {
-            "key": "building",
-            "value": "industrial"
-        },
-        {
-            "key": "building",
-            "value": "kindergarten"
-        },
-        {
-            "key": "building",
-            "value": "public"
-        },
-        {
-            "key": "building",
-            "value": "residential"
-        },
-        {
-            "key": "building",
-            "value": "retail"
-        },
-        {
-            "key": "building",
-            "value": "roof"
-        },
-        {
-            "key": "building",
-            "value": "school"
-        },
-        {
-            "key": "building",
-            "value": "shed"
-        },
-        {
-            "key": "building",
-            "value": "stable"
-        },
-        {
-            "key": "building",
-            "value": "static_caravan"
-        },
-        {
-            "key": "building",
-            "value": "terrace"
-        },
-        {
-            "key": "building",
-            "value": "train_station"
-        },
-        {
-            "key": "building",
-            "value": "university"
-        },
-        {
-            "key": "building",
-            "value": "warehouse"
-        },
-        {
             "key": "craft"
         },
         {
@@ -829,38 +693,6 @@
             "value": "yes"
         },
         {
-            "key": "natural",
-            "value": "sand"
-        },
-        {
-            "key": "landuse",
-            "value": "grass"
-        },
-        {
-            "key": "sport",
-            "value": "golf"
-        },
-        {
-            "key": "golf",
-            "value": "hole"
-        },
-        {
-            "key": "natural",
-            "value": "water"
-        },
-        {
-            "key": "landuse",
-            "value": "grass"
-        },
-        {
-            "key": "landuse",
-            "value": "grass"
-        },
-        {
-            "key": "natural",
-            "value": "water"
-        },
-        {
             "key": "highway"
         },
         {
@@ -1060,90 +892,6 @@
         },
         {
             "key": "landuse"
-        },
-        {
-            "key": "landuse",
-            "value": "allotments"
-        },
-        {
-            "key": "landuse",
-            "value": "basin"
-        },
-        {
-            "key": "landuse",
-            "value": "cemetery"
-        },
-        {
-            "key": "landuse",
-            "value": "churchyard"
-        },
-        {
-            "key": "landuse",
-            "value": "commercial"
-        },
-        {
-            "key": "landuse",
-            "value": "construction"
-        },
-        {
-            "key": "landuse",
-            "value": "farm"
-        },
-        {
-            "key": "landuse",
-            "value": "farmland"
-        },
-        {
-            "key": "landuse",
-            "value": "farmyard"
-        },
-        {
-            "key": "landuse",
-            "value": "forest"
-        },
-        {
-            "key": "landuse",
-            "value": "garages"
-        },
-        {
-            "key": "landuse",
-            "value": "grass"
-        },
-        {
-            "key": "landuse",
-            "value": "industrial"
-        },
-        {
-            "key": "landuse",
-            "value": "landfill"
-        },
-        {
-            "key": "landuse",
-            "value": "meadow"
-        },
-        {
-            "key": "landuse",
-            "value": "military"
-        },
-        {
-            "key": "landuse",
-            "value": "orchard"
-        },
-        {
-            "key": "landuse",
-            "value": "quarry"
-        },
-        {
-            "key": "landuse",
-            "value": "residential"
-        },
-        {
-            "key": "landuse",
-            "value": "retail"
-        },
-        {
-            "key": "landuse",
-            "value": "vineyard"
         },
         {
             "key": "leisure"
@@ -1387,18 +1135,6 @@
             "value": "water"
         },
         {
-            "key": "water",
-            "value": "lake"
-        },
-        {
-            "key": "water",
-            "value": "pond"
-        },
-        {
-            "key": "water",
-            "value": "reservoir"
-        },
-        {
             "key": "natural",
             "value": "wetland"
         },
@@ -1576,58 +1312,6 @@
         },
         {
             "key": "railway"
-        },
-        {
-            "key": "railway",
-            "value": "abandoned"
-        },
-        {
-            "key": "railway",
-            "value": "disused"
-        },
-        {
-            "key": "railway",
-            "value": "funicular"
-        },
-        {
-            "key": "railway",
-            "value": "halt"
-        },
-        {
-            "key": "railway",
-            "value": "level_crossing"
-        },
-        {
-            "key": "railway",
-            "value": "monorail"
-        },
-        {
-            "key": "railway",
-            "value": "narrow_gauge"
-        },
-        {
-            "key": "railway",
-            "value": "platform"
-        },
-        {
-            "key": "railway",
-            "value": "rail"
-        },
-        {
-            "key": "railway",
-            "value": "station"
-        },
-        {
-            "key": "railway",
-            "value": "subway"
-        },
-        {
-            "key": "railway",
-            "value": "subway_entrance"
-        },
-        {
-            "key": "railway",
-            "value": "tram"
         },
         {
             "key": "junction",
@@ -2172,80 +1856,8 @@
             "value": "restriction"
         },
         {
-            "key": "restriction",
-            "value": "no_left_turn"
-        },
-        {
-            "key": "restriction",
-            "value": "no_right_turn"
-        },
-        {
-            "key": "restriction",
-            "value": "no_straight_on"
-        },
-        {
-            "key": "restriction",
-            "value": "no_u_turn"
-        },
-        {
-            "key": "restriction",
-            "value": "only_left_turn"
-        },
-        {
-            "key": "restriction",
-            "value": "only_right_turn"
-        },
-        {
-            "key": "restriction",
-            "value": "only_straight_on"
-        },
-        {
             "key": "type",
             "value": "route"
-        },
-        {
-            "key": "route",
-            "value": "bicycle"
-        },
-        {
-            "key": "route",
-            "value": "bus"
-        },
-        {
-            "key": "route",
-            "value": "detour"
-        },
-        {
-            "key": "route",
-            "value": "ferry"
-        },
-        {
-            "key": "route",
-            "value": "foot"
-        },
-        {
-            "key": "route",
-            "value": "hiking"
-        },
-        {
-            "key": "route",
-            "value": "pipeline"
-        },
-        {
-            "key": "route",
-            "value": "power"
-        },
-        {
-            "key": "route",
-            "value": "road"
-        },
-        {
-            "key": "route",
-            "value": "train"
-        },
-        {
-            "key": "route",
-            "value": "tram"
         },
         {
             "key": "type",
@@ -2253,38 +1865,6 @@
         },
         {
             "key": "waterway"
-        },
-        {
-            "key": "waterway",
-            "value": "canal"
-        },
-        {
-            "key": "waterway",
-            "value": "dam"
-        },
-        {
-            "key": "waterway",
-            "value": "ditch"
-        },
-        {
-            "key": "waterway",
-            "value": "drain"
-        },
-        {
-            "key": "waterway",
-            "value": "river"
-        },
-        {
-            "key": "waterway",
-            "value": "riverbank"
-        },
-        {
-            "key": "waterway",
-            "value": "stream"
-        },
-        {
-            "key": "waterway",
-            "value": "weir"
         }
     ]
 }

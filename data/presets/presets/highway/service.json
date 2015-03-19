@@ -1,6 +1,8 @@
 {
     "icon": "highway-service",
     "fields": [
+        "or_rdclass",
+        "or_condition",
         "service",
         "oneway",
         "maxspeed",
