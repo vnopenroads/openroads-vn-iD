@@ -11,7 +11,7 @@ describe('iD.Connection', function () {
 
     describe('#changesetUrl', function() {
         it('provides a changeset url', function() {
-            expect(c.changesetURL(2)).to.eql('http://www.openstreetmap.org/changeset/2');
+            expect(c.changesetURL(2)).to.eql('https://fast-dawn-4805.herokuapp.com/changesets/2');
         });
     });
 
@@ -30,9 +30,9 @@ describe('iD.Connection', function () {
     describe("#switch", function() {
         it("changes the URL", function() {
             c.switch({
-                url: "http://example.com"
+                openroads: "http://example.com"
             });
-            expect(c.changesetURL(1)).to.equal("http://example.com/changeset/1")
+            expect(c.changesetURL(1)).to.equal("http://example.com/changesets/1")
         });
 
         it("emits an auth event", function(done) {
@@ -96,7 +96,7 @@ describe('iD.Connection', function () {
                 done();
             });
 
-            server.respondWith("GET", "http://www.openstreetmap.org/api/0.6/node/1",
+            server.respondWith("GET", "https://fast-dawn-4805.herokuapp.com/xml/node/1",
                 [200, { "Content-Type": "text/xml" }, nodeXML]);
             server.respond();
         });
@@ -108,7 +108,7 @@ describe('iD.Connection', function () {
                 done();
             });
 
-            server.respondWith("GET", "http://www.openstreetmap.org/api/0.6/way/1/full",
+            server.respondWith("GET", "https://fast-dawn-4805.herokuapp.com/xml/way/1/full",
                 [200, { "Content-Type": "text/xml" }, wayXML]);
             server.respond();
         });
@@ -120,7 +120,7 @@ describe('iD.Connection', function () {
                 done();
             });
 
-            server.respondWith("GET", "http://www.openstreetmap.org/api/0.6/node/1",
+            server.respondWith("GET", "https://fast-dawn-4805.herokuapp.com/xml/node/1",
                 [200, { "Content-Type": "text/xml" }, nodeXML]);
             server.respond();
         });
@@ -132,8 +132,8 @@ describe('iD.Connection', function () {
 
             expect(jxon).to.eql({
                 osmChange: {
-                    '@version': 0.3,
-                    '@generator': 'iD',
+                    '@version': 0.1,
+                    '@generator': 'openroads-iD',
                     'create': {},
                     'modify': {},
                     'delete': {'@if-unused': true}
