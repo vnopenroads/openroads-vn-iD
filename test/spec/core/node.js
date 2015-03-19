@@ -52,13 +52,13 @@ describe('iD.Node', function () {
             expect(node.isIntersection(graph)).to.equal(true);
         });
 
-        it("returns true for a node shared by more than one waterway", function () {
-            var node = iD.Node(),
-                w1 = iD.Way({nodes: [node.id], tags: {waterway: 'river'}}),
-                w2 = iD.Way({nodes: [node.id], tags: {waterway: 'river'}}),
-                graph = iD.Graph([node, w1, w2]);
-            expect(node.isIntersection(graph)).to.equal(true);
-        });
+        // it("returns true for a node shared by more than one waterway", function () {
+        //     var node = iD.Node(),
+        //         w1 = iD.Way({nodes: [node.id], tags: {waterway: 'river'}}),
+        //         w2 = iD.Way({nodes: [node.id], tags: {waterway: 'river'}}),
+        //         graph = iD.Graph([node, w1, w2]);
+        //     expect(node.isIntersection(graph)).to.equal(true);
+        // });
     });
 
     describe("#isHighwayIntersection", function () {
