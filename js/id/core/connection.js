@@ -1,9 +1,10 @@
+/* global qwest */
 iD.Connection = function() {
 
     var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
         url = 'http://www.openstreetmap.org',
         openroads = 'https://fast-dawn-4805.herokuapp.com',
-        testUrl = 'http://localhost:1337',
+        //testUrl = 'http://localhost:1337',
         connection = {},
         inflight = {},
         loadedTiles = {},
@@ -161,7 +162,7 @@ iD.Connection = function() {
     connection.authenticated = function() {
         return oauth.authenticated();
     };
-iD
+
     // Generate Changeset XML. Returns a string.
     connection.changesetJXON = function(tags) {
         return {
