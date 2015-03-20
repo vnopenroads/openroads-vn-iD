@@ -142,7 +142,9 @@ iD.Connection = function() {
     };
 
     function parse(dom) {
-        if (!dom || !dom.childNodes) return new Error('Bad request');
+        if (!dom || !dom.childNodes) {
+          return new Error('Bad request');
+        }
 
         var root = dom.childNodes[0],
             children = root.childNodes,
@@ -224,14 +226,14 @@ iD.Connection = function() {
     };
 
     connection.putChangeset = function(changes, comment, imageryUsed, callback) {
-        qwest.put(openroads + '/changeset/create', {
+        qwest.put(testUrl + '/changeset/create', {
             uid: userDetails.id,
-            user: userDetails.user,
+            user: userDetails.display_name,
             comment: comment
         }, {
             responseType: 'json',
         }).then(function(changeset) {
-            qwest.post(openroads + '/changeset/' + changeset.id + '/upload', {
+            qwest.post(testUrl + '/changeset/' + changeset.id + '/upload', {
                 xmlString: JXON.stringify(connection.osmChangeJXON(changeset.id, changes))
             }, {
                 responseType: 'json'
@@ -326,7 +328,7 @@ iD.Connection = function() {
             });
 
         function bboxUrl(tile) {
-            return openroads + '/xml/map?bbox=' + tile.extent.toParam();
+            return testUrl + '/xml/map?bbox=' + tile.extent.toParam();
         }
 
         _.filter(inflight, function(v, i) {
