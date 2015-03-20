@@ -141,9 +141,10 @@ iD.Connection = function() {
     };
 
     function parse(dom) {
-        if (!dom || !dom.childNodes) return new Error('Bad request');
+        if (!dom || !dom.childNodes) {
+          return new Error('Bad request');
+        }
 
-        console.log(dom);
         var root = dom.childNodes[0],
             children = root.childNodes,
             entities = [];
@@ -162,7 +163,7 @@ iD.Connection = function() {
     connection.authenticated = function() {
         return oauth.authenticated();
     };
-iD
+
     // Generate Changeset XML. Returns a string.
     connection.changesetJXON = function(tags) {
         return {
