@@ -41,7 +41,7 @@ iD.Connection = function() {
         return openroads + '/' + entity.type + 's/' + entity.osmId();
     };
 
-    // TODO endpoint also hasn't been implemented yet
+    // TODO endpoint also hasn't been implemented yet.
     connection.userURL = function(username) {
         return url + '/user/' + username;
     };
