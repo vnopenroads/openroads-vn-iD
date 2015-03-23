@@ -41,7 +41,7 @@ iD.Connection = function() {
         return openroads + '/' + entity.type + 's/' + entity.osmId();
     };
 
-    // TODO endpoint also hasn't been implemented yet
+    // TODO endpoint also hasn't been implemented yet.
     connection.userURL = function(username) {
         return url + '/user/' + username;
     };
@@ -142,7 +142,9 @@ iD.Connection = function() {
     };
 
     function parse(dom) {
-        if (!dom || !dom.childNodes) return new Error('Bad request');
+        if (!dom || !dom.childNodes) {
+          return new Error('Bad request');
+        }
 
         var root = dom.childNodes[0],
             children = root.childNodes,
@@ -226,7 +228,7 @@ iD.Connection = function() {
     connection.putChangeset = function(changes, comment, imageryUsed, callback) {
         qwest.put(openroads + '/changeset/create', {
             uid: userDetails.id,
-            user: userDetails.user,
+            user: userDetails.display_name,
             comment: comment
         }, {
             responseType: 'json',
