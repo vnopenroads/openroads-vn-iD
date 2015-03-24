@@ -3,12 +3,7 @@
     "fields": [
         "or_rdclass",
         "or_condition",
-        "oneway_yes",
-        "maxspeed",
-        "structure",
-        "access",
-        "surface",
-        "ref"
+        "surface"
     ],
     "geometry": [
         "line"

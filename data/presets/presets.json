@@ -3256,10 +3256,6 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
             "surface"
         ],
         "geometry": [
@@ -3287,13 +3283,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway_yes",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3321,12 +3311,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway_yes",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3346,17 +3331,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "surface",
-            "width",
-            "structure",
-            "access",
-            "incline",
-            "sac_scale",
-            "trail_visibility",
-            "mtb/scale",
-            "mtb/scale/uphill",
-            "mtb/scale/imba",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3397,13 +3372,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3419,12 +3388,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3469,10 +3433,6 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
             "surface"
         ],
         "geometry": [
@@ -3503,10 +3463,6 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
             "surface"
         ],
         "geometry": [
@@ -3523,13 +3479,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3545,12 +3495,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3570,11 +3515,6 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "service",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
             "surface"
         ],
         "geometry": [
@@ -3740,13 +3680,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3762,12 +3696,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3787,16 +3716,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "surface",
-            "width",
-            "structure",
-            "access",
-            "incline",
-            "tracktype",
-            "smoothness",
-            "mtb/scale",
-            "mtb/scale/uphill",
-            "mtb/scale/imba"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3829,13 +3749,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3851,12 +3765,7 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
+            "surface"
         ],
         "geometry": [
             "line"
@@ -3889,10 +3798,6 @@
         "fields": [
             "or_rdclass",
             "or_condition",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
             "surface"
         ],
         "geometry": [
