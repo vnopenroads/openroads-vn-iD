@@ -3,16 +3,7 @@
     "fields": [
         "or_rdclass",
         "or_condition",
-        "surface",
-        "width",
-        "structure",
-        "access",
-        "incline",
-        "tracktype",
-        "smoothness",
-        "mtb/scale",
-        "mtb/scale/uphill",
-        "mtb/scale/imba"
+        "surface"
     ],
     "geometry": [
         "line"

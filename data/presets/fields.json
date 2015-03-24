@@ -753,14 +753,16 @@
             "bad",
             "poor",
             "fair",
-            "good"
+            "good",
+            "excellent"
         ],
         "strings": {
             "options": {
                 "bad": "Bad",
                 "poor": "Poor",
                 "fair": "Fair",
-                "good": "Good"
+                "good": "Good",
+                "excellent": "Excellent"
             }
         }
     },
