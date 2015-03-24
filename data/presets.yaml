@@ -359,6 +359,7 @@ en:
           poor: Poor
           fair: Fair
           good: Good
+          excellent: Excellent
       or_rdclass:
         label: Road class
         options:

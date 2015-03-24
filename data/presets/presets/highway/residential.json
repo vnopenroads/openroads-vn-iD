@@ -3,10 +3,6 @@
     "fields": [
         "or_rdclass",
         "or_condition",
-        "oneway",
-        "maxspeed",
-        "structure",
-        "access",
         "surface"
     ],
     "geometry": [
