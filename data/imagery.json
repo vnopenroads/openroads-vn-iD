@@ -20,6 +20,7 @@
             0,
             16
         ],
+        "overzoom": false,
         "default": true,
         "overlay": true
     },
@@ -44,6 +45,7 @@
             0,
             16
         ],
+        "overzoom": false,
         "terms_url": "http://www.mapbox.com/about/maps/",
         "terms_text": "Terms & Feedback",
         "overlay": true
