@@ -1,0 +1,16 @@
+{
+    "icon": "highway-unclassified",
+    "fields": [
+        "or_condition",
+        "surface"
+    ],
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "or_class": "barangay",
+        "highway": "unclassified"
+    },
+    "terms": [],
+    "name": "Barangay"
+}

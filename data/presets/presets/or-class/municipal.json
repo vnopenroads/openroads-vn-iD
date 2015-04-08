@@ -1,0 +1,16 @@
+{
+    "icon": "highway-tertiary",
+    "fields": [
+        "or_condition",
+        "surface"
+    ],
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "or_class": "municipal",
+        "highway": "tertiary"
+    },
+    "terms": [],
+    "name": "Municipal"
+}

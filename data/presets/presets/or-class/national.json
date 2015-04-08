@@ -1,0 +1,16 @@
+{
+    "icon": "highway-primary",
+    "fields": [
+        "or_condition",
+        "surface"
+    ],
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "or_class": "national",
+        "highway": "primary"
+    },
+    "terms": [],
+    "name": "National"
+}
