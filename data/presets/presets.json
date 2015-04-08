@@ -5252,6 +5252,70 @@
         "name": "Travel Agency",
         "searchable": false
     },
+    "or-class/barangay": {
+        "icon": "highway-unclassified",
+        "fields": [
+            "or_condition",
+            "surface"
+        ],
+        "geometry": [
+            "line"
+        ],
+        "tags": {
+            "or_class": "barangay",
+            "highway": "unclassified"
+        },
+        "terms": [],
+        "name": "Barangay"
+    },
+    "or-class/municipal": {
+        "icon": "highway-tertiary",
+        "fields": [
+            "or_condition",
+            "surface"
+        ],
+        "geometry": [
+            "line"
+        ],
+        "tags": {
+            "or_class": "municipal",
+            "highway": "tertiary"
+        },
+        "terms": [],
+        "name": "Municipal"
+    },
+    "or-class/national": {
+        "icon": "highway-primary",
+        "fields": [
+            "or_condition",
+            "surface"
+        ],
+        "geometry": [
+            "line"
+        ],
+        "tags": {
+            "or_class": "national",
+            "highway": "primary"
+        },
+        "terms": [],
+        "name": "National"
+    },
+    "or-class/provincial": {
+        "icon": "highway-secondary",
+        "fields": [
+            "or_condition",
+            "surface"
+        ],
+        "geometry": [
+            "line"
+        ],
+        "tags": {
+            "or_class": "provincial",
+            "highway": "secondary"
+        },
+        "terms": [],
+        "name": "Provincial"
+    },
     "piste": {
         "icon": "skiing",
         "fields": [
