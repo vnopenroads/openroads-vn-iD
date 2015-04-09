@@ -61,6 +61,22 @@ _.extend(iD.Node.prototype, {
         return r;
     },
 
+    asJSON: function(changeset_id) {
+        var r = {
+            node: {
+                id: this.osmId(),
+                lon: this.loc[0],
+                lat: this.loc[1],
+                version: this.version || 0,
+                tag: _.map(this.tags, function(v, k) {
+                    return { k: k, v: v}
+                })
+            }
+        };
+        if (changeset_id) r.node.changeset = changeset_id;
+        return r;
+    },
+
     asGeoJSON: function() {
         return {
             type: 'Point',

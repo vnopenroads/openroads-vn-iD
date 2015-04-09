@@ -223,6 +223,23 @@ _.extend(iD.Way.prototype, {
         return r;
     },
 
+    asJSON: function(changeset_id) {
+        var r = {
+            way: {
+                id: this.osmId(),
+                version: this.version || 0,
+                nd: _.map(this.nodes, function(id) {
+                    return { ref: iD.Entity.id.toOSM(id) };
+                }),
+                tag: _.map(this.tags, function(v, k) {
+                    return { k: k, v: v };
+                })
+            }
+        };
+        if (changeset_id) r.way.changeset = changeset_id;
+        return r;
+    },
+
     asGeoJSON: function(resolver) {
         return resolver.transient(this, 'GeoJSON', function() {
             var coordinates = _.pluck(resolver.childNodes(this), 'loc');
