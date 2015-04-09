@@ -1516,6 +1516,18 @@ en:
       office/travel_agent:
         name: Travel Agency
         terms: "<translate with synonyms or related terms for 'Travel Agency', separated by commas>"
+      or-class/barangay:
+        name: Barangay
+        terms: "<translate with synonyms or related terms for 'Barangay', separated by commas>"
+      or-class/municipal:
+        name: Municipal
+        terms: "<translate with synonyms or related terms for 'Municipal', separated by commas>"
+      or-class/national:
+        name: National
+        terms: "<translate with synonyms or related terms for 'National', separated by commas>"
+      or-class/provincial:
+        name: Provincial
+        terms: "<translate with synonyms or related terms for 'Provincial', separated by commas>"
       piste:
         name: Piste/Ski Trail
         terms: "<translate with synonyms or related terms for 'Piste/Ski Trail', separated by commas>"
