@@ -253,10 +253,10 @@ iD.Connection = function() {
 
     connection.putChangeset = function(changes, comment, imageryUsed, callback) {
 
-        console.log(JXON.stringify(connection.osmChangeJXON('123', changes)));
-        console.log(JSON.stringify(connection.osmChangeJSON(1, changes)));
+        //console.log(JXON.stringify(connection.osmChangeJXON('123', changes)));
+        //console.log(JSON.stringify(connection.osmChangeJSON(1, changes)));
 
-        qwest.put(testUrl + '/changeset/create', {
+        qwest.put(openroads + '/changeset/create', {
             uid: userDetails.id,
             user: userDetails.display_name,
             comment: comment
@@ -264,7 +264,8 @@ iD.Connection = function() {
             responseType: 'json',
         }).then(function(changeset) {
             var data = connection.osmChangeJSON(changeset.id, changes);
-            qwest.post(testUrl + '/changeset/' + changeset.id + '/upload', data, {
+            console.log(JSON.stringify(data));
+            qwest.post(openroads + '/changeset/' + changeset.id + '/upload', data, {
                 dataType: 'json',
                 responseType: 'json',
                 retries: 1,
@@ -360,7 +361,7 @@ iD.Connection = function() {
             });
 
         function bboxUrl(tile) {
-            return testUrl + '/xml/map?bbox=' + tile.extent.toParam();
+            return openroads + '/xml/map?bbox=' + tile.extent.toParam();
         }
 
         _.filter(inflight, function(v, i) {
