@@ -1,0 +1,16 @@
+{
+    "icon": "highway-secondary",
+    "fields": [
+        "or_condition",
+        "surface"
+    ],
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "or_class": "provincial",
+        "highway": "secondary"
+    },
+    "terms": [],
+    "name": "Provincial"
+}

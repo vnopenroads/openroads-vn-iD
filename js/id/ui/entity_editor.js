@@ -69,15 +69,13 @@ iD.ui.EntityEditor = function(context) {
             .attr('class', 'inspector-border inspector-preset');
 
         $enter.append('div')
-            .attr('class', 'inspector-border raw-tag-editor inspector-inner');
-            //.attr('class', 'raw-tag-editor inspector-inner');
+            .attr('class', 'raw-tag-editor inspector-inner');
 
-        // Don't draw relations editor, as it's not supported.
-        //$enter.append('div')
-            //.attr('class', 'inspector-border raw-member-editor inspector-inner');
+        $enter.append('div')
+            .attr('class', 'inspector-border raw-member-editor inspector-inner');
 
-        //$enter.append('div')
-            //.attr('class', 'raw-membership-editor inspector-inner');
+        $enter.append('div')
+            .attr('class', 'raw-membership-editor inspector-inner');
 
         selection.selectAll('.preset-reset')
             .on('click', function() {

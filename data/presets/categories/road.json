@@ -3,20 +3,10 @@
     "name": "Road",
     "icon": "category-roads",
     "members": [
-        "highway/residential",
-        "highway/motorway",
-        "highway/trunk",
-        "highway/primary",
-        "highway/secondary",
-        "highway/tertiary",
-        "highway/service",
-        "highway/motorway_link",
-        "highway/trunk_link",
-        "highway/primary_link",
-        "highway/secondary_link",
-        "highway/tertiary_link",
-        "highway/unclassified",
-        "highway/track",
-        "highway/road"
+        "or-class/national",
+        "or-class/provincial",
+        "or-class/municipal",
+        "or-class/barangay",
+        "highway/service"
     ]
 }
