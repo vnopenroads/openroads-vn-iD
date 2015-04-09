@@ -1226,6 +1226,22 @@
             "value": "travel_agent"
         },
         {
+            "key": "highway",
+            "value": "unclassified"
+        },
+        {
+            "key": "highway",
+            "value": "tertiary"
+        },
+        {
+            "key": "highway",
+            "value": "primary"
+        },
+        {
+            "key": "highway",
+            "value": "secondary"
+        },
+        {
             "key": "piste:type"
         },
         {
