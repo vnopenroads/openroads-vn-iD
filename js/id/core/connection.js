@@ -4,7 +4,7 @@ iD.Connection = function() {
     var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
         url = 'http://www.openstreetmap.org',
         openroads = 'https://fast-dawn-4805.herokuapp.com',
-        //testUrl = 'http://localhost:1337',
+        testUrl = 'http://der.local:4000',
         connection = {},
         inflight = {},
         loadedTiles = {},
@@ -212,6 +212,32 @@ iD.Connection = function() {
         };
     };
 
+    connection.osmChangeJSON = function(changeset_id, changes) {
+        function nest(x, order) {
+            var groups = {};
+            for (var i = 0; i < x.length; i++) {
+                var tagName = Object.keys(x[i])[0];
+                if (!groups[tagName]) groups[tagName] = [];
+                groups[tagName].push(x[i][tagName]);
+            }
+            return groups;
+        }
+
+        function rep(entity) {
+            return entity.asJSON(changeset_id);
+        }
+
+        return {
+            osmChange: {
+                'version': 0.1,
+                'generator': 'openroads-iD',
+                'create': nest(changes.created.map(rep)),
+                'modify': nest(changes.modified.map(rep)),
+                'delete': nest(changes.deleted.map(rep))
+            }
+        };
+    };
+
     connection.changesetTags = function(comment, imageryUsed) {
         var tags = {
             imagery_used: imageryUsed.join(';').substr(0, 255),
@@ -226,6 +252,10 @@ iD.Connection = function() {
     };
 
     connection.putChangeset = function(changes, comment, imageryUsed, callback) {
+
+        //console.log(JXON.stringify(connection.osmChangeJXON('123', changes)));
+        //console.log(JSON.stringify(connection.osmChangeJSON(1, changes)));
+
         qwest.put(openroads + '/changeset/create', {
             uid: userDetails.id,
             user: userDetails.display_name,
@@ -233,12 +263,15 @@ iD.Connection = function() {
         }, {
             responseType: 'json',
         }).then(function(changeset) {
-            qwest.post(openroads + '/changeset/' + changeset.id + '/upload', {
-                xmlString: JXON.stringify(connection.osmChangeJXON(changeset.id, changes))
-            }, {
-                responseType: 'json'
+            var data = connection.osmChangeJSON(changeset.id, changes);
+            console.log(JSON.stringify(data));
+            qwest.post(openroads + '/changeset/' + changeset.id + '/upload', data, {
+                dataType: 'json',
+                responseType: 'json',
+                retries: 1,
+                timeout: 10000
             }).then(function(response) {
-                callback(response.changeset.id);
+                callback(null, response.changeset.id);
             }).catch(function(error) {
                 callback(error);
             });
