@@ -740,6 +740,31 @@
         "type": "text",
         "label": "Hours"
     },
+    "openroads/project/cost-revision": {
+        "key": "openroads:project:cost-revision",
+        "type": "number",
+        "label": "Project cost revision"
+    },
+    "openroads/project/cost": {
+        "key": "openroads:project:cost",
+        "type": "number",
+        "label": "Project cost"
+    },
+    "openroads/project/id": {
+        "key": "openroads:project:id",
+        "type": "text",
+        "label": "Project ID"
+    },
+    "openroads/project/tour-spot": {
+        "key": "openroads:project:tour-spot",
+        "type": "text",
+        "label": "Tour spot"
+    },
+    "openroads/project/work-scope": {
+        "key": "openroads:project:work-scope",
+        "type": "text",
+        "label": "Work scope"
+    },
     "operator": {
         "key": "operator",
         "type": "text",

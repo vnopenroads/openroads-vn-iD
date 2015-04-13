@@ -5252,6 +5252,64 @@
         "name": "Travel Agency",
         "searchable": false
     },
+    "openroads/access-road": {
+        "geometry": [
+            "relation"
+        ],
+        "tags": {
+            "type": "access-road"
+        },
+        "name": "FMR access road",
+        "icon": "relation",
+        "fields": [
+            "openroads/project/id"
+        ]
+    },
+    "openroads/project": {
+        "geometry": [
+            "relation"
+        ],
+        "tags": {
+            "type": "project"
+        },
+        "name": "Project",
+        "icon": "relation",
+        "fields": [
+            "openroads/project/id"
+        ]
+    },
+    "openroads/project/fmr": {
+        "geometry": [
+            "relation"
+        ],
+        "tags": {
+            "type": "project",
+            "project": "fmr"
+        },
+        "name": "Farm to Market Road",
+        "icon": "relation",
+        "fields": [
+            "openroads/project/id",
+            "openroads/project/cost",
+            "openroads/project/cost-revision"
+        ]
+    },
+    "openroads/project/trp": {
+        "geometry": [
+            "relation"
+        ],
+        "tags": {
+            "type": "project",
+            "project": "trp"
+        },
+        "name": "Tourism Road Infrastructure Program",
+        "icon": "relation",
+        "fields": [
+            "openroads/project/id",
+            "openroads/project/tour-spot",
+            "openroads/project/work-scope"
+        ]
+    },
     "or-class/barangay": {
         "icon": "highway-unclassified",
         "fields": [

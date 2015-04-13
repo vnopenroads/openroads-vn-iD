@@ -1,8 +1,12 @@
 en:
   presets:
     categories:
+      category-access-road:
+        name: FMR access road
       category-path:
         name: Path
+      category-project:
+        name: Project
       category-road:
         name: Road
     fields:
@@ -350,6 +354,16 @@ en:
           "no": "No"
       opening_hours:
         label: Hours
+      openroads/project/cost-revision:
+        label: Project cost revision
+      openroads/project/cost:
+        label: Project cost
+      openroads/project/id:
+        label: Project ID
+      openroads/project/tour-spot:
+        label: Tour spot
+      openroads/project/work-scope:
+        label: Work scope
       operator:
         label: Operator
       or_condition:
@@ -1516,6 +1530,18 @@ en:
       office/travel_agent:
         name: Travel Agency
         terms: "<translate with synonyms or related terms for 'Travel Agency', separated by commas>"
+      openroads/access-road:
+        name: FMR access road
+        terms: "<translate with synonyms or related terms for 'FMR access road', separated by commas>"
+      openroads/project:
+        name: Project
+        terms: "<translate with synonyms or related terms for 'Project', separated by commas>"
+      openroads/project/fmr:
+        name: Farm to Market Road
+        terms: "<translate with synonyms or related terms for 'Farm to Market Road', separated by commas>"
+      openroads/project/trp:
+        name: Tourism Road Infrastructure Program
+        terms: "<translate with synonyms or related terms for 'Tourism Road Infrastructure Program', separated by commas>"
       or-class/barangay:
         name: Barangay
         terms: "<translate with synonyms or related terms for 'Barangay', separated by commas>"

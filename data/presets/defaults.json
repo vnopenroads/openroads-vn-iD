@@ -28,5 +28,7 @@
         "vertex"
     ],
     "relation": [
+        "category-project",
+        "category-access-road"
     ]
 }

@@ -1226,6 +1226,22 @@
             "value": "travel_agent"
         },
         {
+            "key": "type",
+            "value": "access-road"
+        },
+        {
+            "key": "type",
+            "value": "project"
+        },
+        {
+            "key": "project",
+            "value": "fmr"
+        },
+        {
+            "key": "project",
+            "value": "trp"
+        },
+        {
             "key": "highway",
             "value": "unclassified"
         },

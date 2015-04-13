@@ -1,4 +1,12 @@
 {
+    "category-access-road": {
+        "geometry": "relation",
+        "name": "FMR access road",
+        "icon": "relation",
+        "members": [
+            "openroads/access-road"
+        ]
+    },
     "category-path": {
         "geometry": "line",
         "name": "Path",
@@ -9,6 +17,16 @@
             "highway/bridleway",
             "highway/path",
             "highway/steps"
+        ]
+    },
+    "category-project": {
+        "geometry": "relation",
+        "name": "Project",
+        "icon": "relation",
+        "members": [
+            "openroads/project/fmr",
+            "openroads/project/trp",
+            "openroads/project"
         ]
     },
     "category-road": {

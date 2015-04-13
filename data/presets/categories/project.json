@@ -1,0 +1,10 @@
+{
+    "geometry": "relation",
+    "name": "Project",
+    "icon": "relation",
+    "members": [
+        "openroads/project/fmr",
+        "openroads/project/trp",
+        "openroads/project"
+    ]
+}
