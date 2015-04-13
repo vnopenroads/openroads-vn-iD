@@ -1,0 +1,17 @@
+{
+    "geometry": [
+        "relation"
+    ],
+    "tags": {
+        "type": "project",
+        "project": "trp"
+    },
+    "name": "Tourism Road Infrastructure Program",
+    "icon": "relation",
+    "fields": [
+        "openroads/project/id",
+        "openroads/project/tour-spot",
+        "openroads/project/work-scope"
+    ]
+}
+ 

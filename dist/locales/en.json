@@ -510,8 +510,14 @@
     },
     "presets": {
         "categories": {
+            "category-access-road": {
+                "name": "FMR access road"
+            },
             "category-path": {
                 "name": "Path"
+            },
+            "category-project": {
+                "name": "Project"
             },
             "category-road": {
                 "name": "Road"
@@ -984,6 +990,21 @@
             },
             "opening_hours": {
                 "label": "Hours"
+            },
+            "openroads/project/cost-revision": {
+                "label": "Project cost revision"
+            },
+            "openroads/project/cost": {
+                "label": "Project cost"
+            },
+            "openroads/project/id": {
+                "label": "Project ID"
+            },
+            "openroads/project/tour-spot": {
+                "label": "Tour spot"
+            },
+            "openroads/project/work-scope": {
+                "label": "Work scope"
             },
             "operator": {
                 "label": "Operator"
@@ -2537,6 +2558,22 @@
             },
             "office/travel_agent": {
                 "name": "Travel Agency",
+                "terms": ""
+            },
+            "openroads/access-road": {
+                "name": "FMR access road",
+                "terms": ""
+            },
+            "openroads/project": {
+                "name": "Project",
+                "terms": ""
+            },
+            "openroads/project/fmr": {
+                "name": "Farm to Market Road",
+                "terms": ""
+            },
+            "openroads/project/trp": {
+                "name": "Tourism Road Infrastructure Program",
                 "terms": ""
             },
             "or-class/barangay": {

@@ -1,0 +1,13 @@
+{
+    "geometry": [
+        "relation"
+    ],
+    "tags": {
+        "type": "project"
+    },
+    "name": "Project",
+    "icon": "relation",
+    "fields": [
+        "openroads/project/id"
+    ]
+}

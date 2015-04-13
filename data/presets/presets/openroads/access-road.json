@@ -1,0 +1,13 @@
+{
+    "geometry": [
+        "relation"
+    ],
+    "tags": {
+        "type": "access-road"
+    },
+    "name": "FMR access road",
+    "icon": "relation",
+    "fields": [
+        "openroads/project/id"
+    ]
+}
