@@ -1,0 +1,5 @@
+{
+    "key": "openroads:project:cost-revision",
+    "type": "number",
+    "label": "Project cost revision"
+}

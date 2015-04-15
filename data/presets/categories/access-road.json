@@ -1,0 +1,8 @@
+{
+    "geometry": "relation",
+    "name": "FMR access road",
+    "icon": "relation",
+    "members": [
+        "openroads/access-road"
+    ]
+}
