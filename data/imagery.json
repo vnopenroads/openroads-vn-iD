@@ -12,10 +12,10 @@
         "default": true
     },
     {
-        "name": "OpenRoads CRID+FMR baseline",
+        "name": "OpenRoads road network",
         "type": "tms",
-        "description": "CRID and FMR data for Bohol",
-        "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/devseed.ff2e6e69/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q",
+        "description": "OpenRoads road network",
+        "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.cc286209/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
         "scaleExtent": [
             0,
             16
