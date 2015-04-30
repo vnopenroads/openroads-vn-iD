@@ -9,7 +9,7 @@ iD.ui = function(context) {
         hash();
 
         if (!hash.hadHash) {
-            map.centerZoom([124.1403,9.8641], 10);
+            map.centerZoom([122.725,11.638], 7);
         }
 
         container.append('svg')
