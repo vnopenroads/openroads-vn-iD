@@ -11,8 +11,8 @@ iD.Connection = function() {
         tileZoom = 16,
         oauth = osmAuth({
             url: 'http://www.openstreetmap.org',
-            oauth_consumer_key: 'ZzL5dc9Qz4ZlKNAMmBUTawo1PfjByR6HXspwzzPR',
-            oauth_secret: 'YwTnX3KFDkfJe0lHxyMuBCPwn3RdqwlwY2Ls9OKp',
+            oauth_consumer_key: 'tVvJwyxIViwjQcbu5C2OlJqcfWaCEGf8w2aqdx65',
+            oauth_secret: 'OTmJkup1A4WDpMdEGImq6EJElg5t8mvUMBOj8IaQ',
             loading: authenticating,
             done: authenticated
         }),
