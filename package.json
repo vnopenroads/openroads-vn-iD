@@ -1,7 +1,7 @@
 {
   "name": "iD",
-  "version": "1.7.0",
-  "description": "a new editor for openstreetmap",
+  "version": "1.0.0",
+  "description": "an editor for the OpenRoads project, based off OSM iD",
   "main": "iD.js",
   "directories": {
     "doc": "docs",
