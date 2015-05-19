@@ -1,18 +1,17 @@
 language: node_js
 node_js:
 - '0.12'
-
 env:
   global:
-  - GH_REF=github.com/developmentseed/openroads-iD.git
+  - GH_REF=github.com/opengovt/openroads-iD.git
   - DEPLOY_BRANCH=master
-  - secure: a2e6ixXoBhOgFFll4UeNCco53d6BISv5W/x67XfM3iPrzLVfgED34jlfXhHfh7y9AWg86zUWofyz2SJbal/6+MFAujKT04HvTaynUyn3eFV1RIZH5waF10eV/Styq/u2KpQmExWBJWqMUeZJSETcnBD9qFk1E1nZ8lGrsz5yAg0=
+  - secure: SoZ9/kTuUk3qgcTIfewPL9gCVcsI7KVTHz2pHgvJyf+uECGuAj62bi5uJQxebWlxExI70hS2IG3W4uUQK9OqwTb3+MdzthEDrLiYf13cFLotNT6qUUpqmFPhU2v7msWHmv4SS2lR6oeoFeVtBLLyEMgXZY+KpN+74u1HWuU/Vos=
 
 before_install:
-  - chmod +x ./.build_scripts/deploy.sh
+- chmod +x ./.build_scripts/deploy.sh
 
 script:
-  - make
+- make
 
 after_success:
-  - ./.build_scripts/deploy.sh
+- ./.build_scripts/deploy.sh
