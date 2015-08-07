@@ -1614,7 +1614,7 @@
             19
         ],
         "terms_url": "http://openstreetmap.org/",
-        "terms_text": "© OpenStreetMap contributors, CC-BY-SA",
+        "terms_text": "© OpenStreetMap contributors, CC-BY-SA. The tracing layer is in sync with openstreetmap.org.",
         "id": "MAPNIK",
         "default": true
     },
