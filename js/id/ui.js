@@ -39,7 +39,7 @@ iD.ui = function(context) {
             .attr('class', 'limiter');
 
         limiter.append('div')
-            .attr('class', 'button-wrap joined col2')
+            .attr('class', 'button-wrap joined col3')
             .call(iD.ui.Modes(context), limiter);
 
         limiter.append('div')
