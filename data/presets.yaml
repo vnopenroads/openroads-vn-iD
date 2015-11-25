@@ -1542,6 +1542,9 @@ en:
       openroads/project/trp:
         name: Tourism Road Infrastructure Program
         terms: "<translate with synonyms or related terms for 'Tourism Road Infrastructure Program', separated by commas>"
+      openroads/protect_type/marine_area:
+        name: Marine Protected Area
+        terms: "<translate with synonyms or related terms for 'Marine Protected Area', separated by commas>"
       or-class/barangay:
         name: Barangay
         terms: "<translate with synonyms or related terms for 'Barangay', separated by commas>"

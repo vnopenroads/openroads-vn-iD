@@ -5310,6 +5310,18 @@
             "openroads/project/work-scope"
         ]
     },
+    "openroads/protect_type/marine_area": {
+        "fields": [],
+        "geometry": [
+            "area"
+        ],
+        "tags": {
+            "boundary": "protected_area",
+            "protect_type": "marine_area"
+        },
+        "terms": [],
+        "name": "Marine Protected Area"
+    },
     "or-class/barangay": {
         "icon": "highway-unclassified",
         "fields": [
