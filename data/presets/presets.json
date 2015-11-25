@@ -5311,7 +5311,6 @@
         ]
     },
     "openroads/protect_type/marine_area": {
-        "icon": "highway-secondary",
         "fields": [],
         "geometry": [
             "area"
