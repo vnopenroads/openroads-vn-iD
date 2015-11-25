@@ -1,0 +1,14 @@
+{
+    "icon": "highway-secondary",
+    "fields": [
+    ],
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "boundary": "protected_area",
+        "protect_type": "marine_area"
+    },
+    "terms": [],
+    "name": "Marine Protected Area"
+}

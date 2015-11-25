@@ -1242,6 +1242,10 @@
             "value": "trp"
         },
         {
+            "key": "protect_type",
+            "value": "marine_area"
+        },
+        {
             "key": "highway",
             "value": "unclassified"
         },
