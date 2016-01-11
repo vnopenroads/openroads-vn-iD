@@ -12,6 +12,27 @@ iD.ui = function(context) {
             map.centerZoom([122.725,11.638], 7);
         }
 
+        // Check for bounds.
+        // ----------------------------------------
+        // vv  WARNING!  vv
+        // This MUST be moved to the correct place.
+        var q = iD.util.stringQs(location.hash.substring(1));
+        var args = (q.bounds || '').split('/').map(Number);
+        if (args.length === 4 && !args.some(isNaN)) {
+            var e = iD.geo.Extent([args[0], args[1]], [args[2], args[3]]);
+            // The setTimeout is merely a temporary hack to make it work.
+            // WHY?
+            // Map.extent uses the projection to determine what zoom level
+            // to use to be able to fit the extent.
+            // At the time this code runs, the extent is no laded (or set?)
+            // and the zoom is not set correctly. By delaying the execution
+            // a bit we give the system time to have everything ready.
+            setTimeout(function() {
+                map.extent(e);
+            }, 100);
+        }
+        // ----------------------------------------
+
         container.append('svg')
             .attr('id', 'defs')
             .call(iD.svg.Defs(context));
