@@ -1,5 +1,6 @@
 {
     "area": [
+        "openroads/protect_type/marine_area"
     ],
     "line": [
         "category-road",

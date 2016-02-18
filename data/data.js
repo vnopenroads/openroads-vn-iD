@@ -16220,6 +16220,10 @@ iD.data = {
                     "name": "Tourism Road Infrastructure Program",
                     "terms": ""
                 },
+                "openroads/protect_type/marine_area": {
+                    "name": "Marine Protected Area",
+                    "terms": ""
+                },
                 "or-class/barangay": {
                     "name": "Barangay",
                     "terms": ""
