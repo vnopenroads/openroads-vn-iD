@@ -2,6 +2,7 @@
     "icon": "highway-unclassified",
     "fields": [
         "or_condition",
+        "or_width",
         "surface"
     ],
     "geometry": [

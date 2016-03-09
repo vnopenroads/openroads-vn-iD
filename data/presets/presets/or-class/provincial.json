@@ -2,6 +2,7 @@
     "icon": "highway-secondary",
     "fields": [
         "or_condition",
+        "or_width",
         "surface"
     ],
     "geometry": [
