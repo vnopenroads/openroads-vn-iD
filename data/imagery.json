@@ -15,7 +15,7 @@
         "name": "OpenRoads road network",
         "type": "tms",
         "description": "OpenRoads road network",
-        "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.cc286209/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
+        "template": "http://52.91.217.210/{zoom}/{x}/{y}.png",
         "scaleExtent": [
             0,
             16
@@ -37,24 +37,16 @@
         "overlay": true
     },
     {
-        "name": "Locator Overlay",
+        "name": "Grid Overlay",
         "type": "tms",
-        "description": "Shows major features to help orient you.",
-        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openstreetmap.map-inh76ba2/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnN0cmVldG1hcCIsImEiOiJncjlmd0t3In0.DmZsIeOW-3x-C5eX-wAqTw",
+        "description": "Shows a 1km2 or 10km2 grid, depending on zoom level",
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/devseed.f7828772/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnN0cmVldG1hcCIsImEiOiJncjlmd0t3In0.DmZsIeOW-3x-C5eX-wAqTw",
         "scaleExtent": [
             0,
-            16
+            20
         ],
         "overzoom": false,
-        "terms_url": "http://www.mapbox.com/about/maps/",
-        "terms_text": "Terms & Feedback",
         "overlay": true
-    },
-    {
-        "name": "MapQuest Open Aerial",
-        "type": "tms",
-        "template": "http://oatile{switch:1,2,3,4}.mqcdn.com/tiles/1.0.0/sat/{zoom}/{x}/{y}.png",
-        "default": true
     },
     {
         "name": "Mapbox Satellite",
@@ -1617,20 +1609,6 @@
         "terms_text": "© OpenStreetMap contributors, CC-BY-SA. The tracing layer is in sync with openstreetmap.org.",
         "id": "MAPNIK",
         "default": true
-    },
-    {
-        "name": "OpenStreetMap GPS traces",
-        "type": "tms",
-        "description": "Public GPS traces uploaded to OpenStreetMap.",
-        "template": "http://{switch:a,b,c}.gps-tile.openstreetmap.org/lines/{zoom}/{x}/{y}.png",
-        "scaleExtent": [
-            0,
-            20
-        ],
-        "terms_url": "http://www.openstreetmap.org/copyright",
-        "terms_text": "© OpenStreetMap contributors",
-        "terms_html": "© <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap contributors</a>. North: <span style='display: inline-block; width: 10px; height: 10px; background-color: #7fed11;'></span> South: <span style='display: inline-block; width: 10px; height: 10px; background-color: #7f11ed;'></span> East: <span style='display: inline-block; width: 10px; height: 10px; background-color: #ff3f3f;'></span> West: <span style='display: inline-block; width: 10px; height: 10px; background-color: #00bfbf;'></span>",
-        "overlay": true
     },
     {
         "name": "Pangasinán/Bulacan (Phillipines HiRes)",
