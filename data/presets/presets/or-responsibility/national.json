@@ -1,5 +1,5 @@
 {
-    "icon": "highway-tertiary",
+    "icon": "highway-primary",
     "fields": [
         "or_condition",
         "or_width",
@@ -9,9 +9,9 @@
         "line"
     ],
     "tags": {
-        "or_class": "municipal",
-        "highway": "tertiary"
+        "or_responsibility": "national",
+        "highway": "primary"
     },
     "terms": [],
-    "name": "Municipal"
+    "name": "National"
 }
