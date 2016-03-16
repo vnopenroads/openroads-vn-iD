@@ -3,10 +3,10 @@
     "name": "Road",
     "icon": "category-roads",
     "members": [
-        "or-responsibility/national",
-        "or-responsibility/provincial",
-        "or-responsibility/municipal",
-        "or-responsibility/barangay",
+        "or_responsibility/national",
+        "or_responsibility/provincial",
+        "or_responsibility/municipal",
+        "or_responsibility/barangay",
         "highway/service"
     ]
 }
