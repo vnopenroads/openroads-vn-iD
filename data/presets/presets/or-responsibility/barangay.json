@@ -1,5 +1,5 @@
 {
-    "icon": "highway-primary",
+    "icon": "highway-unclassified",
     "fields": [
         "or_condition",
         "or_width",
@@ -9,9 +9,9 @@
         "line"
     ],
     "tags": {
-        "or_class": "national",
-        "highway": "primary"
+        "or_responsibility": "barangay",
+        "highway": "unclassified"
     },
     "terms": [],
-    "name": "National"
+    "name": "Barangay"
 }

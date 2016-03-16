@@ -1,7 +1,7 @@
 {
-    "key": "or_rdclass",
+    "key": "or_responsibility",
     "type": "combo",
-    "label": "Road class",
+    "label": "Road responsibility",
     "keys": [
         "national",
         "provincial",

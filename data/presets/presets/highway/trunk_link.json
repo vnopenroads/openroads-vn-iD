@@ -1,9 +1,10 @@
 {
     "icon": "highway-trunk-link",
     "fields": [
-        "or_rdclass",
+        "or_responsibility",
         "or_condition",
-        "surface"
+        "surface",
+        "or_width"
     ],
     "geometry": [
         "line"

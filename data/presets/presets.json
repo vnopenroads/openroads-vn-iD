@@ -3253,11 +3253,6 @@
     },
     "highway/living_street": {
         "icon": "highway-living-street",
-        "fields": [
-            "or_rdclass",
-            "or_condition",
-            "surface"
-        ],
         "geometry": [
             "line"
         ],
@@ -3281,9 +3276,10 @@
     "highway/motorway": {
         "icon": "highway-motorway",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3309,9 +3305,10 @@
     "highway/motorway_link": {
         "icon": "highway-motorway-link",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3329,9 +3326,10 @@
     "highway/path": {
         "icon": "highway-path",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3370,9 +3368,10 @@
     "highway/primary": {
         "icon": "highway-primary",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3386,9 +3385,10 @@
     "highway/primary_link": {
         "icon": "highway-primary-link",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3431,9 +3431,10 @@
     "highway/residential": {
         "icon": "highway-residential",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3461,9 +3462,10 @@
     "highway/road": {
         "icon": "highway-road",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3477,9 +3479,10 @@
     "highway/secondary": {
         "icon": "highway-secondary",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3493,9 +3496,10 @@
     "highway/secondary_link": {
         "icon": "highway-secondary-link",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3513,9 +3517,10 @@
     "highway/service": {
         "icon": "highway-service",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3678,9 +3683,10 @@
     "highway/tertiary": {
         "icon": "highway-tertiary",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3694,9 +3700,10 @@
     "highway/tertiary_link": {
         "icon": "highway-tertiary-link",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3714,9 +3721,10 @@
     "highway/track": {
         "icon": "highway-track",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3747,9 +3755,10 @@
     "highway/trunk": {
         "icon": "highway-trunk",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3763,9 +3772,10 @@
     "highway/trunk_link": {
         "icon": "highway-trunk-link",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -3796,9 +3806,10 @@
     "highway/unclassified": {
         "icon": "highway-unclassified",
         "fields": [
-            "or_rdclass",
+            "or_responsibility",
             "or_condition",
-            "surface"
+            "surface",
+            "or_width"
         ],
         "geometry": [
             "line"
@@ -5322,65 +5333,69 @@
         "terms": [],
         "name": "Marine Protected Area"
     },
-    "or-class/barangay": {
+    "or-responsibility/barangay": {
         "icon": "highway-unclassified",
         "fields": [
             "or_condition",
+            "or_width",
             "surface"
         ],
         "geometry": [
             "line"
         ],
         "tags": {
-            "or_class": "barangay",
+            "or_responsibility": "barangay",
             "highway": "unclassified"
         },
         "terms": [],
         "name": "Barangay"
     },
-    "or-class/municipal": {
+    "or-responsibility/municipal": {
         "icon": "highway-tertiary",
         "fields": [
             "or_condition",
+            "or_width",
             "surface"
         ],
         "geometry": [
             "line"
         ],
         "tags": {
-            "or_class": "municipal",
+            "or_responsibility": "municipal",
             "highway": "tertiary"
         },
         "terms": [],
         "name": "Municipal"
     },
-    "or-class/national": {
+    "or-responsibility/national": {
         "icon": "highway-primary",
         "fields": [
             "or_condition",
+            "or_width",
             "surface"
         ],
         "geometry": [
             "line"
         ],
         "tags": {
-            "or_class": "national",
+            "or_responsibility": "national",
             "highway": "primary"
         },
         "terms": [],
         "name": "National"
     },
-    "or-class/provincial": {
+    "or-responsibility/provincial": {
         "icon": "highway-secondary",
         "fields": [
             "or_condition",
+            "or_width",
             "surface"
         ],
         "geometry": [
             "line"
         ],
         "tags": {
-            "or_class": "provincial",
+            "or_responsibility": "provincial",
             "highway": "secondary"
         },
         "terms": [],
