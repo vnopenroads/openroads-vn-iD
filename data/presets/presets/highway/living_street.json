@@ -1,11 +1,5 @@
 {
     "icon": "highway-living-street",
-    "fields": [
-        "or_responsibility",
-        "or_condition",
-        "surface",
-        "or_width"
-    ],
     "geometry": [
         "line"
     ],

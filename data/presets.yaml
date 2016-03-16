@@ -374,6 +374,13 @@ en:
           fair: Fair
           good: Good
           excellent: Excellent
+      or_responsibility:
+        label: Road responsibility
+        options:
+          national: National
+          provincial: Provincial
+          municipal: Municipal
+          barangay: Barangay
       or_width:
         label: Road width
         options:

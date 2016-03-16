@@ -791,6 +791,25 @@
             }
         }
     },
+    "or_responsibility": {
+        "key": "or_responsibility",
+        "type": "combo",
+        "label": "Road responsibility",
+        "keys": [
+            "national",
+            "provincial",
+            "municipal",
+            "barangay"
+        ],
+        "strings": {
+            "options": {
+                "national": "National",
+                "provincial": "Provincial",
+                "municipal": "Municipal",
+                "barangay": "Barangay"
+            }
+        }
+    },
     "or_width": {
         "key": "or_width",
         "type": "combo",
