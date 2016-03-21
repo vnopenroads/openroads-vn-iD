@@ -53,11 +53,12 @@ iD.behavior.Hash = function(context) {
             var center = extent.center();
             var map = context.map();
             var zoom = map.extentZoom(extent);
+            delete q.bounds;
             var s = iD.util.qsString(_.assign(q, {
                 map: zoom + '/' + center.join('/')
             }), true);
             parser(map, (s0 = s));
-            update();
+            window.location.hash = '#' + s;
         } else {
             hashchange();
         }
