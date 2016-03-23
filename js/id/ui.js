@@ -4,14 +4,6 @@ iD.ui = function(context) {
 
         if (iD.detect().opera) container.classed('opera', true);
 
-        var hash = iD.behavior.Hash(context);
-
-        hash();
-
-        if (!hash.hadHash) {
-            map.centerZoom([122.725,11.638], 7);
-        }
-
         container.append('svg')
             .attr('id', 'defs')
             .call(iD.svg.Defs(context));
@@ -31,6 +23,14 @@ iD.ui = function(context) {
         var m = content.append('div')
             .attr('id', 'map')
             .call(map);
+
+        var hash = iD.behavior.Hash(context);
+
+        hash();
+
+        if (!hash.hadHash) {
+            map.centerZoom([122.725,11.638], 7);
+        }
 
         bar.append('div')
             .attr('class', 'spacer col4');
