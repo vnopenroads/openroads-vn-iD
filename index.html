@@ -263,7 +263,15 @@
                         ]));
             });
         </script>
-        <script src="http://localhost:9898/assets/scripts/OR_frame_notifier.js" type="text/javascript"></script>
-        <script>new ORFrameNotifier('editor');</script>
+        <script>
+          (function(r, o, a, d, s){
+            r.ORFrame = function(i){r.ORFID = i};
+            d = o.createElement(a);
+            d.src = '//localhost:3000/OR_frame_notifier.js';
+            s = o.getElementsByTagName(a)[0];
+            s.parentNode.insertBefore(d, s);
+          })(window, document, 'script');
+          ORFrame('or-editor');
+        </script>
     </body>
 </html>

@@ -14663,13 +14663,24 @@ iD.data = {
                         "excellent": "Excellent"
                     }
                 },
-                "or_rdclass": {
-                    "label": "Road class",
+                "or_responsibility": {
+                    "label": "Road responsibility",
                     "options": {
                         "national": "National",
                         "provincial": "Provincial",
                         "municipal": "Municipal",
                         "barangay": "Barangay"
+                    }
+                },
+                "or_width": {
+                    "label": "Road width",
+                    "options": {
+                        "-3": "< 3 meters",
+                        "3": "3 meters",
+                        "4": "4 meter",
+                        "5": "5 meters",
+                        "6": "6 meters",
+                        "6+": "> 6 meters"
                     }
                 },
                 "par": {

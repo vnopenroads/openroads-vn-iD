@@ -46,6 +46,24 @@ iD.behavior.Hash = function(context) {
 
     var throttledUpdate = _.throttle(update, 500);
 
+    function initialBounds(q) {
+        var args = q.bounds.split('/').map(Number);
+        if (args.length === 4 && !args.some(isNaN)) {
+            var extent = iD.geo.Extent([args[0], args[1]], [args[2], args[3]]);
+            var center = extent.center();
+            var map = context.map();
+            var zoom = map.extentZoom(extent);
+            delete q.bounds;
+            var s = iD.util.qsString(_.assign(q, {
+                map: zoom + '/' + center.join('/')
+            }), true);
+            parser(map, (s0 = s));
+            window.location.hash = '#' + s;
+        } else {
+            hashchange();
+        }
+    }
+
     function hashchange() {
         if (location.hash === s0) return; // ignore spurious hashchange events
         if (parser(context.map(), (s0 = location.hash).substring(1))) {
@@ -67,7 +85,8 @@ iD.behavior.Hash = function(context) {
             var q = iD.util.stringQs(location.hash.substring(1));
             if (q.id) context.loadEntity(q.id.split(',')[0], !q.map);
             if (q.comment) context.storage('comment', q.comment);
-            hashchange();
+            if (q.bounds) initialBounds(q);
+            else hashchange();
             if (q.map) hash.hadHash = true;
         }
     }

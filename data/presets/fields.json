@@ -791,10 +791,10 @@
             }
         }
     },
-    "or_rdclass": {
-        "key": "or_rdclass",
+    "or_responsibility": {
+        "key": "or_responsibility",
         "type": "combo",
-        "label": "Road class",
+        "label": "Road responsibility",
         "keys": [
             "national",
             "provincial",
@@ -807,6 +807,29 @@
                 "provincial": "Provincial",
                 "municipal": "Municipal",
                 "barangay": "Barangay"
+            }
+        }
+    },
+    "or_width": {
+        "key": "or_width",
+        "type": "combo",
+        "label": "Road width",
+        "keys": [
+            "-3",
+            "3",
+            "4",
+            "5",
+            "6",
+            "6+"
+        ],
+        "strings": {
+            "options": {
+                "3": "3 meters",
+                "4": "4 meter",
+                "5": "5 meters",
+                "6": "6 meters",
+                "-3": "< 3 meters",
+                "6+": "> 6 meters"
             }
         }
     },

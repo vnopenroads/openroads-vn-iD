@@ -374,13 +374,22 @@ en:
           fair: Fair
           good: Good
           excellent: Excellent
-      or_rdclass:
-        label: Road class
+      or_responsibility:
+        label: Road responsibility
         options:
           national: National
           provincial: Provincial
           municipal: Municipal
           barangay: Barangay
+      or_width:
+        label: Road width
+        options:
+          "3": 3 meters
+          "4": 4 meter
+          "5": 5 meters
+          "6": 6 meters
+          "-3": < 3 meters
+          6+: "> 6 meters"
       par:
         label: Par
         placeholder: "3, 4, 5..."
@@ -1545,16 +1554,16 @@ en:
       openroads/protect_type/marine_area:
         name: Marine Protected Area
         terms: "<translate with synonyms or related terms for 'Marine Protected Area', separated by commas>"
-      or-class/barangay:
+      or-responsibility/barangay:
         name: Barangay
         terms: "<translate with synonyms or related terms for 'Barangay', separated by commas>"
-      or-class/municipal:
+      or-responsibility/municipal:
         name: Municipal
         terms: "<translate with synonyms or related terms for 'Municipal', separated by commas>"
-      or-class/national:
+      or-responsibility/national:
         name: National
         terms: "<translate with synonyms or related terms for 'National', separated by commas>"
-      or-class/provincial:
+      or-responsibility/provincial:
         name: Provincial
         terms: "<translate with synonyms or related terms for 'Provincial', separated by commas>"
       piste:

@@ -1,10 +1,5 @@
 {
     "icon": "highway-living-street",
-    "fields": [
-        "or_rdclass",
-        "or_condition",
-        "surface"
-    ],
     "geometry": [
         "line"
     ],

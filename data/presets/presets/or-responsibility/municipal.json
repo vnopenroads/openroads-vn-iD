@@ -1,5 +1,5 @@
 {
-    "icon": "highway-secondary",
+    "icon": "highway-tertiary",
     "fields": [
         "or_condition",
         "or_width",
@@ -9,9 +9,9 @@
         "line"
     ],
     "tags": {
-        "or_class": "provincial",
-        "highway": "secondary"
+        "or_responsibility": "municipal",
+        "highway": "tertiary"
     },
     "terms": [],
-    "name": "Provincial"
+    "name": "Municipal"
 }
