@@ -28,7 +28,7 @@
         "name": "Philippine municipalities",
         "type": "tms",
         "description": "Municipality boundaries for the Philippines",
-        "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/devseed.aac96d9d/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q",
+        "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/devseed.6bb2097c/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q",
         "scaleExtent": [
             0,
             18
