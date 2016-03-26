@@ -18,7 +18,7 @@ iD.ui.Background = function(context) {
         function setOpacity(d) {
             var bg = context.container().selectAll('.background-layer')
                 .transition()
-                .style('opacity', 1)
+                .style('opacity', d)
                 .attr('data-opacity', d);
 
             if (!iD.detect().opera) {
