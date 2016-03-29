@@ -1,3 +1,29 @@
+/*
+ * OR colors
+ * primary: #042A42
+ * (4, 42, 66)
+ * secondary: #0C9ECB
+ * (12, 158, 203)
+ *
+ *  - #09799B (9, 121, 155)
+ *  - #3DB1D5 (61, 177, 213)
+ *  - #91D3E7
+ *  - #B6E1EF
+ *
+ * tertiary
+ *  - #44BAB8
+ *  - #E07860
+ *  - #EFB654
+ *
+ * grays
+ *  - #4A4A4A
+ *  - #6A6A6A
+ *  - #FAFAFA (borders, strokes)
+ *  - #F2F2F2
+ *  - #FAFAFA
+ */
+
+
 /* Basics
 ------------------------------------------------------- */
 
@@ -291,6 +317,12 @@ ul li { list-style: none;}
 .fillL3 {
     background: #ececec;
     color: #333;
+}
+
+.fillOR {
+    background: #09799B;
+    background: rgba(9, 121, 155, 0.6);
+    color: white;
 }
 
 .fillD {
@@ -1793,31 +1825,36 @@ img.wiki-image {
 
 .map-controls {
     right: 0;
-    top: 70px;
+    top: 60px;
+    bottom: 0;
     width: 40px;
     position: fixed;
     z-index: 100;
+    background: #09799B;
+    background: rgba(9, 121, 155, 0.7);
 }
 
 .map-control > button {
     width: 40px;
-    background: rgba(0,0,0,.5);
+    background: transparent;
     border-radius: 0;
 }
 
 .map-control > button:hover {
-    background: rgba(0, 0, 0, .8);
+    background: #3DB1D5;
+    background: rgba(61, 177, 213, 0.8);
 }
 
 .map-control > button.active,
 .map-control > button.active:hover {
-    background: #7092ff;
+    background: #3DB1D5;
+    background: rgba(61, 177, 213, 0.8);
 }
 
 /* Zoomer */
 
 .zoombuttons button.zoom-in {
-    border-radius: 4px 0 0 0;
+    border-radius: 0;
 }
 
 /* Background / Map Data Settings */
@@ -1828,7 +1865,7 @@ img.wiki-image {
 }
 
 .background-control button {
-    border-radius: 4px 0 0 0;
+    border-radius: 0;
 }
 
 .map-data-control,
@@ -2038,7 +2075,6 @@ img.wiki-image {
     z-index: -1;
 }
 
-
 /* Geolocator */
 
 .geolocate-control {
@@ -2046,7 +2082,7 @@ img.wiki-image {
 }
 
 .geolocate-control button {
-    border-radius: 0 0 0 4px;
+    border-radius: 0;
 }
 
 .map-overlay.content {
@@ -2061,7 +2097,7 @@ img.wiki-image {
 /* Help */
 
 .help-control button {
-    border-radius: 0 0 0 4px;
+    border-radius: 0;
 }
 
 .help-wrap p {
