@@ -321,9 +321,28 @@ ul li { list-style: none;}
 
 .fillOR {
     background: #09799B;
-    background: rgba(9, 121, 155, 0.6);
+    background: rgba(9, 121, 155, 0.7);
     color: white;
 }
+
+.fillOR2 {
+    background: #3DB1D5;
+    background: rgba(61, 177, 213, 0.8);
+    color: white;
+}
+
+.fillOR2 a:visited, .fillOR2 a {
+    color: white;
+    -webkit-transition: all 100ms;
+       -moz-transition: all 100ms;
+         -o-transition: all 100ms;
+            transition: all 100ms;
+}
+
+.fillOR2 a:hover {
+    color: #F2F2F2;
+}
+
 
 .fillD {
     background:rgba(0,0,0,.5);
@@ -2088,10 +2107,10 @@ img.wiki-image {
 .map-overlay.content {
     position: fixed;
     top:60px;
-    bottom: 30px;
-    padding: 20px 50px 20px 20px;
+    bottom: 0;
+    padding: 20px;
     right: 0;
-    overflow: auto;
+    overflow: visible;
 }
 
 /* Help */

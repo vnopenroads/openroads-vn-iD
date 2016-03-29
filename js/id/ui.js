@@ -17,7 +17,8 @@ iD.ui = function(context) {
             .attr('id', 'content');
 
         var bar = content.append('div')
-            .attr('id', 'bar');
+            .attr('id', 'bar')
+            .attr('class', 'fillOR');
 
         var m = content.append('div')
             .attr('id', 'map')

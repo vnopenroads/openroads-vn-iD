@@ -8,7 +8,8 @@ iD.ui.Background = function(context) {
             ['bottom', [0, 1]]],
         opacityDefault = (context.storage('background-opacity') !== null) ?
             (+context.storage('background-opacity')) : 1,
-        customTemplate = '';
+        customTemplate = '',
+        mapControls = context.container().select('.map-controls');
 
     // Can be 0 from <1.3.0 use or due to issue #1923.
     if (opacityDefault === 0) opacityDefault = 1;
@@ -156,17 +157,25 @@ iD.ui.Background = function(context) {
                     selection.on('mousedown.background-inside', function() {
                         return d3.event.stopPropagation();
                     });
+                    mapControls.style('right', '0px')
+                        .transition()
+                        .duration(200)
+                        .style('right', '250px');
                     content.style('display', 'block')
-                        .style('right', '-300px')
+                        .style('right', '-250px')
                         .transition()
                         .duration(200)
                         .style('right', '0px');
                 } else {
+                    mapControls.style('right', '250px')
+                        .transition()
+                        .duration(200)
+                        .style('right', '0');
                     content.style('display', 'block')
                         .style('right', '0px')
                         .transition()
                         .duration(200)
-                        .style('right', '-300px')
+                        .style('right', '-250px')
                         .each('end', function() {
                             d3.select(this).style('display', 'none');
                         });
@@ -177,7 +186,8 @@ iD.ui.Background = function(context) {
 
 
         var content = selection.append('div')
-                .attr('class', 'fillL map-overlay col3 content hide'),
+                .attr('class', 'fillOR2 map-overlay content hide')
+                .style('width', '250px'),
             tooltip = bootstrap.tooltip()
                 .placement('left')
                 .html(true)
@@ -251,6 +261,7 @@ iD.ui.Background = function(context) {
         var overlayList = content.append('ul')
             .attr('class', 'layer-list');
 
+        /*
         var adjustments = content.append('div')
             .attr('class', 'adjustments');
 
@@ -285,6 +296,7 @@ iD.ui.Background = function(context) {
 
         resetButton.append('div')
             .attr('class', 'icon undo');
+        */
 
         context.map()
             .on('move.background-update', _.debounce(update, 1000));

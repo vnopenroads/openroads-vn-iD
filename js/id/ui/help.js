@@ -20,6 +20,8 @@ iD.ui.Help = function(context) {
         };
     });
 
+    var mapControls = context.container().select('.map-controls');
+
     function help(selection) {
 
         function hide() {
@@ -41,12 +43,20 @@ iD.ui.Help = function(context) {
                     selection.on('mousedown.help-inside', function() {
                         return d3.event.stopPropagation();
                     });
+                    mapControls.style('right', '0px')
+                        .transition()
+                        .duration(200)
+                        .style('right', '500px');
                     pane.style('display', 'block')
                         .style('right', '-500px')
                         .transition()
                         .duration(200)
                         .style('right', '0px');
                 } else {
+                    mapControls.style('right', '500px')
+                        .transition()
+                        .duration(200)
+                        .style('right', '0');
                     pane.style('right', '0px')
                         .transition()
                         .duration(200)
@@ -98,7 +108,8 @@ iD.ui.Help = function(context) {
 
 
         var pane = selection.append('div')
-                .attr('class', 'help-wrap map-overlay fillL col5 content hide'),
+              .attr('class', 'help-wrap map-overlay fillOR2 content hide')
+              .style('width', '500px'),
             tooltip = bootstrap.tooltip()
                 .placement('left')
                 .html(true)
