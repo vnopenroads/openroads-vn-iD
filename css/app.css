@@ -2185,25 +2185,34 @@ img.wiki-image {
 }
 
 #attrib {
-    width: 100%;
-    height: 20px;
-    float: left;
-    clear: both;
+    /*
+     * OR
+     * width: 100%;
+     * height: 20px;
+     * float: left;
+     * clear: both;
+    */
 }
 
 .base-layer-attribution,
 .overlay-layer-attribution {
-    position: absolute;
+    /* OR */
+    /* position: absolute; */
     color: #888;
     font-size: 10px;
 }
 
 .base-layer-attribution {
-    left: 10px;
+    /* OR */
+    /* left: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .overlay-layer-attribution {
     right: 10px;
+    /* OR */
+    display: none;
 }
 
 .overlay-layer-attribution .attribution:not(:last-child):after {
@@ -2217,22 +2226,33 @@ img.wiki-image {
 
 #footer {
     width: 100%;
-    float: left;
-    clear: both;
+    /*
+     * OR
+     * float: left;
+     * clear: both;
+     * text-align: left;
+     */
+    display: flex;
+    align-items: center;
 }
 
 #scale-block {
-    display: table-cell;
-    vertical-align: bottom;
-    width: 250px;
-    height: 30px;
-    float: left;
-    clear: left;
+    /*
+     * OR
+     * display: table-cell;
+     * vertical-align: bottom;
+     * width: 250px;
+     * height: 30px;
+     * float: left;
+     * clear: left;
+     */
 }
 
 #info-block {
     float: right;
     clear: right;
+    /* OR */
+    display: none;
 }
 
 #scale {
@@ -2299,6 +2319,8 @@ img.wiki-image {
     text-align: right;
     width: 100%;
     padding: 0px 5px;
+    /* OR */
+    display: none;
 }
 
 .api-status.offline,

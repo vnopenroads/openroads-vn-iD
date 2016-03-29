@@ -80,13 +80,20 @@ iD.ui = function(context) {
         var about = content.append('div')
             .attr('id', 'about');
 
-        about.append('div')
-            .attr('id', 'attrib')
-            .call(iD.ui.Attribution(context));
+        // OR
+        // about.append('div')
+            // .attr('id', 'attrib')
+            // .call(iD.ui.Attribution(context));
 
         var footer = about.append('div')
             .attr('id', 'footer')
-            .attr('class', 'fillD');
+            // OR
+            // .attr('class', 'fillD');
+
+        // OR
+        footer.append('div')
+            .attr('id', 'attrib')
+            .call(iD.ui.Attribution(context));
 
         footer.append('div')
             .attr('id', 'scale-block')
