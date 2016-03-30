@@ -5,7 +5,7 @@
  * secondary: #0C9ECB
  * (12, 158, 203)
  *
- *  - #09799B (9, 121, 155)
+ *  - #3982B3 (57, 130, 179)
  *  - #3DB1D5 (61, 177, 213)
  *  - #91D3E7
  *  - #B6E1EF
@@ -320,8 +320,8 @@ ul li { list-style: none;}
 }
 
 .fillOR {
-    background: #09799B;
-    background: rgba(9, 121, 155, 0.7);
+    background: #3982B3;
+    background: rgba(57, 130, 179, 0.85);
     color: white;
 }
 
@@ -1860,8 +1860,8 @@ img.wiki-image {
     width: 40px;
     position: fixed;
     z-index: 100;
-    background: #09799B;
-    background: rgba(9, 121, 155, 0.7);
+    background: #3982B3;
+    background: rgba(57, 130, 179, 0.85);
 }
 
 .map-control > button {
