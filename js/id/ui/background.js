@@ -43,10 +43,19 @@ iD.ui.Background = function(context) {
                 .property('checked', active);
         }
 
+        function selectImageLayer() {
+            function active(d) {
+                return context.background().showsLayer(d);
+            }
+            content.selectAll('.img-layer')
+                .classed('active', active);
+        }
+
         function clickSetSource(d) {
             d3.event.preventDefault();
             context.background().baseLayerSource(d);
-            selectLayer();
+            // selectLayer();
+            selectImageLayer();
         }
 
         function editCustom() {
@@ -56,7 +65,8 @@ iD.ui.Background = function(context) {
                 template.indexOf('google.com') !== -1 ||
                 template.indexOf('googleapis.com') !== -1 ||
                 template.indexOf('google.ru') !== -1) {
-                selectLayer();
+                // selectLayer();
+                selectImageLayer();
                 return;
             }
             setCustom(template);
@@ -64,13 +74,15 @@ iD.ui.Background = function(context) {
 
         function setCustom(template) {
             context.background().baseLayerSource(iD.BackgroundSource.Custom(template));
-            selectLayer();
+            // selectLayer();
+            selectImageLayer();
         }
 
         function clickSetOverlay(d) {
             d3.event.preventDefault();
             context.background().toggleOverlayLayer(d);
-            selectLayer();
+            // selectLayer();
+            selectImageLayer();
         }
 
         function drawList(layerList, type, change, filter) {
@@ -107,11 +119,46 @@ iD.ui.Background = function(context) {
             layerList.style('display', layerList.selectAll('li.layer').data().length > 0 ? 'block' : 'none');
         }
 
-        function update() {
-            backgroundList.call(drawList, 'radio', clickSetSource, function(d) { return !d.overlay; });
-            overlayList.call(drawList, 'checkbox', clickSetOverlay, function(d) { return d.overlay; });
+        function drawImageList(layerList, placeHolder, click, filter) {
+            var sources = context.background()
+                .sources(context.map().extent())
+                .filter(filter);
 
-            selectLayer();
+            var layerLinks = layerList.selectAll('li.img-layer')
+                .data(sources, function(d) { return d.name(); });
+
+            var enter = layerLinks.enter()
+                .append('li')
+                .attr('class', 'img-layer')
+                .on('click', click);
+
+            // only set tooltips for layers with tooltips
+            enter.filter(function(d) { return d.description; })
+                .call(bootstrap.tooltip()
+                    .title(function(d) { return d.description; })
+                    .placement('top'));
+
+            enter.append('div')
+                .attr('class', 'image');
+
+            enter.append('span')
+                .text(function(d) { return d.name(); });
+
+            layerLinks.exit()
+                .remove();
+
+            layerList.style('display', layerList.selectAll('li.img-layer').data().length > 0 ? 'block' : 'none');
+        }
+
+        function update() {
+            vectorList.call(drawImageList, true, clickSetSource, function(d) { return d.vector && !d.overlay && d.id !== 'none'; });
+            satelliteList.call(drawImageList, true, clickSetSource, function(d) { return !d.vector && !d.overlay && d.id !== 'none'; });
+
+            // backgroundList.call(drawList, 'radio', clickSetSource, function(d) { return !d.overlay; });
+            // overlayList.call(drawList, 'checkbox', clickSetOverlay, function(d) { return d.overlay; });
+
+            // selectLayer();
+            selectImageLayer();
 
             var source = context.background().baseLayerSource();
             if (source.id === 'custom') {
@@ -202,10 +249,14 @@ iD.ui.Background = function(context) {
             .attr('class', 'icon layers light');
 
 
+        content.append('h3')
+            .text(t('background.title'));
+
+        /*
         var opa = content.append('div')
                 .attr('class', 'opacity-options-wrapper');
 
-        opa.append('h4')
+        opa.append('h3')
             .text(t('background.title'));
 
         var opacityList = opa.append('ul')
@@ -257,11 +308,24 @@ iD.ui.Background = function(context) {
 
         label.append('span')
             .text(t('background.custom'));
+        */
 
+        var vectorList = content.append('ul')
+            .attr('class', 'img-layer-list');
+
+        vectorList.append('h4')
+            .text(t('background.vector'));
+
+        var satelliteList = content.append('ul')
+            .attr('class', 'img-layer-list');
+
+        satelliteList.append('h4')
+            .text(t('background.satellite'));
+
+        /*
         var overlayList = content.append('ul')
             .attr('class', 'layer-list');
 
-        /*
         var adjustments = content.append('div')
             .attr('class', 'adjustments');
 
@@ -305,7 +369,7 @@ iD.ui.Background = function(context) {
             .on('change.background-update', update);
 
         update();
-        setOpacity(opacityDefault);
+        // setOpacity(opacityDefault);
 
         var keybinding = d3.keybinding('background')
             .on(key, toggle)

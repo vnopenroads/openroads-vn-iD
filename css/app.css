@@ -1978,6 +1978,40 @@ img.wiki-image {
     text-overflow: ellipsis;
 }
 
+.img-layer-list li {
+    position: relative;
+    display: block;
+    height: 120px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.img-layer-list .image {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background-image: url(img/thumbnails/bing.png);
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.img-layer-list span {
+    display: block;
+    text-align: center;
+    line-height: 120px;
+}
+
+.img-layer-list:not(:last-child) {
+    border-bottom: 1px solid #FAFAFA;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+    margin-bottom: 20px;
+}
+
+.img-layer.active {
+    box-shadow: 2px 2px 15px #FFF;
+}
+
 .hide-toggle {
     display: block;
     padding-left:12px;
@@ -2134,6 +2168,11 @@ img.wiki-image {
     padding: 20px;
     right: 0;
     overflow: visible;
+    overflow-y: scroll;
+}
+
+.map-overlay.content h3 {
+    color: black;
 }
 
 /* Help */
