@@ -59,14 +59,6 @@ iD.ui = function(context) {
             .attr('class', 'map-controls');
 
         controls.append('div')
-            .attr('class', 'map-control zoombuttons')
-            .call(iD.ui.Zoom(context));
-
-        controls.append('div')
-            .attr('class', 'map-control geolocate-control')
-            .call(iD.ui.Geolocate(map));
-
-        controls.append('div')
             .attr('class', 'map-control add-buttons')
             .call(iD.ui.Modes(context), controls);
 
@@ -89,6 +81,14 @@ iD.ui = function(context) {
         controls.append('div')
             .attr('class', 'map-control help-control')
             .call(iD.ui.Help(context));
+
+        controls.append('div')
+            .attr('class', 'map-control zoombuttons')
+            .call(iD.ui.Zoom(context));
+
+        controls.append('div')
+            .attr('class', 'map-control geolocate-control')
+            .call(iD.ui.Geolocate(map));
 
         var about = content.append('div')
             .attr('id', 'about');
