@@ -17,8 +17,7 @@ iD.ui = function(context) {
             .attr('id', 'content');
 
         var bar = content.append('div')
-            .attr('id', 'bar')
-            .attr('class', 'fillOR');
+            .attr('id', 'bar');
 
         var m = content.append('div')
             .attr('id', 'map')
@@ -32,6 +31,7 @@ iD.ui = function(context) {
             map.centerZoom([122.725,11.638], 7);
         }
 
+        /*
         bar.append('div')
             .attr('class', 'spacer col4');
 
@@ -53,6 +53,7 @@ iD.ui = function(context) {
         bar.append('div')
             .attr('class', 'spinner')
             .call(iD.ui.Spinner(context));
+        */
 
         var controls = bar.append('div')
             .attr('class', 'map-controls');
@@ -64,6 +65,18 @@ iD.ui = function(context) {
         controls.append('div')
             .attr('class', 'map-control geolocate-control')
             .call(iD.ui.Geolocate(map));
+
+        controls.append('div')
+            .attr('class', 'map-control add-buttons')
+            .call(iD.ui.Modes(context), controls);
+
+        controls.append('div')
+            .attr('class', 'map-control undo-redo')
+            .call(iD.ui.UndoRedo(context));
+
+        controls.append('div')
+            .attr('class', 'map-control save-button')
+            .call(iD.ui.Save(context));
 
         controls.append('div')
             .attr('class', 'map-control background-control')
