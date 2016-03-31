@@ -22,7 +22,7 @@ iD.openroads.ui.WayTaskList = function(context) {
         // ----------------------------
 
         // Should tasks be shown?
-        var wayid = Number(id.replace('w', ''));
+        var wayid = parseInt(id.replace('w', ''));
         if (!preset.wayTasks || wayid < 0) {
             // No tasks. Do nothing.
             selection.style('display', 'none');
@@ -39,7 +39,8 @@ iD.openroads.ui.WayTaskList = function(context) {
             .text('Way tasks');
 
         // Trigger network request.
-        context.waytasks().load(5, function(err, waytask) {
+        wayid = 5; // REMOVE;
+        context.waytasks().load(wayid, function(err, waytask) {
             if (!selection.empty()) {
                 renderContent(selection, waytask);
             }

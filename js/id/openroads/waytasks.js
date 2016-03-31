@@ -59,6 +59,21 @@ iD.openroads.WayTasks = function(context) {
         return _.find(loadedTasks, {way_id: wayid});
     };
 
+    exp.getModifiedWays = function() {
+        var changedWays = [];
+        _.forEach(context.history().difference().summary(), function(o) {
+            if (o.changeType === 'modified' && o.entity.type === 'way') {
+                var wid = parseInt(o.entity.id.replace('w', ''));
+                changedWays.push(wid);
+            }
+        });
+        return changedWays;
+    };
+
+    exp.submitModifiedWays = function(wayids) {
+        // Connect
+    };
+
     // exp.store = function() {
     //     context.storage('openroads.Tasks', JSON.stringify(loadedTasks));
     // };
