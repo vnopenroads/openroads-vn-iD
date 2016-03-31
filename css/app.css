@@ -537,14 +537,14 @@ button.save.has-count .count::before {
 /* Icons */
 
 .icon {
-  display:inline-block;
-  vertical-align:top;
-  width:20px;
-  height:20px;
-  background:transparent url(img/sprite.svg) no-repeat 0 0;
-  text-indent:-9999px;
-  overflow:hidden;
-  }
+    display:inline-block;
+    vertical-align:top;
+    width:20px;
+    height:20px;
+    background:transparent url(img/sprite.svg) no-repeat 0 0;
+    text-indent:-9999px;
+    overflow:hidden;
+}
 
 .icon-pre-text {
     margin-right: 3px;
@@ -656,6 +656,17 @@ a:hover .icon.out-link   { background-position: -500px -14px;}
 .icon.wikipedia  { background-position: -100px -200px;}
 .icon.note       { background-position: -120px -200px;}
 .icon.wheelchair { background-position: -140px -200px;}
+
+.mapicon {
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    background: transparent url(img/map_icon.png) no-repeat center center;
+    background-size: cover;
+    text-indent: -9999px;
+    overflow: hidden;
+}
 
 /* ToolBar / Persistent UI Elements
 ------------------------------------------------------- */
@@ -1901,11 +1912,12 @@ img.wiki-image {
     margin-top: 24px;
 }
 
-.layer-control.add-buttons {
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: #3DB1D5;
-    border-top: 1px solid rgba(61, 177, 213, 0.8);
+.layer-controls .separator {
+    height: 1px;
+    display: block;
+    margin: 12px 8px;
+    background: #3DB1D5;
+    background: rgba(61, 177, 213, 0.8);
 }
 
 .zoombuttons button.zoom-in {

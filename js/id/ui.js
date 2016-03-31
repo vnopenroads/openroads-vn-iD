@@ -78,6 +78,9 @@ iD.ui = function(context) {
             .call(iD.ui.MapOverlay(context));
 
         layerControls.append('div')
+            .attr('class', 'separator');
+
+        layerControls.append('div')
             .attr('class', 'layer-control add-buttons')
             .call(iD.ui.Modes(context), layerControls);
 

@@ -156,7 +156,7 @@ iD.ui.MapOverlay = function(context) {
             shown = false;
 
         button.append('span')
-            .attr('class', 'icon data light');
+            .attr('class', 'mapicon');
 
         content.append('h3')
             .text(t('map_overlay.title'));
