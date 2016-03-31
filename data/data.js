@@ -13959,6 +13959,56 @@ iD.data = {
             "map_features": "Map Features",
             "autohidden": "These features have been automatically hidden because too many would be shown on the screen.  You can zoom in to edit them."
         },
+        "map_overlay": {
+            "title": "Map Overlays",
+            "road_network": "Road Networks",
+            "projects": "Projects",
+            "government": "Local Government",
+            "destination": "Destinations",
+            "grid": "Grid"
+        },
+        "road_network": {
+            "national": {
+                "description": "National",
+                "tooltip": "National Network"
+            },
+            "local": {
+                "description": "Local",
+                "tooltip": "Local Network"
+            },
+            "satellite": {
+                "description": "Satellite Projections",
+                "tooltip": "Satellite Projections"
+            }
+        },
+        "admin_level": {
+            "province": {
+                "description": "Province",
+                "tooltip": "Provincial"
+            },
+            "municipality": {
+                "description": "Municipality",
+                "tooltip": "Municipal"
+            },
+            "barangay": {
+                "description": "Barangay",
+                "tooltip": "Barangay"
+            }
+        },
+        "destination": {
+            "building": {
+                "description": "Buildings",
+                "tooltip": "Buildings"
+            },
+            "hospital": {
+                "description": "Hospitals",
+                "tooltip": "Hospitals"
+            },
+            "barangay": {
+                "description": "Barangay",
+                "tooltip": "Barangays"
+            }
+        },
         "feature": {
             "points": {
                 "description": "Points",

@@ -49,6 +49,7 @@
             0,
             20
         ],
+        "id": "grid",
         "overzoom": false,
         "overlay": true
     },

@@ -16,7 +16,7 @@
  *  - #EFB654
  *
  * grays
- *  - #4A4A4A
+ *  - #4A4A4A (74, 74, 74)
  *  - #6A6A6A
  *  - #FAFAFA (borders, strokes)
  *  - #F2F2F2
@@ -1982,7 +1982,7 @@ img.wiki-image {
     position: relative;
     display: block;
     height: 120px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     cursor: pointer;
 }
 
@@ -2002,19 +2002,24 @@ img.wiki-image {
     line-height: 120px;
 }
 
-.img-layer-list:not(:last-child) {
-    border-bottom: 1px solid #FAFAFA;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
-    margin-bottom: 20px;
-}
-
 .img-layer.active {
     box-shadow: 2px 2px 15px #FFF;
 }
 
+.overlay-list,
+.img-layer-list:not(:last-child) {
+    border-bottom: 1px solid #FAFAFA;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+    margin-bottom: 12px;
+}
+
+.overlay-list {
+    padding: 6px 0 12px 12px;
+}
+
 .hide-toggle {
     display: block;
-    padding-left:12px;
+    padding-left: 14px;
     position: relative;
 }
 
@@ -2037,6 +2042,72 @@ img.wiki-image {
     border-right:  4px solid transparent;
     border-left:  4px solid transparent;
 }
+
+.map-overlay-control .toggle-switch {
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.toggle-switch input {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+
+.toggle-switch label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+
+    padding: 2px;
+    width: 40px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.toggle-switch label:before,
+.toggle-switch label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: '';
+}
+
+.toggle-switch label:before {
+    right: 1px;
+    background-color: #4A4A4A;
+    background-color: rgba(74, 74, 74, 0.8);
+    border-radius: 20px;
+    transition: background 0.4s;
+}
+
+.toggle-switch label:after {
+    width: 22px;
+    height: 22px;
+    top: -1px;
+    left: -1px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: margin 0.4s;
+}
+
+.toggle-switch input:checked + label:before {
+    background-color: #91D3E7;
+}
+
+.toggle-switch input:checked + label:after {
+    margin-left: 21px;
+}
+
+/* OR white hide-toggles, not blue */
+.map-overlay-control .hide-toggle:before { border-left: 8px solid white; }
+.map-overlay-control .hide-toggle.expanded:before { border-left: 4px solid transparent; border-top:  8px solid white; }
 
 .background-control .nudge-container button {
     float: left;
