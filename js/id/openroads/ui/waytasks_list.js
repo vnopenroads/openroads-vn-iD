@@ -107,5 +107,6 @@ iD.openroads.ui.WayTaskList = function(context) {
         return wayTaskList;
     };
 
-    return d3.rebind(wayTaskList, event, 'on');
+    // return d3.rebind(wayTaskList, event, 'on');
+    return wayTaskList;
 };
