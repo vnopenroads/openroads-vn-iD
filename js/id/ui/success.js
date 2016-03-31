@@ -32,6 +32,10 @@ iD.ui.Success = function(context) {
             .attr('href', changesetURL)
             .text(t('success.view_on_osm'));
 
+        body.append('div')
+            .attr('class', 'waytasks-success')
+            .call(iD.openroads.ui.WayTasksSuccess(context));
+
         var sharing = {
             facebook: 'https://facebook.com/sharer/sharer.php?u=' + encodeURIComponent(changesetURL),
             twitter: 'https://twitter.com/intent/tweet?source=webclient&text=' + encodeURIComponent(message),
