@@ -9,6 +9,7 @@ iD.ui.EntityEditor = function(context) {
         .on('change', changeTags);
     var rawTagEditor = iD.ui.RawTagEditor(context)
         .on('change', changeTags);
+    var wayTaskList = iD.openroads.ui.WayTaskList(context);
 
     function entityEditor(selection) {
         var entity = context.entity(id),
@@ -77,6 +78,9 @@ iD.ui.EntityEditor = function(context) {
         $enter.append('div')
             .attr('class', 'inspector-border raw-tag-editor inspector-inner');
 
+        $enter.append('div')
+            .attr('class', 'inspector-border waytasks inspector-inner');
+
         selection.selectAll('.preset-reset')
             .on('click', function() {
                 event.choose(preset);
@@ -104,6 +108,12 @@ iD.ui.EntityEditor = function(context) {
                 .preset(preset)
                 .entityID(id)
                 .tags(tags)
+                .state(state));
+
+        $body.select('.waytasks')
+            .call(wayTaskList
+                .preset(preset)
+                .entityID(id)
                 .state(state));
 
         // Disregard logic for showing relations, as
