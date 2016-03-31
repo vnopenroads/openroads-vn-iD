@@ -1019,13 +1019,24 @@
                     "excellent": "Excellent"
                 }
             },
-            "or_rdclass": {
-                "label": "Road class",
+            "or_responsibility": {
+                "label": "Road responsibility",
                 "options": {
                     "national": "National",
                     "provincial": "Provincial",
                     "municipal": "Municipal",
                     "barangay": "Barangay"
+                }
+            },
+            "or_width": {
+                "label": "Road width",
+                "options": {
+                    "3": "3 meters",
+                    "4": "4 meter",
+                    "5": "5 meters",
+                    "6": "6 meters",
+                    "-3": "< 3 meters",
+                    "6+": "> 6 meters"
                 }
             },
             "par": {
@@ -2576,19 +2587,23 @@
                 "name": "Tourism Road Infrastructure Program",
                 "terms": ""
             },
-            "or-class/barangay": {
+            "openroads/protect_type/marine_area": {
+                "name": "Marine Protected Area",
+                "terms": ""
+            },
+            "or-responsibility/barangay": {
                 "name": "Barangay",
                 "terms": ""
             },
-            "or-class/municipal": {
+            "or-responsibility/municipal": {
                 "name": "Municipal",
                 "terms": ""
             },
-            "or-class/national": {
+            "or-responsibility/national": {
                 "name": "National",
                 "terms": ""
             },
-            "or-class/provincial": {
+            "or-responsibility/provincial": {
                 "name": "Provincial",
                 "terms": ""
             },

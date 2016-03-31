@@ -14675,11 +14675,11 @@ iD.data = {
                 "or_width": {
                     "label": "Road width",
                     "options": {
-                        "-3": "< 3 meters",
                         "3": "3 meters",
                         "4": "4 meter",
                         "5": "5 meters",
                         "6": "6 meters",
+                        "-3": "< 3 meters",
                         "6+": "> 6 meters"
                     }
                 },
@@ -16235,19 +16235,19 @@ iD.data = {
                     "name": "Marine Protected Area",
                     "terms": ""
                 },
-                "or-class/barangay": {
+                "or-responsibility/barangay": {
                     "name": "Barangay",
                     "terms": ""
                 },
-                "or-class/municipal": {
+                "or-responsibility/municipal": {
                     "name": "Municipal",
                     "terms": ""
                 },
-                "or-class/national": {
+                "or-responsibility/national": {
                     "name": "National",
                     "terms": ""
                 },
-                "or-class/provincial": {
+                "or-responsibility/provincial": {
                     "name": "Provincial",
                     "terms": ""
                 },

@@ -5348,6 +5348,7 @@
             "highway": "unclassified"
         },
         "terms": [],
+        "wayTasks": true,
         "name": "Barangay"
     },
     "or-responsibility/municipal": {
@@ -5365,6 +5366,7 @@
             "highway": "tertiary"
         },
         "terms": [],
+        "wayTasks": true,
         "name": "Municipal"
     },
     "or-responsibility/national": {
@@ -5382,6 +5384,7 @@
             "highway": "primary"
         },
         "terms": [],
+        "wayTasks": true,
         "name": "National"
     },
     "or-responsibility/provincial": {
@@ -5399,6 +5402,7 @@
             "highway": "secondary"
         },
         "terms": [],
+        "wayTasks": true,
         "name": "Provincial"
     },
     "piste": {
