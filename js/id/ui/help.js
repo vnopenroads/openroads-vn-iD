@@ -20,7 +20,7 @@ iD.ui.Help = function(context) {
         };
     });
 
-    var mapControls = context.container().select('.map-controls');
+    var mapControls = context.container().select('.layer-controls');
 
     function help(selection) {
 

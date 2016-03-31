@@ -4,7 +4,7 @@ iD.ui.MapData = function(context) {
         fills = ['wireframe', 'partial', 'full'],
         fillDefault = context.storage('area-fill') || 'partial',
         fillSelected = fillDefault,
-        mapControls = context.container().select('.map-controls');
+        mapControls = context.container().select('.layer-controls');
 
     function map_data(selection) {
 

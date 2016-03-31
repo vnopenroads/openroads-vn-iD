@@ -580,7 +580,7 @@ button.save.has-count .count::before {
 .icon.layers     { background-position: -300px 0;}
 .icon.avatar     { background-position: -320px 0;}
 .icon.nearby     { background-position: -340px 0;}
-.icon.geolocate  { background-position: -360px 0;}
+.icon.geolocate  { background-position: -360px -40px;}
 .icon.warning    { background-position: -380px 0;}
 .icon.bug        { background-position: -400px 0;}
 .icon.back       { background-position: -420px 0;}
@@ -594,8 +594,8 @@ button.save.has-count .count::before {
 
 .icon.inspect.light    { background-position: -220px -20px;}
 .icon.plus.light       { background-position: -240px -20px;}
-.icon.zoom-in          { background-position: -240px -20px;}
-.icon.zoom-out         { background-position: -260px -20px;}
+.icon.zoom-in          { background-position: -240px -40px;}
+.icon.zoom-out         { background-position: -260px -40px;}
 .icon.geocode.light    { background-position: -280px -20px;}
 .icon.layers.light     { background-position: -300px -20px;}
 .icon.avatar.light     { background-position: -320px -20px;}
@@ -1854,6 +1854,16 @@ img.wiki-image {
 /* Map Controls */
 
 .map-controls {
+    right: 48px;
+    width: 40px;
+    bottom: 48px;
+    position: fixed;
+    z-index: 101;
+    background: #FAFAFA;
+    border-radius: 4px;
+}
+
+.layer-controls {
     right: 0;
     top: 0;
     bottom: 0;
@@ -1864,39 +1874,61 @@ img.wiki-image {
     background: rgba(57, 130, 179, 0.85);
 }
 
-.map-control > button {
+.layer-control > button {
     width: 40px;
     background: transparent;
     color: white;
     border-radius: 0;
 }
 
-.map-control > button:hover {
+.layer-control > button:hover {
     background: #3DB1D5;
     background: rgba(61, 177, 213, 0.8);
 }
 
-.map-control > button.active,
-.map-control > button.active:hover {
+.layer-control > button.active,
+.layer-control > button.active:hover {
     background: #3DB1D5;
     background: rgba(61, 177, 213, 0.8);
 }
 
-.map-control > button:disabled {
+.layer-control > button:disabled {
     background: transparent;
     cursor: default;
 }
 
-.map-control.zoombuttons,
-.map-control.add-buttons,
-.map-control.background-control {
-    margin-top: 42px;
+.layer-control.background-control {
+    margin-top: 24px;
 }
 
-/* Zoomer */
+.layer-control.add-buttons {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: #3DB1D5;
+    border-top: 1px solid rgba(61, 177, 213, 0.8);
+}
 
 .zoombuttons button.zoom-in {
-    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.geolocate-control button {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.zoombuttons button {
+    border-bottom: 1px solid #7d7d7d;
+}
+
+.map-controls button:hover {
+    background: #F2F2F2;
+}
+
+.map-controls button.active,
+.map-controls button.active:hover {
+    background: #F2F2F2;
 }
 
 /* Background / Map Data Settings */
@@ -2223,14 +2255,6 @@ img.wiki-image {
 }
 
 /* Geolocator */
-
-.geolocate-control {
-    margin-bottom: 10px;
-}
-
-.geolocate-control button {
-    border-radius: 0;
-}
 
 .map-overlay.content {
     position: fixed;
@@ -2980,8 +3004,9 @@ img.wiki-image {
     margin-top: -5px;
 }
 
-/* Uncramp map-control tooltips */
-.map-control .tooltip {
+/* Uncramp layer-control tooltips */
+.map-control .tooltip,
+.layer-control .tooltip {
     min-width: 160px;
 }
 /* Move over tooltips that are near the edge of screen */

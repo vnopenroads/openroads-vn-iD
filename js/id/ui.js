@@ -55,40 +55,44 @@ iD.ui = function(context) {
             .call(iD.ui.Spinner(context));
         */
 
-        var controls = bar.append('div')
+        var mapControls = bar.append('div')
             .attr('class', 'map-controls');
 
-        controls.append('div')
-            .attr('class', 'map-control add-buttons')
-            .call(iD.ui.Modes(context), controls);
-
-        controls.append('div')
-            .attr('class', 'map-control undo-redo')
-            .call(iD.ui.UndoRedo(context));
-
-        controls.append('div')
-            .attr('class', 'map-control save-button')
-            .call(iD.ui.Save(context));
-
-        controls.append('div')
-            .attr('class', 'map-control background-control')
-            .call(iD.ui.Background(context));
-
-        controls.append('div')
-            .attr('class', 'map-control map-overlay-control')
-            .call(iD.ui.MapOverlay(context));
-
-        controls.append('div')
-            .attr('class', 'map-control help-control')
-            .call(iD.ui.Help(context));
-
-        controls.append('div')
-            .attr('class', 'map-control zoombuttons')
+        mapControls.append('div')
+            .attr('class', 'layer-control zoombuttons')
             .call(iD.ui.Zoom(context));
 
-        controls.append('div')
-            .attr('class', 'map-control geolocate-control')
+        mapControls.append('div')
+            .attr('class', 'layer-control geolocate-control')
             .call(iD.ui.Geolocate(map));
+
+        var layerControls = bar.append('div')
+            .attr('class', 'layer-controls');
+
+        layerControls.append('div')
+            .attr('class', 'layer-control background-control')
+            .call(iD.ui.Background(context));
+
+        layerControls.append('div')
+            .attr('class', 'layer-control map-overlay-control')
+            .call(iD.ui.MapOverlay(context));
+
+        layerControls.append('div')
+            .attr('class', 'layer-control add-buttons')
+            .call(iD.ui.Modes(context), layerControls);
+
+        layerControls.append('div')
+            .attr('class', 'layer-control undo-redo')
+            .call(iD.ui.UndoRedo(context));
+
+        layerControls.append('div')
+            .attr('class', 'layer-control save-button')
+            .call(iD.ui.Save(context));
+
+        // OR
+        // layerControls.append('div')
+            // .attr('class', 'layer-control help-control')
+            // .call(iD.ui.Help(context));
 
         var about = content.append('div')
             .attr('id', 'about');

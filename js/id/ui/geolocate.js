@@ -24,6 +24,6 @@ iD.ui.Geolocate = function(map) {
                 .placement('left'));
 
          button.append('span')
-             .attr('class', 'icon geolocate light');
+             .attr('class', 'icon geolocate');
     };
 };

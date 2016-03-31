@@ -9,6 +9,7 @@ iD.ui.Background = function(context) {
         opacityDefault = (context.storage('background-opacity') !== null) ?
             (+context.storage('background-opacity')) : 1,
         customTemplate = '',
+        layerControls = context.container().select('.layer-controls'),
         mapControls = context.container().select('.map-controls');
 
     // Can be 0 from <1.3.0 use or due to issue #1923.
@@ -204,20 +205,28 @@ iD.ui.Background = function(context) {
                     selection.on('mousedown.background-inside', function() {
                         return d3.event.stopPropagation();
                     });
-                    mapControls.style('right', '0px')
+                    layerControls.style('right', '0px')
                         .transition()
                         .duration(200)
                         .style('right', '250px');
+                    mapControls.style('right', '48px')
+                        .transition()
+                        .duration(200)
+                        .style('right', '298px');
                     content.style('display', 'block')
                         .style('right', '-250px')
                         .transition()
                         .duration(200)
                         .style('right', '0px');
                 } else {
-                    mapControls.style('right', '250px')
+                    layerControls.style('right', '250px')
                         .transition()
                         .duration(200)
                         .style('right', '0');
+                    mapControls.style('right', '298px')
+                        .transition()
+                        .duration(200)
+                        .style('right', '48px');
                     content.style('display', 'block')
                         .style('right', '0px')
                         .transition()
