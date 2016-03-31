@@ -1,9 +1,9 @@
-iD.openroads.ui.WayTaskList = function(context) {
+iD.openroads.ui.WayTasksList = function(context) {
     var state,
         preset,
         id;
 
-    function wayTaskList(selection) {
+    function wayTasksList(selection) {
 
         // ----------------------------
         // Dev notes. (to remove)
@@ -20,7 +20,6 @@ iD.openroads.ui.WayTaskList = function(context) {
         //
         // A way can be selected through the the url by using id=w[wayid]
         // ----------------------------
-
         // Should tasks be shown?
         var wayid = parseInt(id.replace('w', ''));
         if (!preset.wayTasks || wayid < 0) {
@@ -39,7 +38,6 @@ iD.openroads.ui.WayTaskList = function(context) {
             .text('Way tasks');
 
         // Trigger network request.
-        wayid = 5; // REMOVE;
         context.waytasks().load(wayid, function(err, waytask) {
             if (!selection.empty()) {
                 renderContent(selection, waytask);
@@ -52,62 +50,77 @@ iD.openroads.ui.WayTaskList = function(context) {
         var $loading = selection.selectAll('.waytasks-loading')
             .data([0]);
 
-        $loading.enter().append('p')
+        var $enter = $loading.enter();
+
+        $enter.append('p')
             .attr('class', 'waytasks-loading')
+            .style('display', 'none')
             .text('loading way tasks');
 
+        $enter.append('p')
+            .attr('class', 'waytasks-empty')
+            .style('display', 'none')
+            .text('All errors fixed!');
+
+
         if (wayTask.loadingState === 'loading') {
+            selection.select('.waytasks-list').remove();
             selection.select('.waytasks-loading').style('display', null);
         }
         else {
             selection.select('.waytasks-loading').style('display', 'none');
 
-            var $ul = selection.selectAll('.waytasks-list')
-                .data([0]);
+            if (wayTask.tasks.length === 0) {
+                selection.select('.waytasks-empty').style('display', null);
+            }
+            else {
+                var $ul = selection.selectAll('.waytasks-list')
+                    .data([0]);
 
-            $ul.enter().append('ul')
-                .attr('class', 'waytasks-list');
+                $ul.enter().append('ul')
+                    .attr('class', 'waytasks-list');
 
-            var $items = $ul.selectAll('li')
-                .data(wayTask.tasks);
+                var $items = $ul.selectAll('li')
+                    .data(wayTask.tasks);
 
-            // Enter.
-            var $enter = $items.enter().append('li')
-                .attr('class', 'waytasks-item');
+                // Enter.
+                $enter = $items.enter().append('li')
+                    .attr('class', 'waytasks-item');
 
-            $enter.append('p')
-                .attr('class', 'waytasks-type');
-            $enter.append('p')
-                .attr('class', 'waytasks-description');
+                $enter.append('p')
+                    .attr('class', 'waytasks-type');
+                $enter.append('p')
+                    .attr('class', 'waytasks-description');
 
-            // Update.
-            $items.select('.waytasks-type').text(function (d) { return d.type})
-            $items.select('.waytasks-description').text(function (d) { return d.details})
+                // Update.
+                $items.select('.waytasks-type').text(function (d) { return d.type})
+                $items.select('.waytasks-description').text(function (d) { return d.details})
 
-            // Exit.
-            $items.exit()
-                .remove();
+                // Exit.
+                $items.exit()
+                    .remove();
+            }
         }
     }
 
-    wayTaskList.state = function(_) {
+    wayTasksList.state = function(_) {
         if (!arguments.length) return state;
         state = _;
-        return wayTaskList;
+        return wayTasksList;
     };
 
-    wayTaskList.preset = function(_) {
+    wayTasksList.preset = function(_) {
         if (!arguments.length) return preset;
         preset = _;
-        return wayTaskList;
+        return wayTasksList;
     };
 
-    wayTaskList.entityID = function(_) {
+    wayTasksList.entityID = function(_) {
         if (!arguments.length) return id;
         id = _;
-        return wayTaskList;
+        return wayTasksList;
     };
 
-    // return d3.rebind(wayTaskList, event, 'on');
-    return wayTaskList;
+    // return d3.rebind(wayTasksList, event, 'on');
+    return wayTasksList;
 };

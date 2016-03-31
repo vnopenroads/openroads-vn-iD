@@ -6,43 +6,40 @@ iD.openroads.WayTasks = function(context) {
         // Search to see 
         var waytask = exp.get(wayid);
 
-        // Not found. Trigger load.
-        if (!waytask) {
-            console.log('network request initiated');
-            setTimeout(function() {
-                var temp = {
-                    "way_id": wayid,
-                    loadingState: 'loaded',
-                    "tasks": [
-                        {
-                            "type": "missing-prop",
-                            "details": "Some properties are missing: surface, or_condition"
-                        },
-                        {
-                            "type": "some-other-type",
-                            "details": "Details on this other issue with road 5"
-                        }
-                    ]
-                };
-                var wayIndex = exp.getIndex(temp.way_id);
-                if (wayIndex !== -1) {
-                    loadedTasks[wayIndex] = temp; 
-                }
-                else {
-                    loadedTasks.push(temp); 
-                }
-                return cb(null, temp);
-            }, 5000);
+        if (waytask) {
+            return cb(null, waytask);
+        }
+        else {
+            // Not found. Trigger load.
             // Create loading placeholder.
-            var p = {
+            var placeholder = {
                 way_id: wayid,
                 loadingState: 'loading'
             };
-            loadedTasks.push(p);
-            return cb(null, p);
-        }
-        else {
-            return cb(null, waytask);
+            loadedTasks.push(placeholder);
+
+            console.log('network request initiated');
+            qwest.get(context.connection().base() + '/admin/waytasks/' + wayid)
+                .then(function(response) {
+                    return JSON.parse(response);
+                })
+                .then(function(json) {
+                    // Set state as loaded.
+                    json.loadingState = 'loaded';
+                    var wayIndex = exp.getIndex(json.way_id);
+                    if (wayIndex !== -1) {
+                        loadedTasks[wayIndex] = json;
+                    }
+                    else {
+                        loadedTasks.push(json);
+                    }
+                    return cb(null, json);
+                })
+                .catch(function(err) {
+
+                });
+
+            return cb(null, placeholder);
         }
     };
 

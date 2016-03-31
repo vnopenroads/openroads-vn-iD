@@ -9,7 +9,7 @@ iD.ui.EntityEditor = function(context) {
         .on('change', changeTags);
     var rawTagEditor = iD.ui.RawTagEditor(context)
         .on('change', changeTags);
-    var wayTaskList = iD.openroads.ui.WayTaskList(context);
+    var wayTasksList = iD.openroads.ui.WayTasksList(context);
 
     function entityEditor(selection) {
         var entity = context.entity(id),
@@ -111,7 +111,7 @@ iD.ui.EntityEditor = function(context) {
                 .state(state));
 
         $body.select('.waytasks')
-            .call(wayTaskList
+            .call(wayTasksList
                 .preset(preset)
                 .entityID(id)
                 .state(state));
