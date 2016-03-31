@@ -4,6 +4,7 @@ iD.Connection = function() {
     var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
         url = 'http://www.openstreetmap.org',
         openroads = 'https://openroads-api.herokuapp.com',
+        // openroads = 'http://localhost:4000',
         testUrl = 'http://der.local:4000',
         connection = {},
         inflight = {},
@@ -26,6 +27,11 @@ iD.Connection = function() {
 
     connection.changesetURL = function(changesetId) {
         return openroads + '/changesets/' + changesetId;
+    };
+
+    connection.base = function() {
+        // return 'http://localhost:4000';
+        return openroads;
     };
 
     // TODO this endpoint hasn't been implemented yet.
