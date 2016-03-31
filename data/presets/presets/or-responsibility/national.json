@@ -13,5 +13,6 @@
         "highway": "primary"
     },
     "terms": [],
+    "wayTasks": true,
     "name": "National"
 }

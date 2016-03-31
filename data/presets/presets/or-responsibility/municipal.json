@@ -13,5 +13,6 @@
         "highway": "tertiary"
     },
     "terms": [],
+    "wayTasks": true,
     "name": "Municipal"
 }

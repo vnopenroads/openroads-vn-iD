@@ -68,6 +68,11 @@
             "description": "The quality score this preset will receive when being compared with other matches (higher is better)",
             "type": "number",
             "default": 1.0
+        },
+        "wayTasks": {
+            "description": "Whether or not the feature has way tasks. Only applies to ways",
+            "type": "boolean",
+            "default": false
         }
     },
     "additionalProperties": false
