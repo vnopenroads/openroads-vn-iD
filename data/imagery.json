@@ -1,16 +1,15 @@
 [
     {
-        "name": "Bing aerial imagery",
-        "type": "bing",
+        "name": "Digital Globe",
+        "type": "tms",
         "vector": false,
-        "description": "Satellite and aerial imagery.",
-        "template": "http://www.bing.com/maps/",
+        "description": "Digital Globe Maps API.",
         "scaleExtent": [
             0,
             22
         ],
-        "id": "Bing",
-        "default": true
+        "default": true,
+        "template": "https://api.mapbox.com/v4/digitalglobe.nal0g75k/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNpbWdrZjhlZjAwMnd0emtvNXYzYmFwZm4ifQ.5owPkJs5HMvoB8IQPyuwEw"
     },
     {
         "name": "OpenRoads road network",
@@ -27,10 +26,10 @@
         "overlay": true
     },
     {
-        "name": "Philippine municipalities",
+        "name": "Philippine boundaries",
         "type": "tms",
         "vector": true,
-        "description": "Municipality boundaries for the Philippines",
+        "description": "Regional, provincial and municipal boundaries for the Philippines",
         "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/devseed.6bb2097c/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q",
         "scaleExtent": [
             0,
