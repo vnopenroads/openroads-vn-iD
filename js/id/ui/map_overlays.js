@@ -11,11 +11,33 @@ iD.ui.MapOverlay = function(context) {
             return d.id === 'grid';
         });
 
+    var municipalSource = context.background()
+        .sources(context.map().extent())
+        .find(function (d) {
+            return d.id === 'municipality';
+        });
+
     function map_overlay(selection) {
 
-        function toggleGrid(d) {
+        function toggleOverlay(d) {
             d3.event.preventDefault();
             context.background().toggleOverlayLayer(d);
+        }
+
+        function getToggleSource(source) {
+            return function () {
+                return toggleOverlay(source);
+            };
+        }
+
+        function activeOverlay(d) {
+            return context.background().showsLayer(d);
+        }
+
+        function getActiveSource(source) {
+            return function () {
+                return activeOverlay(source);
+            };
         }
 
         function drawList(selection, data, type, name, change, active) {
@@ -51,7 +73,7 @@ iD.ui.MapOverlay = function(context) {
         function update() {
             networkList.call(drawList, roadNetwork, 'checkbox', 'road_network', function () {}, function () {});
             projectList.call(drawList, admin, 'checkbox', 'admin_level', function () {}, function () {});
-            governmentList.call(drawList, admin, 'checkbox', 'admin_level', function () {}, function () {});
+            governmentList.call(drawList, admin.slice(1, 2), 'checkbox', 'admin_level', getToggleSource(municipalSource), getActiveSource(municipalSource));
             destinationList.call(drawList, destination, 'checkbox', 'destination', function () {}, function () {});
 
             content.select('.toggle-switch input')
@@ -202,7 +224,7 @@ iD.ui.MapOverlay = function(context) {
             toggleSwitch.append('input')
                 .attr('id', 'grid-toggle')
                 .attr('type', 'checkbox')
-                .on('change', toggleGrid);
+                .on('change', toggleOverlay);
 
             toggleSwitch.append('label')
                 .attr('for', 'grid-toggle');
