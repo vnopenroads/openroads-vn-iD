@@ -14204,6 +14204,13 @@ iD.data = {
                 "start": "Start mapping!"
             }
         },
+        "waytasks": {
+            "title": "Way Tasks",
+            "loading": "Loading way tasks",
+            "empty": "All way tasks were fixed",
+            "go_dashboards": "Go to Dashboards",
+            "next_task": "Next task"
+        },
         "presets": {
             "categories": {
                 "category-access-road": {
