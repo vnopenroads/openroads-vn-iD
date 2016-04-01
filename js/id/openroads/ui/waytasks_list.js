@@ -33,7 +33,7 @@ iD.openroads.ui.WayTasksList = function(context) {
             .data([0]);
 
         $title.enter()
-            .append('h2')
+            .append('h3')
             .attr('class', 'waytasks-title')
             .text('Way tasks');
 
@@ -87,13 +87,13 @@ iD.openroads.ui.WayTasksList = function(context) {
                 $enter = $items.enter().append('li')
                     .attr('class', 'waytasks-item');
 
-                $enter.append('p')
-                    .attr('class', 'waytasks-type');
+                // $enter.append('p')
+                //     .attr('class', 'waytasks-type');
                 $enter.append('p')
                     .attr('class', 'waytasks-description');
 
                 // Update.
-                $items.select('.waytasks-type').text(function (d) { return d.type})
+                // $items.select('.waytasks-type').text(function (d) { return d.type})
                 $items.select('.waytasks-description').text(function (d) { return d.details})
 
                 // Exit.

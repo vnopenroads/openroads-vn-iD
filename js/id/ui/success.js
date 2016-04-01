@@ -33,8 +33,11 @@ iD.ui.Success = function(context) {
             .text(t('success.view_on_osm'));
 
         body.append('div')
-            .attr('class', 'waytasks-success')
+            .attr('class', 'waytasks-success col12')
             .call(iD.openroads.ui.WayTasksSuccess(context));
+
+        var shareContainer = body.append('div')
+            .attr('class', 'sharing-opt-container')
 
         var sharing = {
             facebook: 'https://facebook.com/sharer/sharer.php?u=' + encodeURIComponent(changesetURL),
@@ -42,7 +45,7 @@ iD.ui.Success = function(context) {
             google: 'https://plus.google.com/share?url=' + encodeURIComponent(changesetURL)
         };
 
-        body.selectAll('.button.social')
+        shareContainer.selectAll('.button.social')
             .data(d3.entries(sharing))
             .enter().append('a')
             .attr('class', function(d) { return 'button social col4 ' + d.key; })
