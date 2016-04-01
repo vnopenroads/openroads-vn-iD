@@ -19,7 +19,7 @@ iD.openroads.WayTasks = function(context) {
             loadedTasks.push(placeholder);
 
             console.log('network request initiated');
-            qwest.get(context.connection().base() + '/admin/waytasks/' + wayid)
+            qwest.get(context.connection().base() + '/way/' + wayid + '/waytasks')
                 .then(function(response) {
                     return JSON.parse(response);
                 })
