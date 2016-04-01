@@ -241,8 +241,8 @@ en:
     location: Location
     add_fields: "Add field:"
   background:
-    title: Background
-    description: Background settings
+    title: Basemaps
+    description: Basemap settings
     percent_brightness: "{opacity}% brightness"
     none: None
     custom: Custom
@@ -250,6 +250,8 @@ en:
     custom_prompt: "Enter a tile URL template. Valid tokens are {z}, {x}, {y} for Z/X/Y scheme and {u} for quadtile scheme."
     fix_misalignment: Fix alignment
     reset: reset
+    satellite: Satellite
+    vector: Vector
   map_data:
     title: Map Data
     description: Map Data
@@ -257,6 +259,54 @@ en:
     fill_area: Fill Areas
     map_features: Map Features
     autohidden: "These features have been automatically hidden because too many would be shown on the screen.  You can zoom in to edit them."
+  map_overlay:
+    title: Map Overlays
+    description: Map Overlays
+    road_network: Road Networks
+    projects: Projects
+    government: Local Government
+    destination: Destinations
+    grid: Grid
+  road_network:
+    national:
+      description: National
+      tooltip: "National Network"
+    local:
+      description: Local
+      tooltip: "Local Network"
+    satellite:
+      description: Satellite Projections
+      tooltip: "Satellite Projections"
+  admin_level:
+    province:
+      description: Province
+      tooltip: "Provincial"
+    municipality:
+      description: Municipality
+      tooltip: "City-Municipality"
+    barangay:
+      description: Barangay
+      tooltip: "Barangay"
+  destination:
+    building:
+      description: Buildings
+      tooltip: "Buildings"
+    hospital:
+      description: Hospitals
+      tooltip: "Hospitals"
+    community:
+      description: Community
+      tooltip: "Communities"
+    mpa:
+      description: "Marine Protected Areas"
+      tooltip: "Marine Protected Areas"
+  project:
+    trip:
+      description: Tourism
+      tooltip: "Tourism Roads"
+    fmr:
+      description: Farm to Market
+      tooltip: "Farm to Market Roads"
   feature:
     points:
       description: Points
@@ -370,7 +420,7 @@ en:
     help: |
       # Help
 
-      This is an editor for [OpenRoads](http://www.openroads.ph/). You can 
+      This is an editor for [OpenRoads](http://www.openroads.ph/). You can
       use it to add and update road network data from the Philippines.
 
       Edits that you make on this map will be visible to everyone who uses
@@ -378,7 +428,7 @@ en:
       [free OpenStreetMap account](https://www.openstreetmap.org/user/new).
 
       The [iD editor](http://ideditor.com/) is a collaborative project with [source
-      code available on GitHub](https://github.com/openstreetmap/iD). It is 
+      code available on GitHub](https://github.com/openstreetmap/iD). It is
       mainly developed to support the OpenStreetMap project.
     editing_saving: |
       # Editing & Saving

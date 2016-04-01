@@ -17,7 +17,7 @@ iD.ui.UndoRedo = function(context) {
 
     return function(selection) {
         var tooltip = bootstrap.tooltip()
-            .placement('bottom')
+            .placement('left')
             .html(true)
             .title(function (d) {
                 return iD.ui.tooltipHtml(d.annotation() ?
@@ -25,10 +25,10 @@ iD.ui.UndoRedo = function(context) {
                     t(d.id + '.nothing'), d.cmd);
             });
 
-        var buttons = selection.selectAll('button')
+        var buttons = selection.selectAll('.undo-redo')
             .data(commands)
             .enter().append('button')
-            .attr('class', 'col6 disabled')
+            .attr('class', 'disabled undo-redo')
             .on('click', function(d) { return d.action(); })
             .call(tooltip);
 
