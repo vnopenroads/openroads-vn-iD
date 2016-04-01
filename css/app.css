@@ -660,8 +660,8 @@ a:hover .icon.out-link   { background-position: -500px -14px;}
 .mapicon {
     display: inline-block;
     vertical-align: top;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     background: transparent url(img/map_icon.png) no-repeat center center;
     background-size: cover;
     text-indent: -9999px;
@@ -2059,6 +2059,10 @@ img.wiki-image {
 
 .overlay-list {
     padding: 6px 0 12px 12px;
+}
+
+.overlay-list label {
+  cursor: pointer;
 }
 
 .hide-toggle {
