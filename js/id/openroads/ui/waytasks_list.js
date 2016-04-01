@@ -35,7 +35,7 @@ iD.openroads.ui.WayTasksList = function(context) {
         $title.enter()
             .append('h3')
             .attr('class', 'waytasks-title')
-            .text('Way tasks');
+            .text(t('waytasks.title'));
 
         // Trigger network request.
         context.waytasks().load(wayid, function(err, waytask) {
@@ -55,12 +55,12 @@ iD.openroads.ui.WayTasksList = function(context) {
         $enter.append('p')
             .attr('class', 'waytasks-loading')
             .style('display', 'none')
-            .text('loading way tasks');
+            .text(t('waytasks.loading'));
 
         $enter.append('p')
             .attr('class', 'waytasks-empty')
             .style('display', 'none')
-            .text('All errors fixed!');
+            .text(t('waytasks.empty'));
 
 
         if (wayTask.loadingState === 'loading') {

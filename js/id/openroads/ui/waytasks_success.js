@@ -3,11 +3,11 @@ iD.openroads.ui.WayTasksSuccess = function(context) {
     function wayTasksSuccess(selection) {
         selection.append('a')
             .attr('class', 'bttn bttn-dashboard')
-            .text('Go to dashboards');
+            .text(t('waytasks.go_dashboards'));
 
         selection.append('button')
             .attr('class', 'bttn bttn-next')
-            .text('Next task')
+            .text(t('waytasks.next_task'))
             .on('click', function() {
                 // TODO:
                 // - Figure out what's the next way.

@@ -716,4 +716,9 @@ en:
       help: "More documentation and this walkthrough are available here."
       save: "Don't forget to regularly save your changes!"
       start: "Start mapping!"
-
+  waytasks:
+    title: "Way Tasks"
+    loading: "Loading way tasks"
+    empty: "All way tasks were fixed"
+    go_dashboards: "Go to Dashboards"
+    next_task: "Next task"
