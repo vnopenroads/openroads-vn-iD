@@ -261,6 +261,7 @@ en:
     autohidden: "These features have been automatically hidden because too many would be shown on the screen.  You can zoom in to edit them."
   map_overlay:
     title: Map Overlays
+    description: Map Overlays
     road_network: Road Networks
     projects: Projects
     government: Local Government
@@ -282,7 +283,7 @@ en:
       tooltip: "Provincial"
     municipality:
       description: Municipality
-      tooltip: "Municipal"
+      tooltip: "City-Municipality"
     barangay:
       description: Barangay
       tooltip: "Barangay"
@@ -293,9 +294,19 @@ en:
     hospital:
       description: Hospitals
       tooltip: "Hospitals"
-    barangay:
-      description: Barangay
-      tooltip: "Barangays"
+    community:
+      description: Community
+      tooltip: "Communities"
+    mpa:
+      description: "Marine Protected Areas"
+      tooltip: "Marine Protected Areas"
+  project:
+    trip:
+      description: Tourism
+      tooltip: "Tourism Roads"
+    fmr:
+      description: Farm to Market
+      tooltip: "Farm to Market Roads"
   feature:
     points:
       description: Points

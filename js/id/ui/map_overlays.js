@@ -1,8 +1,9 @@
 iD.ui.MapOverlay = function(context) {
     var key = 'F',
         admin = ['province', 'municipality', 'barangay'],
-        destination = ['building', 'hospital', 'barangay'],
+        destination = ['building', 'hospital', 'community', 'mpa'],
         roadNetwork = ['national', 'local', 'satellite'],
+        projects = ['trip', 'fmr'],
         layerControls = context.container().select('.layer-controls'),
         mapControls = context.container().select('.map-controls');
 
@@ -73,7 +74,7 @@ iD.ui.MapOverlay = function(context) {
 
         function update() {
             networkList.call(drawList, roadNetwork, 'checkbox', 'road_network', function () {}, function () {});
-            projectList.call(drawList, admin, 'checkbox', 'admin_level', function () {}, function () {});
+            projectList.call(drawList, projects, 'checkbox', 'project', function () {}, function () {});
             governmentList.call(drawList, admin.slice(1, 2), 'checkbox', 'admin_level', getToggleSource(municipalSource), getActiveSource(municipalSource));
             destinationList.call(drawList, destination, 'checkbox', 'destination', function () {}, function () {});
 
@@ -148,7 +149,7 @@ iD.ui.MapOverlay = function(context) {
             tooltip = bootstrap.tooltip()
                 .placement('left')
                 .html(true)
-                .title(iD.ui.tooltipHtml(t('map_data.description'), key)),
+                .title(iD.ui.tooltipHtml(t('map_overlay.description'), key)),
             button = selection.append('button')
                 .attr('tabindex', -1)
                 .on('click', togglePanel)
@@ -185,13 +186,13 @@ iD.ui.MapOverlay = function(context) {
             .classed('hide-toggle', true)
             .classed('expanded', true);
 
-        var projects = content.append('div')
+        var projectContainer = content.append('div')
             .attr('class', 'filters');
 
-        var projectList = projects.append('ul')
+        var projectList = projectContainer.append('ul')
             .attr('class', 'overlay-list');
 
-        projectToggle.on('click', toggleDropdown(projects));
+        projectToggle.on('click', toggleDropdown(projectContainer));
 
         // government layers
         var governmentToggle = content.append('a')

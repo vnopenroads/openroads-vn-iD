@@ -13961,6 +13961,7 @@ iD.data = {
         },
         "map_overlay": {
             "title": "Map Overlays",
+            "description": "Map Overlays",
             "road_network": "Road Networks",
             "projects": "Projects",
             "government": "Local Government",
@@ -13988,7 +13989,7 @@ iD.data = {
             },
             "municipality": {
                 "description": "Municipality",
-                "tooltip": "Municipal"
+                "tooltip": "City-Municipality"
             },
             "barangay": {
                 "description": "Barangay",
@@ -14004,9 +14005,23 @@ iD.data = {
                 "description": "Hospitals",
                 "tooltip": "Hospitals"
             },
-            "barangay": {
-                "description": "Barangay",
-                "tooltip": "Barangays"
+            "community": {
+                "description": "Community",
+                "tooltip": "Communities"
+            },
+            "mpa": {
+                "description": "Marine Protected Areas",
+                "tooltip": "Marine Protected Areas"
+            }
+        },
+        "project": {
+            "trip": {
+                "description": "Tourism",
+                "tooltip": "Tourism Roads"
+            },
+            "fmr": {
+                "description": "Farm to Market",
+                "tooltip": "Farm to Market Roads"
             }
         },
         "feature": {
