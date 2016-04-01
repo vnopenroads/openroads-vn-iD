@@ -15,12 +15,13 @@ iD.ui.Save = function(context) {
 
     return function(selection) {
         var tooltip = bootstrap.tooltip()
-            .placement('bottom')
+            .placement('left')
             .html(true)
             .title(iD.ui.tooltipHtml(t('save.no_changes'), key));
 
         var button = selection.append('button')
-            .attr('class', 'save col12 disabled')
+            // .attr('class', 'save col12 disabled')
+            .attr('class', 'save disabled')
             .attr('tabindex', -1)
             .on('click', save)
             .call(tooltip);

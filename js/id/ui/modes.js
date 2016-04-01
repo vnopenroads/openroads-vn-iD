@@ -9,38 +9,41 @@ iD.ui.Modes = function(context) {
     }
 
     return function(selection) {
-        var buttons = selection.selectAll('button.add-button')
-            .data(modes);
+        var tooltip = bootstrap.tooltip()
+            .placement('left')
+            .html(true)
+            .title(function(mode) {
+                return iD.ui.tooltipHtml(mode.description, mode.key);
+            });
 
-       buttons.enter().append('button')
-           .attr('tabindex', -1)
-           .attr('class', function(mode) { return mode.id + ' add-button col4'; })
-           .on('click.mode-buttons', function(mode) {
-               if (mode.id === context.mode().id) {
-                   context.enter(iD.modes.Browse(context));
-               } else {
-                   context.enter(mode);
-               }
-           })
-           .call(bootstrap.tooltip()
-               .placement('bottom')
-               .html(true)
-               .title(function(mode) {
-                   return iD.ui.tooltipHtml(mode.description, mode.key);
-               }));
+        var buttons = selection.selectAll('.add-button')
+            .data(modes)
+            .enter().append('button')
+            .attr('tabindex', -1)
+            .attr('class', 'add-button disabled')
+            .on('click.mode-buttons', function(mode) {
+                if (mode.id === context.mode().id) {
+                    context.enter(iD.modes.Browse(context));
+                } else {
+                    context.enter(mode);
+                }
+            })
+            .call(tooltip);
+
+        buttons.append('span')
+            .attr('class', function(mode) { return mode.id + ' icon'; });
+
+        /*
+        buttons.append('span')
+            .attr('class', 'label')
+            .text(function(mode) { return mode.title; });
+        */
 
         context.map()
             .on('move.modes', _.debounce(update, 500));
 
         context
             .on('enter.modes', update);
-
-        buttons.append('span')
-            .attr('class', function(mode) { return mode.id + ' icon icon-pre-text'; });
-
-        buttons.append('span')
-            .attr('class', 'label')
-            .text(function(mode) { return mode.title; });
 
         context.on('enter.editor', function(entered) {
             buttons.classed('active', function(mode) { return entered.button === mode.button; });
