@@ -17,8 +17,7 @@ iD.ui = function(context) {
             .attr('id', 'content');
 
         var bar = content.append('div')
-            .attr('id', 'bar')
-            .attr('class', 'fillD');
+            .attr('id', 'bar');
 
         var m = content.append('div')
             .attr('id', 'map')
@@ -32,6 +31,7 @@ iD.ui = function(context) {
             map.centerZoom([122.725,11.638], 7);
         }
 
+        /*
         bar.append('div')
             .attr('class', 'spacer col4');
 
@@ -53,40 +53,67 @@ iD.ui = function(context) {
         bar.append('div')
             .attr('class', 'spinner')
             .call(iD.ui.Spinner(context));
+        */
 
-        var controls = bar.append('div')
+        var mapControls = bar.append('div')
             .attr('class', 'map-controls');
 
-        controls.append('div')
-            .attr('class', 'map-control zoombuttons')
+        mapControls.append('div')
+            .attr('class', 'layer-control zoombuttons')
             .call(iD.ui.Zoom(context));
 
-        controls.append('div')
-            .attr('class', 'map-control geolocate-control')
+        mapControls.append('div')
+            .attr('class', 'layer-control geolocate-control')
             .call(iD.ui.Geolocate(map));
 
-        controls.append('div')
-            .attr('class', 'map-control background-control')
+        var layerControls = bar.append('div')
+            .attr('class', 'layer-controls');
+
+        layerControls.append('div')
+            .attr('class', 'layer-control background-control')
             .call(iD.ui.Background(context));
 
-        controls.append('div')
-            .attr('class', 'map-control map-data-control')
-            .call(iD.ui.MapData(context));
+        layerControls.append('div')
+            .attr('class', 'layer-control map-overlay-control')
+            .call(iD.ui.MapOverlay(context));
 
-        controls.append('div')
-            .attr('class', 'map-control help-control')
-            .call(iD.ui.Help(context));
+        layerControls.append('div')
+            .attr('class', 'separator');
+
+        layerControls.append('div')
+            .attr('class', 'layer-control add-buttons')
+            .call(iD.ui.Modes(context), layerControls);
+
+        layerControls.append('div')
+            .attr('class', 'layer-control undo-redo')
+            .call(iD.ui.UndoRedo(context));
+
+        layerControls.append('div')
+            .attr('class', 'layer-control save-button')
+            .call(iD.ui.Save(context));
+
+        // OR
+        // layerControls.append('div')
+            // .attr('class', 'layer-control help-control')
+            // .call(iD.ui.Help(context));
 
         var about = content.append('div')
             .attr('id', 'about');
 
-        about.append('div')
-            .attr('id', 'attrib')
-            .call(iD.ui.Attribution(context));
+        // OR
+        // about.append('div')
+            // .attr('id', 'attrib')
+            // .call(iD.ui.Attribution(context));
 
         var footer = about.append('div')
             .attr('id', 'footer')
-            .attr('class', 'fillD');
+            // OR
+            // .attr('class', 'fillD');
+
+        // OR
+        footer.append('div')
+            .attr('id', 'attrib')
+            .call(iD.ui.Attribution(context));
 
         footer.append('div')
             .attr('id', 'scale-block')

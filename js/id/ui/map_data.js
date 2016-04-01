@@ -3,7 +3,8 @@ iD.ui.MapData = function(context) {
         features = context.features().keys(),
         fills = ['wireframe', 'partial', 'full'],
         fillDefault = context.storage('area-fill') || 'partial',
-        fillSelected = fillDefault;
+        fillSelected = fillDefault,
+        mapControls = context.container().select('.layer-controls');
 
     function map_data(selection) {
 
@@ -141,17 +142,25 @@ iD.ui.MapData = function(context) {
                     selection.on('mousedown.map_data-inside', function() {
                         return d3.event.stopPropagation();
                     });
+                    mapControls.style('right', '0px')
+                        .transition()
+                        .duration(200)
+                        .style('right', '250px');
                     content.style('display', 'block')
-                        .style('right', '-300px')
+                        .style('right', '-250px')
                         .transition()
                         .duration(200)
                         .style('right', '0px');
                 } else {
+                    mapControls.style('right', '250px')
+                        .transition()
+                        .duration(200)
+                        .style('right', '0');
                     content.style('display', 'block')
                         .style('right', '0px')
                         .transition()
                         .duration(200)
-                        .style('right', '-300px')
+                        .style('right', '-250px')
                         .each('end', function() {
                             d3.select(this).style('display', 'none');
                         });
@@ -162,7 +171,8 @@ iD.ui.MapData = function(context) {
 
 
         var content = selection.append('div')
-                .attr('class', 'fillL map-overlay col3 content hide'),
+                .attr('class', 'fillOR2 map-overlay content hide')
+                .style('width', '250px'),
             tooltip = bootstrap.tooltip()
                 .placement('left')
                 .html(true)
