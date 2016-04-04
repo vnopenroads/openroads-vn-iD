@@ -3,7 +3,17 @@ iD.openroads.ui.WayTasksSuccess = function(context) {
     function wayTasksSuccess(selection) {
         selection.append('a')
             .attr('class', 'bttn bttn-dashboard')
-            .text(t('waytasks.go_dashboards'));
+            .text(t('waytasks.go_dashboards'))
+            .on('click', function() {
+                d3.event.preventDefault();
+                if (window !== window.parent) {
+                    window.parent.postMessage({
+                      id: window.ORFID,
+                      type: 'navigate',
+                      url: '/analytics'
+                    }, '*');
+                }
+            });
 
         selection.append('button')
             .attr('class', 'bttn bttn-next')
