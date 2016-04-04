@@ -14208,6 +14208,7 @@ iD.data = {
             "title": "Way Tasks",
             "loading": "Loading way tasks",
             "empty": "All way tasks were fixed",
+            "error": "Failed loading way tasks",
             "go_dashboards": "Go to Dashboards",
             "next_task": "Next task"
         },

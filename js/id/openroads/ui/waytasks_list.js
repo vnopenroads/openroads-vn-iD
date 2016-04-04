@@ -42,6 +42,9 @@ iD.openroads.ui.WayTasksList = function(context) {
         // Trigger network request.
         context.waytasks().load(wayid, function(err, waytask) {
             if (!selection.empty()) {
+                if (err) {
+                    return renderContent(selection, {loadingState: 'errored'});
+                }
                 renderContent(selection, waytask);
             }
         });
@@ -64,10 +67,21 @@ iD.openroads.ui.WayTasksList = function(context) {
             .style('display', 'none')
             .text(t('waytasks.empty'));
 
+        $enter.append('p')
+            .attr('class', 'waytasks-error')
+            .style('display', 'none')
+            .text(t('waytasks.error'));
+
 
         if (wayTask.loadingState === 'loading') {
             selection.select('.waytasks-list').remove();
             selection.select('.waytasks-loading').style('display', null);
+            selection.select('.waytasks-error').style('display', 'none');
+        }
+        else if (wayTask.loadingState === 'errored') {
+            selection.select('.waytasks-list').remove();
+            selection.select('.waytasks-loading').style('display', 'none');
+            selection.select('.waytasks-error').style('display', null);
         }
         else {
             selection.select('.waytasks-loading').style('display', 'none');

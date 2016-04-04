@@ -36,7 +36,11 @@ iD.openroads.WayTasks = function(context) {
                     return cb(null, json);
                 })
                 .catch(function(err) {
-
+                    var wayIndex = exp.getIndex(wayid);
+                    if (wayIndex !== -1) {
+                        loadedTasks.splice(wayIndex, 1);
+                    }
+                    return cb(err);
                 });
 
             return cb(null, placeholder);
