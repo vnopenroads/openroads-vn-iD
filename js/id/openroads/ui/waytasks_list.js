@@ -8,9 +8,11 @@ iD.openroads.ui.WayTasksList = function(context) {
         // ----------------------------
         // Dev notes. (to remove)
         // ----------------------------
-        // An option was added to the preset (or-responsibility) indication
-        // whether or not to fetch way tasks for this feature:
-        // preset.wayTasks
+        // Tasks are fetched for every feature with:
+        // - field or_responsibility
+        // or
+        // - tag or_responsibility = '*'
+        // _.find(preset.fields, {key: 'or_responsibility'})
         //
         // If there are way tasks, show a loading indication, fetch the tasks
         // and show the list.
@@ -22,7 +24,7 @@ iD.openroads.ui.WayTasksList = function(context) {
         // ----------------------------
         // Should tasks be shown?
         var wayid = parseInt(id.replace('w', ''));
-        if (!preset.wayTasks || wayid < 0) {
+        if (!_.find(preset.fields, {key: 'or_responsibility'}) && !preset.tags.or_responsibility || wayid < 0) {
             // No tasks. Do nothing.
             selection.style('display', 'none');
             return;
