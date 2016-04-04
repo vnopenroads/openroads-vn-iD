@@ -30,16 +30,16 @@ iD.modes.Save = function(context) {
         // not a big deal, since when the worker runs task will be checked.
         // ---------------------------------------------------
 
-console.log('getModifiedWays', context.waytasks().getModifiedWays());
+// console.log('getModifiedWays', context.waytasks().getModifiedWays());
 
-        // context.connection().putChangeset(
-        //     context.history().changes(iD.actions.DiscardTags(context.history().difference())),
-        //     e.comment,
-        //     context.history().imageryUsed(),
-        //     function(err, changeset_id) {
-setTimeout(function() {
-var err = false;
-var changeset_id = 1;
+        context.connection().putChangeset(
+            context.history().changes(iD.actions.DiscardTags(context.history().difference())),
+            e.comment,
+            context.history().imageryUsed(),
+            function(err, changeset_id) {
+// setTimeout(function() {
+// var err = false;
+// var changeset_id = 1;
                 loading.close();
                 if (err) {
                     var confirm = iD.ui.confirm(context.container());
@@ -55,8 +55,8 @@ var changeset_id = 1;
                     context.flush();
                     success(e, changeset_id);
                 }
- }, 100);
-        //     });
+ // }, 100);
+            });
     }
 
     function success(e, changeset_id) {
