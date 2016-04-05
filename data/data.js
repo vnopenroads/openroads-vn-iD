@@ -14219,6 +14219,14 @@ iD.data = {
                 "start": "Start mapping!"
             }
         },
+        "waytasks": {
+            "title": "Errors Detected",
+            "loading": "Loading way error",
+            "empty": "All error were fixed!",
+            "error": "Failed loading way error",
+            "go_dashboards": "Go to Dashboards",
+            "next_task": "Next task"
+        },
         "presets": {
             "categories": {
                 "category-access-road": {

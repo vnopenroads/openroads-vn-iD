@@ -269,6 +269,11 @@ window.iD = function () {
         return context;
     };
 
+    /* Tasks */
+    var waytasks = iD.openroads.WayTasks(context);
+
+    context.waytasks = function() { return waytasks; };
+
     /* Taginfo */
     var taginfo;
     context.taginfo = function(_) {

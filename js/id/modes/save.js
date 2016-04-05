@@ -15,11 +15,31 @@ iD.modes.Save = function(context) {
         context.container()
             .call(loading);
 
+        // ---------------------------------------------------
+        // What is going on here?
+        //
+        // To avoid continuously saving stuff the instruction was commented
+        // out and replaced by a simulation with setTimeout.
+        //
+        // Left to do here is:
+        // - get modified waysid -- context.waytasks().getModifiedWays()
+        // - Save to the database using:
+        // context.waytasks().submitModifiedWays() -> Not implemented.
+        //
+        // This save can be silent. If it works great, but if it fails it's
+        // not a big deal, since when the worker runs task will be checked.
+        // ---------------------------------------------------
+
+// console.log('getModifiedWays', context.waytasks().getModifiedWays());
+
         context.connection().putChangeset(
             context.history().changes(iD.actions.DiscardTags(context.history().difference())),
             e.comment,
             context.history().imageryUsed(),
             function(err, changeset_id) {
+// setTimeout(function() {
+// var err = false;
+// var changeset_id = 1;
                 loading.close();
                 if (err) {
                     var confirm = iD.ui.confirm(context.container());
@@ -35,6 +55,7 @@ iD.modes.Save = function(context) {
                     context.flush();
                     success(e, changeset_id);
                 }
+ // }, 100);
             });
     }
 

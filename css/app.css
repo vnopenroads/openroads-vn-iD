@@ -3221,3 +3221,53 @@ img.wiki-image {
     background: rgba(0, 0, 0, 0) url(img/sprite.svg) no-repeat -400px -220px;
     margin: auto;
 }
+
+
+/*
+  ------------------------------------------------------------------------------
+    Waytasks related styling.
+*/
+.waytasks-list {
+    border:1px solid #ccc;
+    border-radius: 4px;
+    background:#fff;
+}
+
+.waytasks-list li {
+    border-top: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+.waytasks-list li:first-child {
+    border-top: 0;
+}
+
+.waytasks-success .bttn {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 15px 0 0;
+    background: #7092ff;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.5;
+    height: auto;
+    transition: background 100ms;
+}
+
+.waytasks-success .bttn:hover,
+.waytasks-success .bttn:active {
+    background: #597be7;
+    color: #fff;
+}
+
+.waytasks-success .bttn:last-child {
+    margin-right: 0;
+}
+
+.waytasks-success {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
