@@ -1,20 +1,24 @@
 iD.ui.Sidebar = function(context) {
     var inspector = iD.ui.Inspector(context),
+        noticeSelect = iD.ui.NoticeSelect(context),
         current;
 
     function sidebar(selection) {
-        var featureListWrap = selection.append('div')
-            .attr('class', 'feature-list-pane')
-            .call(iD.ui.FeatureList(context));
+        // var featureListWrap = selection.append('div')
+        //     .attr('class', 'feature-list-pane')
+        //     .call(iD.ui.FeatureList(context));
 
         selection.call(iD.ui.Notice(context));
+
+        selection.call(noticeSelect);
 
         var inspectorWrap = selection.append('div')
             .attr('class', 'inspector-hidden inspector-wrap fr');
 
         sidebar.hover = function(id) {
             if (!current && id) {
-                featureListWrap.classed('inspector-hidden', true);
+                // featureListWrap.classed('inspector-hidden', true);
+                noticeSelect.hide();
                 inspectorWrap.classed('inspector-hidden', false)
                     .classed('inspector-hover', true);
 
@@ -26,7 +30,8 @@ iD.ui.Sidebar = function(context) {
                     inspectorWrap.call(inspector);
                 }
             } else if (!current) {
-                featureListWrap.classed('inspector-hidden', false);
+                // featureListWrap.classed('inspector-hidden', false);
+                noticeSelect.show();
                 inspectorWrap.classed('inspector-hidden', true);
                 inspector.state('hide');
             }
@@ -36,7 +41,8 @@ iD.ui.Sidebar = function(context) {
 
         sidebar.select = function(id, newFeature) {
             if (!current && id) {
-                featureListWrap.classed('inspector-hidden', true);
+                // featureListWrap.classed('inspector-hidden', true);
+                noticeSelect.hide();
                 inspectorWrap.classed('inspector-hidden', false)
                     .classed('inspector-hover', false);
 
@@ -49,14 +55,16 @@ iD.ui.Sidebar = function(context) {
                     inspectorWrap.call(inspector);
                 }
             } else if (!current) {
-                featureListWrap.classed('inspector-hidden', false);
+                // featureListWrap.classed('inspector-hidden', false);
+                noticeSelect.show();
                 inspectorWrap.classed('inspector-hidden', true);
                 inspector.state('hide');
             }
         };
 
         sidebar.show = function(component) {
-            featureListWrap.classed('inspector-hidden', true);
+            // featureListWrap.classed('inspector-hidden', true);
+            noticeSelect.hide();
             inspectorWrap.classed('inspector-hidden', true);
             if (current) current.remove();
             current = selection.append('div')
@@ -65,7 +73,8 @@ iD.ui.Sidebar = function(context) {
         };
 
         sidebar.hide = function() {
-            featureListWrap.classed('inspector-hidden', false);
+            // featureListWrap.classed('inspector-hidden', false);
+            noticeSelect.show();
             inspectorWrap.classed('inspector-hidden', true);
             if (current) current.remove();
             current = null;

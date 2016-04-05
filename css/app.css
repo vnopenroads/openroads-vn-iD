@@ -2814,6 +2814,15 @@ img.wiki-image {
     background-position: -240px -40px;
 }
 
+.notice--select-feature {
+    margin: auto;
+    color: #000;
+    opacity: 0.9;
+    font-weight: bold;
+    height: 20px;
+    line-height: 1;
+}
+
 /* Tooltips
 ------------------------------------------------------- */
 
