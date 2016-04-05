@@ -49,6 +49,9 @@ iD.ui.EntityEditor = function(context) {
             .attr('class', 'inspector-body');
 
         $enter.append('div')
+            .attr('class', 'inspector-border waytasks inspector-inner');
+
+        $enter.append('div')
             .attr('class', 'preset-list-item inspector-inner')
             .append('div')
             .attr('class', 'preset-list-button-wrap')
@@ -77,9 +80,6 @@ iD.ui.EntityEditor = function(context) {
         
         $enter.append('div')
             .attr('class', 'inspector-border raw-tag-editor inspector-inner');
-
-        $enter.append('div')
-            .attr('class', 'inspector-border waytasks inspector-inner');
 
         selection.selectAll('.preset-reset')
             .on('click', function() {
