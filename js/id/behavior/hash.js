@@ -18,7 +18,7 @@ iD.behavior.Hash = function(context) {
             center = map.center(),
             zoom = map.zoom(),
             precision = Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2)),
-            q = _.omit(iD.util.stringQs(location.hash.substring(1)), 'comment'),
+            q = _.omit(iD.util.stringQs(location.hash.substring(1)), ['comment', 'bounds']),
             newParams = {};
 
         if (mode && mode.id === 'browse') {
@@ -53,14 +53,12 @@ iD.behavior.Hash = function(context) {
             var center = extent.center();
             var map = context.map();
             var zoom = map.extentZoom(extent);
-            delete q.bounds;
+            // delete q.bounds;
             var s = iD.util.qsString(_.assign(q, {
                 map: zoom + '/' + center.join('/')
             }), true);
             parser(map, (s0 = s));
-            window.location.hash = '#' + s;
-        } else {
-            hashchange();
+            // window.location.hash = '#' + s;
         }
     }
 
@@ -86,7 +84,7 @@ iD.behavior.Hash = function(context) {
             if (q.id) context.loadEntity(q.id.split(',')[0], !q.map);
             if (q.comment) context.storage('comment', q.comment);
             if (q.bounds) initialBounds(q);
-            else hashchange();
+            hashchange();
             if (q.map) hash.hadHash = true;
         }
     }
