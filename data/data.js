@@ -14227,6 +14227,7 @@ iD.data = {
             "go_dashboards": "Go to Dashboards",
             "next_task": "Next task"
         },
+        "select_feature_edit": "Select a feature to edit",
         "presets": {
             "categories": {
                 "category-access-road": {

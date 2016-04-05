@@ -734,3 +734,4 @@ en:
     error: "Failed loading way error"
     go_dashboards: "Go to Dashboards"
     next_task: "Next task"
+  select_feature_edit: Select a feature to edit
