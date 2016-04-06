@@ -2,7 +2,7 @@ iD.ui.MapOverlay = function(context) {
     var key = 'F',
         admin = ['province', 'municipality', 'barangay'],
         destination = ['building', 'hospital', 'community', 'mpa'],
-        roadNetwork = ['national', 'local', 'satellite'],
+        roadNetwork = ['openroads'],
         projects = ['trip', 'fmr'],
         layerControls = context.container().select('.layer-controls'),
         mapControls = context.container().select('.map-controls');
@@ -11,6 +11,12 @@ iD.ui.MapOverlay = function(context) {
         .sources(context.map().extent())
         .find(function (d) {
             return d.id === 'grid';
+        });
+
+    var roadSource = context.background()
+        .sources(context.map().extent())
+        .find(function (d) {
+            return d.id === 'ornetwork';
         });
 
     var municipalSource = context.background()
@@ -73,8 +79,8 @@ iD.ui.MapOverlay = function(context) {
         }
 
         function update() {
-            networkList.call(drawList, roadNetwork, 'checkbox', 'road_network', function () {}, function () {});
-            projectList.call(drawList, projects, 'checkbox', 'project', function () {}, function () {});
+            networkList.call(drawList, roadNetwork, 'checkbox', 'road_network', getToggleSource(roadSource), getActiveSource(roadSource));
+            projectList.call(drawList, projects, 'checkbox', 'project',  function () {}, function () {});
             governmentList.call(drawList, admin.slice(1, 2), 'checkbox', 'admin_level', getToggleSource(municipalSource), getActiveSource(municipalSource));
             destinationList.call(drawList, destination, 'checkbox', 'destination', function () {}, function () {});
 
