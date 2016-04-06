@@ -13911,6 +13911,7 @@ iD.data = {
             "no_documentation_key": "There is no documentation available for this key",
             "show_more": "Show More",
             "view_on_osm": "View on openstreetmap.org",
+            "view_on_or_api": "View on OpenRoads API",
             "all_tags": "All tags",
             "all_members": "All members",
             "all_relations": "All relations",
