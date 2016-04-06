@@ -63,6 +63,9 @@ dist/iD.js: \
 	js/id/presets.js \
 	js/id/presets/*.js \
 	js/id/validate.js \
+	js/id/openroads.js \
+	js/id/openroads/*.js \
+	js/id/openroads/ui/*.js \
 	js/id/end.js \
 	js/lib/locale.js \
 	data/introGraph.js
