@@ -22,6 +22,7 @@
             16
         ],
         "overzoom": false,
+        "id": "ornetwork",
         "default": true,
         "overlay": true
     },
@@ -52,6 +53,36 @@
         "id": "grid",
         "overzoom": false,
         "overlay": true
+    },
+    {
+        "name": "Port Barton - September 2015",
+        "type": "tms",
+        "vector": false,
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.6i9inhlt/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
+        "name": "Port Barton - February 2016",
+        "type": "tms",
+        "vector": false,
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.54xkwcml/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
+        "name": "Puerto Princesa - September 2015",
+        "type": "tms",
+        "vector": false,
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.1hwextr8/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
+        "scaleExtent": [
+            0,
+            19
+        ]
     },
     {
         "name": "Mapbox Satellite",
