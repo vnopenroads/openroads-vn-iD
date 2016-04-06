@@ -53,17 +53,18 @@ iD.behavior.Hash = function(context) {
             var center = extent.center();
             var map = context.map();
             var zoom = map.extentZoom(extent);
-            // delete q.bounds;
             var s = iD.util.qsString(_.assign(q, {
                 map: zoom + '/' + center.join('/')
             }), true);
             parser(map, (s0 = s));
-            // window.location.hash = '#' + s;
         }
     }
 
     function hashchange() {
         if (location.hash === s0) return; // ignore spurious hashchange events
+        var q = iD.util.stringQs(location.hash.substring(1));
+        if (q.bounds) return initialBounds(q);
+
         if (parser(context.map(), (s0 = location.hash).substring(1))) {
             update(); // replace bogus hash
         }
