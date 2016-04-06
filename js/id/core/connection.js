@@ -31,7 +31,6 @@ iD.Connection = function() {
     };
 
     connection.base = function() {
-        // return 'http://localhost:4000';
         return openroads;
     };
 
@@ -45,7 +44,7 @@ iD.Connection = function() {
     };
 
     connection.entityURL = function(entity) {
-        return openroads + '/' + entity.type + 's/' + entity.osmId();
+        return openroads + '/xml/' + entity.type + '/' + entity.osmId();
     };
 
     // TODO endpoint also hasn't been implemented yet.
