@@ -14225,6 +14225,7 @@ iD.data = {
             "loading": "Loading way error",
             "empty": "All error were fixed!",
             "error": "Failed loading way error",
+            "in_review": "There errors are currently being reviewed by the system",
             "go_dashboards": "Go to Dashboards",
             "next_task": "Next task"
         },

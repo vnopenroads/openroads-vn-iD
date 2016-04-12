@@ -30,8 +30,6 @@ iD.modes.Save = function(context) {
         // not a big deal, since when the worker runs task will be checked.
         // ---------------------------------------------------
 
-// console.log('getModifiedWays', context.waytasks().getModifiedWays());
-
         context.connection().putChangeset(
             context.history().changes(iD.actions.DiscardTags(context.history().difference())),
             e.comment,
@@ -40,6 +38,10 @@ iD.modes.Save = function(context) {
 // setTimeout(function() {
 // var err = false;
 // var changeset_id = 1;
+                var modifiedWays = context.waytasks().getModifiedWays();
+                // This save is silent. If it works great, but if it fails it's
+                // not a big deal, since when the worker runs task will be checked.
+                context.waytasks().submitModifiedWays(modifiedWays);
                 loading.close();
                 if (err) {
                     var confirm = iD.ui.confirm(context.container());

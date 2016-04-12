@@ -14,7 +14,8 @@ iD.openroads.WayTasks = function(context) {
             // Create loading placeholder.
             var placeholder = {
                 way_id: wayid,
-                loadingState: 'loading'
+                loadingState: 'loading',
+                state: 'active'
             };
             loadedTasks.push(placeholder);
 
@@ -72,65 +73,24 @@ iD.openroads.WayTasks = function(context) {
     };
 
     exp.submitModifiedWays = function(wayids) {
-        // Connect
+        // Mark the waytasks as "pending".
+        // This is just client side, but since this data is removed when
+        // the workers run, it's not a problem.
+        _.forEach(wayids, function(wid) {
+            exp.get(wid).state = 'pending';
+        });
+
+        qwest.put(context.connection().base() + '/admin/waytasks/state', {
+            pending: wayids
+        }, {
+            dataType: 'json',
+            responseType: 'json',
+        }).then(function(response) {
+            console.log('submitModifiedWays', response);
+        }).catch(function(error) {
+            console.error('submitModifiedWays', error);
+        });
     };
-
-    // exp.store = function() {
-    //     context.storage('openroads.Tasks', JSON.stringify(loadedTasks));
-    // };
-
-    // exp.restore = function() {
-    //     try {
-    //         var storedData = JSON.parse(context.storage('openroads.Tasks'));
-    //         _.forEach(loadedTasks, function(l) {
-    //             var exist = _.find(storedData, { id: l.id });
-    //             if (!exist) {
-    //                 storedData.push(l);
-    //             }
-    //         });
-    //         loadedTasks = storedData;
-    //     } catch(e) {
-    //         // Leave empty as default.
-    //     }
-    // };
-
-    // exp.reset = function() {
-    //     loadedTasks = [];
-    //     context.storage('openroads.Tasks', null);
-    // };
-
-    // exp.complete = function(id, status) {
-    //     console.log('complete', id, status);
-    //     // Without arguments return all the completed tasks.
-    //     if (arguments.length === 0) {
-    //         return _.where(loadedTasks, {complete: true});
-    //     }
-    //     // With only the id return the completeness of the given task.
-    //     var task = _.find(loadedTasks, { id: id });
-    //     if (arguments.length === 1) {
-    //         return task ? task.complete : null;
-    //     }
-    //     // With both arguments, set the status.
-    //     if (task) {
-    //         task.complete = status;
-    //         return status;
-    //     }
-
-    //     return null;
-    // };
-
-    // exp.completeToggle = function(id) {
-    //     return exp.complete(id, !exp.complete(id));
-    // };
-
-    // exp.get = function(id) {
-    //     if (id) {
-    //         var task = _.find(loadedTasks, { id: id });
-    //         return task ? task : null;
-    //     }
-    //     return loadedTasks;
-    // };
-
 
     return exp;
 };

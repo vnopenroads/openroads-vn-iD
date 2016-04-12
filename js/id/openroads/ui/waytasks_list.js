@@ -52,44 +52,48 @@ iD.openroads.ui.WayTasksList = function(context) {
 
     function renderContent(selection, wayTask) {
 
-        var $loading = selection.selectAll('.waytasks-loading')
-            .data([0]);
-
-        var $enter = $loading.enter();
+        var $enter = selection.selectAll('.waytasks-info')
+            .data([0])
+            .enter();
 
         $enter.append('p')
-            .attr('class', 'waytasks-loading')
-            .style('display', 'none')
+            .attr('class', 'waytasks-info waytasks-loading')
             .text(t('waytasks.loading'));
 
         $enter.append('p')
-            .attr('class', 'waytasks-empty')
-            .style('display', 'none')
+            .attr('class', 'waytasks-info waytasks-empty')
             .text(t('waytasks.empty'));
 
         $enter.append('p')
-            .attr('class', 'waytasks-error')
-            .style('display', 'none')
+            .attr('class', 'waytasks-info waytasks-error')
             .text(t('waytasks.error'));
+
+        $enter.append('p')
+            .attr('class', 'waytasks-info waytasks-review')
+            .text(t('waytasks.in_review'));
+
+        // Hide them all and show what's needed.
+        selection.selectAll('.waytasks-info').style('display', 'none');
 
 
         if (wayTask.loadingState === 'loading') {
             selection.select('.waytasks-list').remove();
             selection.select('.waytasks-loading').style('display', null);
-            selection.select('.waytasks-error').style('display', 'none');
         }
         else if (wayTask.loadingState === 'errored') {
             selection.select('.waytasks-list').remove();
-            selection.select('.waytasks-loading').style('display', 'none');
             selection.select('.waytasks-error').style('display', null);
         }
         else {
-            selection.select('.waytasks-loading').style('display', 'none');
-
             if (wayTask.tasks.length === 0) {
                 selection.select('.waytasks-empty').style('display', null);
             }
             else {
+                // In review?
+                if (wayTask.state === 'pending') {
+                    selection.select('.waytasks-review').style('display', null);
+                }
+
                 var $ul = selection.selectAll('.waytasks-list')
                     .data([0]);
 

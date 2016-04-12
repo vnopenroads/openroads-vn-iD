@@ -3280,3 +3280,10 @@ img.wiki-image {
     padding: 10px;
     text-align: center;
 }
+
+/* Waytasks info messages */
+.waytasks-review {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 16px; 
+}
