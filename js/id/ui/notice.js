@@ -26,7 +26,8 @@ iD.ui.Notice = function(context) {
 };
 
 iD.ui.NoticeSelect = function(context) {
-    var container;
+    var container,
+        forced = false;
 
     function noticeSelect(selection) {
         container = selection.append('div')
@@ -37,6 +38,7 @@ iD.ui.NoticeSelect = function(context) {
             .text(t('select_feature_edit'));
 
         function disableTooHigh() {
+            if (forced) return;
             container.style('display', context.editable() ? 'block' : 'none');
         }
 
@@ -47,11 +49,19 @@ iD.ui.NoticeSelect = function(context) {
     };
 
     noticeSelect.show = function() {
+        forced = false;
         container.style('display', context.editable() ? 'block' : 'none');
     }
 
     noticeSelect.hide = function() {
         container.style('display', 'none');
+    }
+
+    // When loading a way from the dashboards we have to force the notice
+    // to stay hidden, because the 'move.notice-select' event will be triggered.
+    noticeSelect.forceHide = function() {
+        forced = true;
+        noticeSelect.hide();
     }
 
     return noticeSelect;
