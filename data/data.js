@@ -14221,11 +14221,11 @@ iD.data = {
             }
         },
         "waytasks": {
-            "title": "Errors Detected",
-            "loading": "Loading way error",
-            "empty": "All error were fixed!",
-            "error": "Failed loading way error",
-            "in_review": "There errors are currently being reviewed by the system",
+            "title": "Tasks remaining",
+            "loading": "Loading...",
+            "empty": "No tasks to show",
+            "error": "Oops, failed to load tasks",
+            "in_review": "Note: some tasks currently under review",
             "go_dashboards": "Go to Dashboards",
             "next_task": "Next task"
         },
