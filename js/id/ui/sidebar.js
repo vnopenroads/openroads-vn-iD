@@ -42,7 +42,7 @@ iD.ui.Sidebar = function(context) {
         sidebar.select = function(id, newFeature) {
             if (!current && id) {
                 // featureListWrap.classed('inspector-hidden', true);
-                noticeSelect.hide();
+                noticeSelect.forceHide();
                 inspectorWrap.classed('inspector-hidden', false)
                     .classed('inspector-hover', false);
 
