@@ -52,74 +52,66 @@ iD.openroads.ui.WayTasksList = function(context) {
 
     function renderContent(selection, wayTask) {
 
-        var $enter = selection.selectAll('.waytasks-info')
-            .data([0])
-            .enter();
+        wayTask.tasks = wayTask.tasks || [];
 
-        $enter.append('p')
-            .attr('class', 'waytasks-info waytasks-loading')
-            .text(t('waytasks.loading'));
-
-        $enter.append('p')
-            .attr('class', 'waytasks-info waytasks-empty')
-            .text(t('waytasks.empty'));
-
-        $enter.append('p')
-            .attr('class', 'waytasks-info waytasks-error')
-            .text(t('waytasks.error'));
-
-        $enter.append('p')
-            .attr('class', 'waytasks-info waytasks-review')
-            .text(t('waytasks.in_review'));
-
-        // Hide them all and show what's needed.
-        selection.selectAll('.waytasks-info').style('display', 'none');
-
-
-        if (wayTask.loadingState === 'loading') {
-            selection.select('.waytasks-list').remove();
-            selection.select('.waytasks-loading').style('display', null);
-        }
-        else if (wayTask.loadingState === 'errored') {
-            selection.select('.waytasks-list').remove();
-            selection.select('.waytasks-error').style('display', null);
-        }
-        else {
-            if (wayTask.tasks.length === 0) {
-                selection.select('.waytasks-empty').style('display', null);
+        function taskStatus (d) {
+            if (d.loadingState === 'loading') {
+                return t('waytasks.loading');
+            }
+            else if (d.loading === 'errored') {
+                return t('waytasks.error');
+            }
+            else if (d.state === 'pending') {
+                return t('waytasks.in_review');
+            }
+            else if (!d.tasks.length) {
+                return t('waytasks.empty');
             }
             else {
-                // In review?
-                if (wayTask.state === 'pending') {
-                    selection.select('.waytasks-review').style('display', null);
-                }
-
-                var $ul = selection.selectAll('.waytasks-list')
-                    .data([0]);
-
-                $ul.enter().append('ul')
-                    .attr('class', 'waytasks-list');
-
-                var $items = $ul.selectAll('li')
-                    .data(wayTask.tasks);
-
-                // Enter.
-                $enter = $items.enter().append('li')
-                    .attr('class', 'waytasks-item');
-
-                // $enter.append('p')
-                //     .attr('class', 'waytasks-type');
-                $enter.append('p')
-                    .attr('class', 'waytasks-description');
-
-                // Update.
-                // $items.select('.waytasks-type').text(function (d) { return d.type})
-                $items.select('.waytasks-description').text(function (d) { return d.details})
-
-                // Exit.
-                $items.exit()
-                    .remove();
+                return ''
             }
+        }
+
+        function isPending (d) {
+            return d.state === 'pending';
+        }
+
+        var status = selection.selectAll('.waytasks-status')
+            .data([wayTask]);
+
+        status.text(taskStatus)
+            .classed('waytasks-review', isPending);
+
+        status.enter().append('p')
+            .attr('class', 'waytasks-status')
+            .classed('waytasks-review', isPending)
+            .text(taskStatus);
+
+        status.exit().remove();
+
+        var tasks = selection.selectAll('.waytasks-list');
+
+        if (tasks.empty()) {
+            tasks = selection.append('ul')
+                .attr('class', 'waytasks-list');
+        }
+
+        var task = tasks.selectAll('.waytasks-item')
+            .data(wayTask.tasks);
+
+        task.text(function (d) { return d.details; });
+
+        task.enter().append('li')
+            .attr('class', 'waytasks-item')
+            .text(function (d) { return d.details; });
+
+        task.exit().remove();
+
+        if (wayTask.tasks.length) {
+            tasks.style('display', null);
+        }
+        else {
+            tasks.style('display', 'none');
         }
     }
 
