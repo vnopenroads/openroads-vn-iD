@@ -20,7 +20,9 @@ iD.Map = function(context) {
         labels = iD.svg.Labels(projection, context),
         supersurface, surface,
         mouse,
-        mousemove;
+        mousemove,
+        mouseLatLon,
+        nextTick = iD.util.nextTick();
 
     function map(selection) {
         context.history()
@@ -56,6 +58,17 @@ iD.Map = function(context) {
 
         surface.on('mousemove.map', function() {
             mousemove = d3.event;
+
+            // change lat/lon display
+            nextTick(function () {
+                var coords = projection.invert(
+                    [mousemove.layerX, mousemove.layerY]);
+                mouseLatLon.text(coords.join(', '));
+            });
+        });
+
+        surface.on('mouseout.map', function() {
+            mouseLatLon.text('');
         });
 
         surface.on('mouseover.vertices', function() {
@@ -73,6 +86,9 @@ iD.Map = function(context) {
                 dispatch.drawn({full: false});
             }
         });
+
+        mouseLatLon = selection.append('p')
+            .attr('class', 'mouse-lat-lon');
 
         context.on('enter.map', function() {
             if (map.editable() && !transformed) {
