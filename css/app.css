@@ -3286,3 +3286,12 @@ img.wiki-image {
     font-style: italic;
     margin-bottom: 8px;
 }
+
+/* Mouse lat lon location indicator */
+.mouse-lat-lon {
+    color: #ccc;
+    text-align: right;
+    position: absolute;
+    bottom: 2px;
+    right: 50px;
+}
