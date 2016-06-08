@@ -13981,6 +13981,10 @@ iD.data = {
             "satellite": {
                 "description": "Satellite Projections",
                 "tooltip": "Satellite Projections"
+            },
+            "openroads": {
+                "description": "OpenRoads network",
+                "tooltip": "OpenRoads Network"
             }
         },
         "admin_level": {
