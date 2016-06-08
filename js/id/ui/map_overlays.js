@@ -1,29 +1,29 @@
 iD.ui.MapOverlay = function(context) {
     var key = 'F',
         admin = ['province', 'municipality', 'barangay'],
-        destination = ['building', 'hospital', 'community', 'mpa'],
+        destination = ['mpa'],
         roadNetwork = ['openroads'],
-        projects = ['trip', 'fmr'],
         layerControls = context.container().select('.layer-controls'),
         mapControls = context.container().select('.map-controls');
 
-    var gridSource = context.background()
-        .sources(context.map().extent())
-        .find(function (d) {
-            return d.id === 'grid';
-        });
+    var background = context.background()
+        .sources(context.map().extent());
 
-    var roadSource = context.background()
-        .sources(context.map().extent())
-        .find(function (d) {
-            return d.id === 'ornetwork';
-        });
+    var gridSource = background.find(function (d) {
+        return d.id === 'grid';
+    });
 
-    var municipalSource = context.background()
-        .sources(context.map().extent())
-        .find(function (d) {
-            return d.id === 'municipality';
-        });
+    var roadSource = background.find(function (d) {
+        return d.id === 'ornetwork';
+    });
+
+    var municipalSource = background.find(function (d) {
+        return d.id === 'municipality';
+    });
+
+    var projectSources = background.filter(function (d) {
+        return d.type === 'wmts';
+    });
 
     function map_overlay(selection) {
 
@@ -48,7 +48,7 @@ iD.ui.MapOverlay = function(context) {
             };
         }
 
-        function drawList(selection, data, type, name, change, active) {
+        function drawList(selection, data, type, name, change, active, text) {
             var items = selection.selectAll('li')
                 .data(data);
 
@@ -65,7 +65,7 @@ iD.ui.MapOverlay = function(context) {
                 .on('change', change);
 
             label.append('span')
-                .text(function(d) { return t(name + '.' + d + '.description'); });
+            .text(text);
 
             //update
             items
@@ -78,11 +78,44 @@ iD.ui.MapOverlay = function(context) {
                 .remove();
         }
 
+        function description (name) {
+            return function (d) {
+                return t(name + '.' + d + '.description');
+            }
+        }
+
         function update() {
-            networkList.call(drawList, roadNetwork, 'checkbox', 'road_network', getToggleSource(roadSource), getActiveSource(roadSource));
-            projectList.call(drawList, projects, 'checkbox', 'project',  function () {}, function () {});
-            governmentList.call(drawList, admin.slice(1, 2), 'checkbox', 'admin_level', getToggleSource(municipalSource), getActiveSource(municipalSource));
-            destinationList.call(drawList, destination, 'checkbox', 'destination', function () {}, function () {});
+            networkList.call(drawList,
+                roadNetwork,
+                'checkbox',
+                'road_network',
+                getToggleSource(roadSource),
+                getActiveSource(roadSource),
+                description('road_network'));
+
+            projectList.call(drawList,
+                projectSources,
+                'checkbox',
+                'project',
+                toggleOverlay,
+                activeOverlay,
+                function (d) { console.log(d); return d.description; });
+
+            governmentList.call(drawList,
+                admin.slice(1, 2),
+                'checkbox',
+                'admin_level',
+                getToggleSource(municipalSource),
+                getActiveSource(municipalSource),
+                description('admin_level'));
+
+            destinationList.call(drawList,
+                destination,
+                'checkbox',
+                'destination',
+                function () {},
+                function () {},
+                description('destination'));
 
             content.select('.toggle-switch input')
                 .property('checked', context.background().showsLayer(gridSource));
