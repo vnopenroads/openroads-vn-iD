@@ -55,11 +55,165 @@
         "overlay": true
     },
     {
-        "name": "Palawan - Planet Labs",
+        "name": "TRIP",
+        "id": "trip-project",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "TRIP",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:trip_projects&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "TRIP Subprojects",
+        "id": "trip-subproject",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "TRIP Subprojects",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:TRIP_Subprojects&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "GAA FMR",
+        "id": "gaa-fmr-regular-access",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "GAA FMR",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:GAA_FMR_Regular_Access&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "GAA FMR Subprojects",
+        "id": "gaa-fmr-regular-subproject",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "GAA FMR Subprojects",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:GAA_FMR_Regular&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "FMR PRDP",
+        "id": "fmr-prdp-access",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "FMR PRDP",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:PRDP_Access&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "FMR PRDP Subprojects",
+        "id": "fmr-prdp-subproject",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "FMR PRDP Subprojects",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:PRDP&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "Bottom-up budgeting",
+        "id": "bottom-up-budgeting",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "Bottom-Up Budgeting",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:BUB&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "PRMF",
+        "id": "prmf",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "PRMF",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:PRMF&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "Kalsada",
+        "id": "kalsada",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "Kalsada",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:Kalsada&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "Port Barton - September 2015",
         "type": "tms",
         "vector": false,
-        "description": "Planet Labs mosaic for Palawan",
-        "template": "https://tiles{switch:0,1,2,3}.planet.com/v0/mosaics/ak_palawan_island_planetscope_v8_mosaic/{zoom}/{x}/{y}.png?api_key=6861dfd2e7be4cd7b04cd0a85b77b859",
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.6i9inhlt/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
+        "name": "Port Barton - February 2016",
+        "type": "tms",
+        "vector": false,
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.54xkwcml/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
+        "name": "Puerto Princesa - September 2015",
+        "type": "tms",
+        "vector": false,
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.1hwextr8/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
         "scaleExtent": [
             0,
             19
