@@ -2069,10 +2069,21 @@ img.wiki-image {
   display: block;
 }
 
+.overlay-list li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.overlay-list .overlay input {
+    float: none;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
 .hide-toggle {
     display: block;
     padding-left: 14px;
     position: relative;
+    margin-bottom: 4px;
 }
 
 .hide-toggle:before {
