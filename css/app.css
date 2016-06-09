@@ -327,7 +327,7 @@ ul li { list-style: none;}
 
 .fillOR2 {
     background: #3DB1D5;
-    background: rgba(61, 177, 213, 0.8);
+    background: rgba(61, 177, 213, 0.9);
     color: white;
 }
 
@@ -2065,10 +2065,25 @@ img.wiki-image {
   cursor: pointer;
 }
 
+.overlay-list li {
+  display: block;
+}
+
+.overlay-list li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.overlay-list .overlay input {
+    float: none;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
 .hide-toggle {
     display: block;
     padding-left: 14px;
     position: relative;
+    margin-bottom: 4px;
 }
 
 .hide-toggle:before {

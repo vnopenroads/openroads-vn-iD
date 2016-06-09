@@ -1,4 +1,20 @@
 iD.BackgroundSource = function(data) {
+
+    // https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_numbers_to_lon..2Flat.
+    // https://github.com/mapbox/whoots-js/blob/master/index.js
+    function bboxFromTile(x, y, z) {
+        var min = latLngFromTile(x, y, z);
+        var max = latLngFromTile(x + 1, y + 1, z);
+        return min[0] + ',' + max[1] + ',' + max[0] + ',' + min[1];
+    }
+
+    function latLngFromTile(x, y, z) {
+        var lng = x / Math.pow(2, z) * 360 - 180;
+        var n = Math.PI - 2 * Math.PI * y / Math.pow(2, z);
+        var lat = 180 / Math.PI * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n)));
+        return [lng, lat];
+    }
+
     var source = _.clone(data),
         offset = [0, 0],
         name = source.name;
@@ -27,6 +43,17 @@ iD.BackgroundSource = function(data) {
     };
 
     source.url = function(coord) {
+        // for WMTS geoserver implementations
+        if (data.type === 'wmts') {
+            if (coord.length !== 3) {
+                console.log('Invalid x/y/z coordinate', JSON.stringify(coord));
+                return false;
+            }
+            var bbox = bboxFromTile(coord[0], coord[1], coord[2]);
+            return data.template.replace('{bbox}', bbox);
+        }
+
+        // for TMS-style layers hosted from Mapbox-like services.
         return data.template
             .replace('{x}', coord[0])
             .replace('{y}', coord[1])
