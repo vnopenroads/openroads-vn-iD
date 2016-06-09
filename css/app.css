@@ -2065,6 +2065,10 @@ img.wiki-image {
   cursor: pointer;
 }
 
+.overlay-list li {
+  display: block;
+}
+
 .hide-toggle {
     display: block;
     padding-left: 14px;
