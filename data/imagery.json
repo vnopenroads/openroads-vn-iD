@@ -12,6 +12,17 @@
         "template": "https://api.mapbox.com/v4/digitalglobe.nal0g75k/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNpbWdrZjhlZjAwMnd0emtvNXYzYmFwZm4ifQ.5owPkJs5HMvoB8IQPyuwEw"
     },
     {
+        "name": "Palawan - Planet Labs",
+        "type": "tms",
+        "vector": false,
+        "description": "Planet Labs mosaic for Palawan",
+        "template": "https://tiles{switch:0,1,2,3}.planet.com/v0/mosaics/ak_palawan_island_planetscope_v8_mosaic/{zoom}/{x}/{y}.png?api_key=6861dfd2e7be4cd7b04cd0a85b77b859",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
         "name": "OpenRoads road network",
         "type": "tms",
         "description": "OpenRoads road network",
@@ -190,36 +201,6 @@
         "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:Kalsada&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&BBOX={bbox}&WIDTH=256&HEIGHT=256"
     },
     {
-        "name": "Port Barton - September 2015",
-        "type": "tms",
-        "vector": false,
-        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.6i9inhlt/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
-        "scaleExtent": [
-            0,
-            19
-        ]
-    },
-    {
-        "name": "Port Barton - February 2016",
-        "type": "tms",
-        "vector": false,
-        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.54xkwcml/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
-        "scaleExtent": [
-            0,
-            19
-        ]
-    },
-    {
-        "name": "Puerto Princesa - September 2015",
-        "type": "tms",
-        "vector": false,
-        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.1hwextr8/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnJvYWRzIiwiYSI6InJ0aUQ2N3MifQ.R3hdFqriZr6kEUr-j_FYpg",
-        "scaleExtent": [
-            0,
-            19
-        ]
-    },
-    {
         "name": "Mapbox Satellite",
         "type": "tms",
         "vector": false,
@@ -248,77 +229,5 @@
         "terms_text": "© OpenStreetMap contributors, CC-BY-SA. The tracing layer is in sync with openstreetmap.org.",
         "id": "MAPNIK",
         "default": true
-    },
-    {
-        "name": "Pangasinán/Bulacan (Phillipines HiRes)",
-        "type": "tms",
-        "vector": false,
-        "template": "http://gravitystorm.dev.openstreetmap.org/imagery/philippines/{zoom}/{x}/{y}.png",
-        "scaleExtent": [
-            12,
-            19
-        ],
-        "polygon": [
-            [
-                [
-                    120.336593,
-                    15.985768
-                ],
-                [
-                    120.445995,
-                    15.984
-                ],
-                [
-                    120.446134,
-                    15.974459
-                ],
-                [
-                    120.476464,
-                    15.974592
-                ],
-                [
-                    120.594247,
-                    15.946832
-                ],
-                [
-                    120.598064,
-                    16.090795
-                ],
-                [
-                    120.596537,
-                    16.197999
-                ],
-                [
-                    120.368537,
-                    16.218527
-                ],
-                [
-                    120.347576,
-                    16.042308
-                ],
-                [
-                    120.336593,
-                    15.985768
-                ]
-            ],
-            [
-                [
-                    120.8268,
-                    15.3658
-                ],
-                [
-                    121.2684,
-                    15.2602
-                ],
-                [
-                    121.2699,
-                    14.7025
-                ],
-                [
-                    120.695,
-                    14.8423
-                ]
-            ]
-        ]
     }
 ]
