@@ -10,7 +10,8 @@ iD.ui.Background = function(context) {
             (+context.storage('background-opacity')) : 1,
         customTemplate = '',
         layerControls = context.container().select('.layer-controls'),
-        mapControls = context.container().select('.map-controls');
+        mapControls = context.container().select('.map-controls'),
+        backgroundEnabled = true;
 
     // Can be 0 from <1.3.0 use or due to issue #1923.
     if (opacityDefault === 0) opacityDefault = 1;
@@ -46,7 +47,7 @@ iD.ui.Background = function(context) {
 
         function selectImageLayer() {
             function active(d) {
-                return context.background().showsLayer(d);
+                return backgroundEnabled && context.background().showsLayer(d);
             }
             content.selectAll('.img-layer')
                 .classed('active', active);
@@ -54,9 +55,18 @@ iD.ui.Background = function(context) {
 
         function clickSetSource(d) {
             d3.event.preventDefault();
-            context.background().baseLayerSource(d);
-            // selectLayer();
-            selectImageLayer();
+            if (backgroundEnabled) {
+                context.background().baseLayerSource(d);
+                // selectLayer();
+                selectImageLayer();
+            }
+        }
+
+        function toggleBackgroundEnabled(e) {
+            var background = context.background();
+            backgroundEnabled = d3.event.target.checked;
+            context.map().toggleBackground(backgroundEnabled);
+            update();
         }
 
         function editCustom() {
@@ -149,6 +159,8 @@ iD.ui.Background = function(context) {
                 .remove();
 
             layerList.style('display', layerList.selectAll('li.img-layer').data().length > 0 ? 'block' : 'none');
+
+            layerList.classed('disabled', !backgroundEnabled);
         }
 
         function update() {
@@ -257,6 +269,18 @@ iD.ui.Background = function(context) {
         button.append('span')
             .attr('class', 'icon layers light');
 
+        var toggleSwitch = content.append('div')
+            .attr('class', 'toggle-switch')
+            .style('float', 'right');
+
+        toggleSwitch.append('input')
+            .attr('id', 'background-toggle')
+            .attr('type', 'checkbox')
+            .attr('checked', 'checked')
+            .on('change', toggleBackgroundEnabled);
+
+        toggleSwitch.append('label')
+            .attr('for', 'background-toggle');
 
         content.append('h3')
             .text(t('background.title'));
