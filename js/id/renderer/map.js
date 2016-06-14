@@ -432,5 +432,9 @@ iD.Map = function(context) {
         return map;
     };
 
+    map.toggleBackground = function(background) {
+        supersurface.classed('no-background', !background);
+    };
+
     return d3.rebind(map, dispatch, 'on');
 };

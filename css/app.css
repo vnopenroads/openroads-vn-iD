@@ -2038,6 +2038,15 @@ img.wiki-image {
     background-position: center center;
     background-size: cover;
     z-index: -1;
+    transition: opacity .2s;
+}
+
+.img-layer-list.disabled li {
+    cursor: default;
+}
+
+.img-layer-list.disabled .image {
+    opacity: .5;
 }
 
 .img-layer-list span {
@@ -2414,6 +2423,19 @@ img.wiki-image {
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+.background-layer {
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+#supersurface.no-background {
+    background: #eee;
+}
+
+#supersurface.no-background .background-layer {
+    opacity: 0;
 }
 
 /* About Section
