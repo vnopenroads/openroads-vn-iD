@@ -12,9 +12,9 @@ iD.BackgroundSource = function(data) {
         var resolution = getTileResolution(z);
         return [
             tileGridOrigin[0] + resolution * x,
-            tileGridOrigin[1] + resolution * y,
+            tileGridOrigin[1] + resolution * (y - 1),
             tileGridOrigin[0] + resolution * (x + 1),
-            tileGridOrigin[1] + resolution * (y + 1)
+            tileGridOrigin[1] + resolution * (y)
         ].join(',');
     }
 
