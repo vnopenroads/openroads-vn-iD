@@ -1,13 +1,25 @@
 iD.BackgroundSource = function(data) {
 
-    // https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_numbers_to_lon..2Flat.
-    // https://github.com/mapbox/whoots-js/blob/master/index.js
-    function bboxFromTile(x, y, z) {
-        var min = latLngFromTile(x, y, z);
-        var max = latLngFromTile(x + 1, y + 1, z);
-        return min[0] + ',' + max[1] + ',' + max[0] + ',' + min[1];
+    var tileGridOrigin = [-20037508.342789244, 20037508.342789244];
+    var maxResolution = 156543.03392804097;
+
+    function getTileResolution(zoom) {
+        return maxResolution / Math.pow(2, zoom) * 256;
     }
 
+    function bboxFromTile(x, y, z) {
+        y = -y;
+        var resolution = getTileResolution(z);
+        return [
+            tileGridOrigin[0] + resolution * x,
+            tileGridOrigin[1] + resolution * (y - 1),
+            tileGridOrigin[0] + resolution * (x + 1),
+            tileGridOrigin[1] + resolution * (y)
+        ].join(',');
+    }
+
+    // https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_numbers_to_lon..2Flat.
+    // https://github.com/mapbox/whoots-js/blob/master/index.js
     function latLngFromTile(x, y, z) {
         var lng = x / Math.pow(2, z) * 360 - 180;
         var n = Math.PI - 2 * Math.PI * y / Math.pow(2, z);
