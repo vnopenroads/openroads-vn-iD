@@ -25,7 +25,7 @@
     {
         "name": "Minimal",
         "type": "tms",
-        "vector": false,
+        "vector": true,
         "description": "Light basemap with country outlines.",
         "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.fddb9509/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q",
         "scaleExtent": [
@@ -38,7 +38,7 @@
         "type": "tms",
         "description": "OpenRoads road network",
         "vector": true,
-        "template": "http://50.16.162.86/{zoom}/{x}/{y}.png",
+        "template": "http://50.16.162.86/surface/{zoom}/{x}/{y}.png",
         "scaleExtent": [
             0,
             16
