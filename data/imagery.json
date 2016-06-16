@@ -38,7 +38,7 @@
         "type": "tms",
         "description": "OpenRoads road network",
         "vector": true,
-        "template": "http://50.16.162.86/surface/{zoom}/{x}/{y}.png",
+        "template": "http://50.16.162.86/{zoom}/{x}/{y}.png",
         "scaleExtent": [
             0,
             16
