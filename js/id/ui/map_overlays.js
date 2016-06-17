@@ -13,7 +13,7 @@ iD.ui.MapOverlay = function(context) {
         return d.id === 'grid';
     });
 
-    var roadSource = background.find(function (d) {
+    var roadSource = background.filter(function (d) {
         return d.id === 'ornetwork';
     });
 
@@ -86,12 +86,12 @@ iD.ui.MapOverlay = function(context) {
 
         function update() {
             networkList.call(drawList,
-                roadNetwork,
+                roadSource,
                 'checkbox',
                 'road_network',
-                getToggleSource(roadSource),
-                getActiveSource(roadSource),
-                description('road_network'));
+                toggleOverlay,
+                activeOverlay,
+                function (d) { return d.description; });
 
             projectList.call(drawList,
                 projectSources,
@@ -99,7 +99,7 @@ iD.ui.MapOverlay = function(context) {
                 'project',
                 toggleOverlay,
                 activeOverlay,
-                function (d) { console.log(d); return d.description; });
+                function (d) { return d.description; });
 
             governmentList.call(drawList,
                 admin.slice(1, 2),
@@ -200,7 +200,6 @@ iD.ui.MapOverlay = function(context) {
 
         content.append('h3')
             .text(t('map_overlay.title'));
-
 
         // road networks
         var roadToggle = content.append('a')
