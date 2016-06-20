@@ -36,7 +36,7 @@
     {
         "name": "OpenRoads",
         "type": "tms",
-        "description": "OpenRoads road network",
+        "description": "Roads by responsibility",
         "vector": true,
         "template": "http://50.16.162.86/{zoom}/{x}/{y}.png",
         "scaleExtent": [
@@ -108,7 +108,7 @@
     },
     {
         "name": "TRIP",
-        "id": "trip-project",
+        "id": "trip",
         "overzoom": false,
         "overlay": true,
         "type": "wmts",
@@ -138,7 +138,7 @@
     },
     {
         "name": "GAA FMR",
-        "id": "gaa-fmr-regular-access",
+        "id": "gaa-fmr-access",
         "overzoom": false,
         "overlay": true,
         "type": "wmts",
@@ -153,7 +153,7 @@
     },
     {
         "name": "GAA FMR Subprojects",
-        "id": "gaa-fmr-regular-subproject",
+        "id": "gaa-fmr",
         "overzoom": false,
         "overlay": true,
         "type": "wmts",
@@ -168,7 +168,7 @@
     },
     {
         "name": "FMR PRDP",
-        "id": "fmr-prdp-access",
+        "id": "prdp-access",
         "overzoom": false,
         "overlay": true,
         "type": "wmts",
@@ -183,7 +183,7 @@
     },
     {
         "name": "FMR PRDP Subprojects",
-        "id": "fmr-prdp-subproject",
+        "id": "prdp",
         "overzoom": false,
         "overlay": true,
         "type": "wmts",
@@ -198,7 +198,7 @@
     },
     {
         "name": "Bottom-up budgeting",
-        "id": "bottom-up-budgeting",
+        "id": "bub",
         "overzoom": false,
         "overlay": true,
         "type": "wmts",
