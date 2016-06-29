@@ -23,6 +23,17 @@
         ]
     },
     {
+        "name": "Mindanao - Planet Labs",
+        "type": "tms",
+        "vector": false,
+        "description": "Planet Labs mosaic for Mindanao",
+        "template": "https://tiles{switch:0,1,2,3}.planet.com/v0/mosaics/ak_mindanao_planetscope_v4_mosaic/{zoom}/{x}/{y}.png?api_key=6861dfd2e7be4cd7b04cd0a85b77b859",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
         "name": "Minimal",
         "type": "tms",
         "vector": true,
