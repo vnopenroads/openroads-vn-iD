@@ -3,7 +3,8 @@
     "fields": [
         "or_condition",
         "or_width",
-        "surface"
+        "surface",
+        "or_fv_batch"
     ],
     "geometry": [
         "line"
