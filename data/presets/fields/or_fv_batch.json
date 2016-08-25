@@ -1,0 +1,6 @@
+{
+    "key": "or_fv_batch",
+    "type": "number",
+    "label": "FV batch ID",
+    "placeholder": "FV batch upload ID (if any)"
+}

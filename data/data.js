@@ -14745,6 +14745,10 @@ iD.data = {
                         "excellent": "Excellent"
                     }
                 },
+                "or_fv_batch": {
+                    "label": "FV batch ID",
+                    "placeholder": "FV batch upload ID (if any)"
+                },
                 "or_responsibility": {
                     "label": "Road responsibility",
                     "options": {
