@@ -15,7 +15,7 @@ if [ $TRAVIS_PULL_REQUEST = "false" ] && [ $TRAVIS_BRANCH = ${DEPLOY_BRANCH} ]; 
   git config user.name "Travis-CI"
   git config user.email "travis@example.com"
   git add .
-  git commit -m "CI deploy to develop ${SHA}"
+  git commit -m "CI deploy to gh-pages ${SHA}"
   git show-ref
 
   # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
@@ -28,7 +28,7 @@ if [ $TRAVIS_PULL_REQUEST = "false" ] && [ $TRAVIS_BRANCH = ${DEPLOY_BRANCH} ]; 
   eval `ssh-agent -s`
   ssh-add deploy_key
 
-  git push --force --quiet $SSH_REPO develop:gh-pages
+  git push --force --quiet $SSH_REPO master:gh-pages
 else
   echo "Not a publishable branch so we're all done here"
 fi

@@ -1,6 +1,6 @@
 # OpenRoads iD
 
-[![Build Status](https://magnum.travis-ci.com/opengovt/openroads-iD.svg?token=d4tUG3NhuWNZYSxWndVL&branch=master)](https://magnum.travis-ci.com/opengovt/openroads-iD)
+[![Build Status](https://travis-ci.org/orma/openroads-vn-iD.svg?branch=develop)](https://travis-ci.org/orma/openroads-vn-iD)
 
 The OpenRoads network editor is a fork of [iD](https://github.com/openstreetmap/iD), the popular OpenStreetMap editor.
 
