@@ -10,9 +10,9 @@
         "line"
     ],
     "tags": {
-        "or_responsibility": "barangay",
+        "or_responsibility": "commune",
         "highway": "unclassified"
     },
     "terms": [],
-    "name": "Barangay"
+    "name": "Commune"
 }

@@ -1,0 +1,18 @@
+{
+    "icon": "highway-unclassified",
+    "fields": [
+        "or_condition",
+        "or_width",
+        "surface",
+        "or_fv_batch"
+    ],
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "or_responsibility": "village",
+        "highway": "unclassified"
+    },
+    "terms": [],
+    "name": "Village"
+}

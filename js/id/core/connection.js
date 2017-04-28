@@ -3,7 +3,7 @@ iD.Connection = function() {
 
     var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
         url = 'http://www.openstreetmap.org',
-        openroads = 'https://openroads-api.herokuapp.com',
+        openroads = 'https://openroads-vn-api.herokuapp.com',
         // openroads = 'http://localhost:4000',
         // openroads = 'http://50.16.162.86:4000',
         testUrl = 'http://der.local:4000',
@@ -261,17 +261,20 @@ iD.Connection = function() {
 
         //console.log(JXON.stringify(connection.osmChangeJXON('123', changes)));
         //console.log(JSON.stringify(connection.osmChangeJSON(1, changes)));
-
+        userDetails = {
+          id: 1245987,
+          display_name: 'test2'
+        }
         qwest.put(openroads + '/changeset/create', {
             uid: userDetails.id,
             user: userDetails.display_name,
             comment: comment
         }, {
             responseType: 'json',
-        }).then(function(changeset) {
-            var data = connection.osmChangeJSON(changeset.id, changes);
+        }).then(function(id) {
+            var data = connection.osmChangeJSON(id, changes);
             console.log(JSON.stringify(data));
-            qwest.post(openroads + '/changeset/' + changeset.id + '/upload', data, {
+            qwest.post(openroads + '/changeset/' + id + '/upload', data, {
                 dataType: 'json',
                 responseType: 'json',
                 retries: 1,
