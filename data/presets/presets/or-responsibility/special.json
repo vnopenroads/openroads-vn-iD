@@ -1,5 +1,5 @@
 {
-    "icon": "highway-tertiary",
+    "icon": "highway-unclassified",
     "fields": [
         "or_condition",
         "or_width",
@@ -10,9 +10,9 @@
         "line"
     ],
     "tags": {
-        "or_responsibility": "municipal",
-        "highway": "tertiary"
+        "or_responsibility": "special",
+        "highway": "unclassified"
     },
     "terms": [],
-    "name": "Municipal"
+    "name": "Special"
 }

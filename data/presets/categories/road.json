@@ -5,8 +5,11 @@
     "members": [
         "or-responsibility/national",
         "or-responsibility/provincial",
-        "or-responsibility/municipal",
-        "or-responsibility/barangay",
+        "or-responsibility/district",
+        "or-responsibility/commune",
+        "or-responsibility/village",
+        "or-responsibility/urban",
+        "or-responsibility/special",
         "highway/service"
     ]
 }
