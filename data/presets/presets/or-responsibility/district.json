@@ -1,0 +1,18 @@
+{
+    "icon": "highway-tertiary",
+    "fields": [
+        "or_condition",
+        "or_width",
+        "surface",
+        "or_fv_batch"
+    ],
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "or_responsibility": "district",
+        "highway": "tertiary"
+    },
+    "terms": [],
+    "name": "District"
+}

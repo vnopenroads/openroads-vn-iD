@@ -28,7 +28,7 @@ iD.ui = function(context) {
         hash();
 
         if (!hash.hadHash) {
-            map.centerZoom([122.725,11.638], 7);
+            map.centerZoom([108.2772, 14.0583], 6);
         }
 
         /*

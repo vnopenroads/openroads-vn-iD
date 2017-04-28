@@ -1557,18 +1557,27 @@ en:
       openroads/protect_type/marine_area:
         name: Marine Protected Area
         terms: "<translate with synonyms or related terms for 'Marine Protected Area', separated by commas>"
-      or-responsibility/barangay:
-        name: Barangay
-        terms: "<translate with synonyms or related terms for 'Barangay', separated by commas>"
-      or-responsibility/municipal:
-        name: Municipal
-        terms: "<translate with synonyms or related terms for 'Municipal', separated by commas>"
+      or-responsibility/commune:
+        name: Commune
+        terms: "<translate with synonyms or related terms for 'Commune', separated by commas>"
+      or-responsibility/district:
+        name: District
+        terms: "<translate with synonyms or related terms for 'District', separated by commas>"
       or-responsibility/national:
         name: National
         terms: "<translate with synonyms or related terms for 'National', separated by commas>"
       or-responsibility/provincial:
         name: Provincial
         terms: "<translate with synonyms or related terms for 'Provincial', separated by commas>"
+      or-responsibility/special:
+        name: Special
+        terms: "<translate with synonyms or related terms for 'Special', separated by commas>"
+      or-responsibility/urban:
+        name: Urban
+        terms: "<translate with synonyms or related terms for 'Urban', separated by commas>"
+      or-responsibility/village:
+        name: Village
+        terms: "<translate with synonyms or related terms for 'Village', separated by commas>"
       piste:
         name: Piste/Ski Trail
         terms: "<translate with synonyms or related terms for 'Piste/Ski Trail', separated by commas>"

@@ -16321,12 +16321,12 @@ iD.data = {
                     "name": "Marine Protected Area",
                     "terms": ""
                 },
-                "or-responsibility/barangay": {
-                    "name": "Barangay",
+                "or-responsibility/commune": {
+                    "name": "Commune",
                     "terms": ""
                 },
-                "or-responsibility/municipal": {
-                    "name": "Municipal",
+                "or-responsibility/district": {
+                    "name": "District",
                     "terms": ""
                 },
                 "or-responsibility/national": {
@@ -16335,6 +16335,18 @@ iD.data = {
                 },
                 "or-responsibility/provincial": {
                     "name": "Provincial",
+                    "terms": ""
+                },
+                "or-responsibility/special": {
+                    "name": "Special",
+                    "terms": ""
+                },
+                "or-responsibility/urban": {
+                    "name": "Urban",
+                    "terms": ""
+                },
+                "or-responsibility/village": {
+                    "name": "Village",
                     "terms": ""
                 },
                 "piste": {

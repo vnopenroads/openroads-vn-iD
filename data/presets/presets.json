@@ -5334,7 +5334,7 @@
         "terms": [],
         "name": "Marine Protected Area"
     },
-    "or-responsibility/barangay": {
+    "or-responsibility/commune": {
         "icon": "highway-unclassified",
         "fields": [
             "or_condition",
@@ -5346,13 +5346,13 @@
             "line"
         ],
         "tags": {
-            "or_responsibility": "barangay",
+            "or_responsibility": "commune",
             "highway": "unclassified"
         },
         "terms": [],
-        "name": "Barangay"
+        "name": "Commune"
     },
-    "or-responsibility/municipal": {
+    "or-responsibility/district": {
         "icon": "highway-tertiary",
         "fields": [
             "or_condition",
@@ -5364,11 +5364,11 @@
             "line"
         ],
         "tags": {
-            "or_responsibility": "municipal",
+            "or_responsibility": "district",
             "highway": "tertiary"
         },
         "terms": [],
-        "name": "Municipal"
+        "name": "District"
     },
     "or-responsibility/national": {
         "icon": "highway-primary",
@@ -5405,6 +5405,60 @@
         },
         "terms": [],
         "name": "Provincial"
+    },
+    "or-responsibility/special": {
+        "icon": "highway-unclassified",
+        "fields": [
+            "or_condition",
+            "or_width",
+            "surface",
+            "or_fv_batch"
+        ],
+        "geometry": [
+            "line"
+        ],
+        "tags": {
+            "or_responsibility": "special",
+            "highway": "unclassified"
+        },
+        "terms": [],
+        "name": "Special"
+    },
+    "or-responsibility/urban": {
+        "icon": "highway-unclassified",
+        "fields": [
+            "or_condition",
+            "or_width",
+            "surface",
+            "or_fv_batch"
+        ],
+        "geometry": [
+            "line"
+        ],
+        "tags": {
+            "or_responsibility": "urban",
+            "highway": "unclassified"
+        },
+        "terms": [],
+        "name": "Urban"
+    },
+    "or-responsibility/village": {
+        "icon": "highway-unclassified",
+        "fields": [
+            "or_condition",
+            "or_width",
+            "surface",
+            "or_fv_batch"
+        ],
+        "geometry": [
+            "line"
+        ],
+        "tags": {
+            "or_responsibility": "village",
+            "highway": "unclassified"
+        },
+        "terms": [],
+        "name": "Village"
     },
     "piste": {
         "icon": "skiing",
