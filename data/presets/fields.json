@@ -791,12 +791,6 @@
             }
         }
     },
-    "or_fv_batch": {
-        "key": "or_fv_batch",
-        "type": "number",
-        "label": "FV batch ID",
-        "placeholder": "FV batch upload ID (if any)"
-    },
     "or_responsibility": {
         "key": "or_responsibility",
         "type": "combo",
@@ -804,17 +798,29 @@
         "keys": [
             "national",
             "provincial",
-            "municipal",
-            "barangay"
+            "district",
+            "commune",
+            "village",
+            "urban",
+            "special"
         ],
         "strings": {
             "options": {
                 "national": "National",
                 "provincial": "Provincial",
-                "municipal": "Municipal",
-                "barangay": "Barangay"
+                "district": "District",
+                "commune": "Commune",
+                "village": "Village",
+                "urban": "Urban",
+                "special": "Special"
             }
         }
+    },
+    "or_vpromms": {
+        "key": "or_vpromms",
+        "type": "number",
+        "label": "VProMMS ID",
+        "placeholder": "VProMMS ID (if any)"
     },
     "or_width": {
         "key": "or_width",
