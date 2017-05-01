@@ -1101,18 +1101,21 @@
                     "excellent": "Excellent"
                 }
             },
-            "or_fv_batch": {
-                "label": "FV batch ID",
-                "placeholder": "FV batch upload ID (if any)"
-            },
             "or_responsibility": {
                 "label": "Road responsibility",
                 "options": {
                     "national": "National",
                     "provincial": "Provincial",
-                    "municipal": "Municipal",
-                    "barangay": "Barangay"
+                    "district": "District",
+                    "commune": "Commune",
+                    "village": "Village",
+                    "urban": "Urban",
+                    "special": "Special"
                 }
+            },
+            "or_vpromms": {
+                "label": "VProMMS ID",
+                "placeholder": "VProMMS ID (if any)"
             },
             "or_width": {
                 "label": "Road width",

@@ -5,15 +5,21 @@
     "keys": [
         "national",
         "provincial",
-        "municipal",
-        "barangay"
+        "district",
+        "commune",
+        "village",
+        "urban",
+        "special"
     ],
     "strings": {
         "options": {
             "national": "National",
             "provincial": "Provincial",
-            "municipal": "Municipal",
-            "barangay": "Barangay"
+            "district": "District",
+            "commune": "Commune",
+            "village": "Village",
+            "urban": "Urban",
+            "special": "Special"
         }
     }
 }
