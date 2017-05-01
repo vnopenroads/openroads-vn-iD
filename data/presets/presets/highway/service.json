@@ -5,7 +5,7 @@
         "or_condition",
         "or_width",
         "surface",
-        "or_fv_batch"
+        "or_vpromms"
     ],
     "geometry": [
         "line"

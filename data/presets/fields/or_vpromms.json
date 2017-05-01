@@ -1,0 +1,6 @@
+{
+    "key": "or_vpromms",
+    "type": "number",
+    "label": "VProMMS ID",
+    "placeholder": "VProMMS ID (if any)"
+}
