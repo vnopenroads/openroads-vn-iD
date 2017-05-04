@@ -27,7 +27,7 @@
         "type": "tms",
         "description": "Roads by responsibility",
         "vector": true,
-        "template": "http://50.16.162.86/{zoom}/{x}/{y}.png",
+        "template": "https://openroads-vn-tiles/{zoom}/{x}/{y}.png",
         "scaleExtent": [
             0,
             16
@@ -36,36 +36,6 @@
         "id": "ornetwork",
         "default": true,
         "overlay": true
-    },
-    {
-        "name": "OpenRoads-Condition",
-        "id": "ornetwork",
-        "overzoom": false,
-        "overlay": true,
-        "type": "tms",
-        "vector": false,
-        "description": "Roads by condition",
-        "scaleExtent": [
-            0,
-            16
-        ],
-        "default": false,
-        "template": "http://50.16.162.86/condition/{zoom}/{x}/{y}.png"
-    },
-    {
-        "name": "OpenRoads-Surface",
-        "id": "ornetwork",
-        "overzoom": false,
-        "overlay": true,
-        "type": "tms",
-        "vector": false,
-        "description": "Roads by surface",
-        "scaleExtent": [
-            0,
-            16
-        ],
-        "default": false,
-        "template": "http://50.16.162.86/surface/{zoom}/{x}/{y}.png"
     },
     {
         "name": "Philippine boundaries",
