@@ -27,7 +27,7 @@
         "type": "tms",
         "description": "Roads by responsibility",
         "vector": true,
-        "template": "http://openroads-vn-tiles.s3-website-us-east-1.amazonaws.com/tiles/{zoom}/{x}/{y}.png",
+        "template": "https://openroads-vn-tiles.s3-website-us-east-1.amazonaws.com/tiles/{zoom}/{x}/{y}.png",
         "scaleExtent": [
             0,
             16
