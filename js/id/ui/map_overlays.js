@@ -1,7 +1,7 @@
 iD.ui.MapOverlay = function(context) {
     var key = 'F',
-        admin = ['province', 'municipality', 'barangay'],
-        destination = ['mpa'],
+        // admin = ['province', 'municipality', 'barangay'],
+        // destination = ['mpa'],
         roadNetwork = ['openroads'],
         layerControls = context.container().select('.layer-controls'),
         mapControls = context.container().select('.map-controls');
@@ -17,13 +17,13 @@ iD.ui.MapOverlay = function(context) {
         return d.id === 'ornetwork';
     });
 
-    var municipalSource = background.find(function (d) {
-        return d.id === 'municipality';
-    });
+    // var municipalSource = background.find(function (d) {
+    //     return d.id === 'municipality';
+    // });
 
-    var projectSources = background.filter(function (d) {
-        return d.type === 'wmts';
-    });
+    // var projectSources = background.filter(function (d) {
+    //     return d.type === 'wmts';
+    // });
 
     function map_overlay(selection) {
 
@@ -93,29 +93,29 @@ iD.ui.MapOverlay = function(context) {
                 activeOverlay,
                 function (d) { return d.description; });
 
-            projectList.call(drawList,
-                projectSources,
-                'checkbox',
-                'project',
-                toggleOverlay,
-                activeOverlay,
-                function (d) { return d.description; });
+            // projectList.call(drawList,
+            //     projectSources,
+            //     'checkbox',
+            //     'project',
+            //     toggleOverlay,
+            //     activeOverlay,
+            //     function (d) { return d.description; });
 
-            governmentList.call(drawList,
-                admin.slice(1, 2),
-                'checkbox',
-                'admin_level',
-                getToggleSource(municipalSource),
-                getActiveSource(municipalSource),
-                description('admin_level'));
+            // governmentList.call(drawList,
+            //     admin.slice(1, 2),
+            //     'checkbox',
+            //     'admin_level',
+            //     getToggleSource(municipalSource),
+            //     getActiveSource(municipalSource),
+            //     description('admin_level'));
 
-            destinationList.call(drawList,
-                destination,
-                'checkbox',
-                'destination',
-                function () {},
-                function () {},
-                description('destination'));
+            // destinationList.call(drawList,
+            //     destination,
+            //     'checkbox',
+            //     'destination',
+            //     function () {},
+            //     function () {},
+            //     description('destination'));
 
             content.select('.toggle-switch input')
                 .property('checked', context.background().showsLayer(gridSource));
@@ -218,48 +218,48 @@ iD.ui.MapOverlay = function(context) {
         roadToggle.on('click', toggleDropdown(roadNetworkContainer));
 
         // projects
-        var projectToggle = content.append('a')
-            .text(t('map_overlay.projects'))
-            .attr('href', '#')
-            .classed('hide-toggle', true)
-            .classed('expanded', true);
+        // var projectToggle = content.append('a')
+        //     .text(t('map_overlay.projects'))
+        //     .attr('href', '#')
+        //     .classed('hide-toggle', true)
+        //     .classed('expanded', true);
 
-        var projectContainer = content.append('div')
-            .attr('class', 'filters');
+        // var projectContainer = content.append('div')
+        //     .attr('class', 'filters');
 
-        var projectList = projectContainer.append('ul')
-            .attr('class', 'overlay-list');
+        // var projectList = projectContainer.append('ul')
+        //     .attr('class', 'overlay-list');
 
-        projectToggle.on('click', toggleDropdown(projectContainer));
+        // projectToggle.on('click', toggleDropdown(projectContainer));
 
         // government layers
-        var governmentToggle = content.append('a')
-            .text(t('map_overlay.government'))
-            .attr('href', '#')
-            .classed('hide-toggle', true)
-            .classed('expanded', true);
+        // var governmentToggle = content.append('a')
+        //     .text(t('map_overlay.government'))
+        //     .attr('href', '#')
+        //     .classed('hide-toggle', true)
+        //     .classed('expanded', true);
 
-        var governmentFeatures = content.append('div')
-            .attr('class', 'filters');
+        // var governmentFeatures = content.append('div')
+        //     .attr('class', 'filters');
 
-        var governmentList = governmentFeatures.append('ul')
-            .attr('class', 'overlay-list');
+        // var governmentList = governmentFeatures.append('ul')
+        //     .attr('class', 'overlay-list');
 
-        governmentToggle.on('click', toggleDropdown(governmentFeatures));
+        // governmentToggle.on('click', toggleDropdown(governmentFeatures));
 
-        var destinationToggle = content.append('a')
-            .text(t('map_overlay.destination'))
-            .attr('href', '#')
-            .classed('hide-toggle', true)
-            .classed('expanded', true);
+        // var destinationToggle = content.append('a')
+        //     .text(t('map_overlay.destination'))
+        //     .attr('href', '#')
+        //     .classed('hide-toggle', true)
+        //     .classed('expanded', true);
 
-        var destinationContainer = content.append('div')
-            .attr('class', 'filters');
+        // var destinationContainer = content.append('div')
+        //     .attr('class', 'filters');
 
-        var destinationList = destinationContainer.append('ul')
-            .attr('class', 'overlay-list');
+        // var destinationList = destinationContainer.append('ul')
+        //     .attr('class', 'overlay-list');
 
-        destinationToggle.on('click', toggleDropdown(destinationContainer));
+        // destinationToggle.on('click', toggleDropdown(destinationContainer));
 
         if (gridSource) {
             content.append('span')
