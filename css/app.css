@@ -326,8 +326,7 @@ ul li { list-style: none;}
 }
 
 .fillOR2 {
-    background: #3DB1D5;
-    background: rgba(61, 177, 213, 0.9);
+    background: rgba(218,37,29,0.64);
     color: white;
 }
 
@@ -1881,7 +1880,6 @@ img.wiki-image {
     width: 40px;
     position: fixed;
     z-index: 100;
-    background: #3982B3;
     background: rgba(218,37,29,0.64);
 }
 
@@ -2053,13 +2051,12 @@ img.wiki-image {
 }
 
 .img-layer.active {
-    box-shadow: 2px 2px 15px #FFF;
+    box-shadow: 0 0 12px 4px rgba(255,255,255,0.32);
 }
 
 .overlay-list,
 .img-layer-list:not(:last-child) {
-    border-bottom: 1px solid #FAFAFA;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.32);
     margin-bottom: 12px;
 }
 
@@ -2149,8 +2146,7 @@ img.wiki-image {
 
 .toggle-switch label:before {
     right: 1px;
-    background-color: #4A4A4A;
-    background-color: rgba(74, 74, 74, 0.8);
+    background-color: rgba(0,0,0,0.32);
     border-radius: 20px;
     transition: background 0.4s;
 }
@@ -2167,7 +2163,7 @@ img.wiki-image {
 }
 
 .toggle-switch input:checked + label:before {
-    background-color: #91D3E7;
+    background-color: #da251d;
 }
 
 .toggle-switch input:checked + label:after {
