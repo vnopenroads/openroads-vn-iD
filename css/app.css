@@ -326,7 +326,7 @@ ul li { list-style: none;}
 }
 
 .fillOR2 {
-    background: rgba(218,37,29,0.64);
+    background: rgba(173,173,173,0.88);
     color: white;
 }
 
@@ -364,7 +364,7 @@ li.hide {
 }
 
 .content {
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.16);
 }
 
 .loading {
@@ -1880,7 +1880,7 @@ img.wiki-image {
     width: 40px;
     position: fixed;
     z-index: 100;
-    background: rgba(218,37,29,0.64);
+    background: rgba(173,173,173,0.88);
 }
 
 .layer-control > button {
@@ -1891,12 +1891,12 @@ img.wiki-image {
 }
 
 .layer-control > button:hover {
-    background: rgba(0,0,0,0.32);
+    background: rgba(0,0,0,0.24);
 }
 
 .layer-control > button.active,
 .layer-control > button.active:hover {
-    background: rgba(0,0,0,0.32);
+    background: rgba(0,0,0,0.24);
 }
 
 .layer-control > button:disabled {
@@ -1912,7 +1912,7 @@ img.wiki-image {
     height: 1px;
     display: block;
     margin: 12px 8px;
-    background: rgba(0,0,0,0.32);
+    background: rgba(0,0,0,0.16);
 }
 
 .zoombuttons button.zoom-in {
@@ -2051,12 +2051,12 @@ img.wiki-image {
 }
 
 .img-layer.active {
-    box-shadow: 0 0 12px 4px rgba(255,255,255,0.32);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.24);
 }
 
 .overlay-list,
 .img-layer-list:not(:last-child) {
-    border-bottom: 1px solid rgba(0,0,0,0.32);
+    border-bottom: 1px solid rgba(0,0,0,0.16);
     margin-bottom: 12px;
 }
 
@@ -2146,7 +2146,7 @@ img.wiki-image {
 
 .toggle-switch label:before {
     right: 1px;
-    background-color: rgba(0,0,0,0.32);
+    background-color: rgba(0,0,0,0.16);
     border-radius: 20px;
     transition: background 0.4s;
 }
@@ -2163,7 +2163,7 @@ img.wiki-image {
 }
 
 .toggle-switch input:checked + label:before {
-    background-color: #da251d;
+    background-color: rgba(0,0,0,0.48);
 }
 
 .toggle-switch input:checked + label:after {
