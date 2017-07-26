@@ -1882,7 +1882,7 @@ img.wiki-image {
     position: fixed;
     z-index: 100;
     background: #3982B3;
-    background: rgba(57, 130, 179, 0.85);
+    background: rgba(218,37,29,0.64);
 }
 
 .layer-control > button {
@@ -1893,14 +1893,12 @@ img.wiki-image {
 }
 
 .layer-control > button:hover {
-    background: #3DB1D5;
-    background: rgba(61, 177, 213, 0.8);
+    background: rgba(0,0,0,0.32);
 }
 
 .layer-control > button.active,
 .layer-control > button.active:hover {
-    background: #3DB1D5;
-    background: rgba(61, 177, 213, 0.8);
+    background: rgba(0,0,0,0.32);
 }
 
 .layer-control > button:disabled {
@@ -1916,8 +1914,7 @@ img.wiki-image {
     height: 1px;
     display: block;
     margin: 12px 8px;
-    background: #3DB1D5;
-    background: rgba(61, 177, 213, 0.8);
+    background: rgba(0,0,0,0.32);
 }
 
 .zoombuttons button.zoom-in {
