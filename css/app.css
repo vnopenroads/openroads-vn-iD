@@ -2295,8 +2295,7 @@ img.wiki-image {
     bottom: 0;
     padding: 20px;
     right: 0;
-    overflow: visible;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .map-overlay.content h3 {
