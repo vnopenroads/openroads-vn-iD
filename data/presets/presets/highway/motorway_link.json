@@ -4,7 +4,8 @@
         "or_responsibility",
         "or_condition",
         "surface",
-        "or_width"
+        "or_width",
+        "or_grade"
     ],
     "geometry": [
         "line"

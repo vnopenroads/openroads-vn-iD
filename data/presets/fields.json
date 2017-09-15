@@ -791,6 +791,27 @@
             }
         }
     },
+    "or_grade": {
+        "key": "or_grade",
+        "type": "combo",
+        "label": "Openroads grade",
+        "keys": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "strings": {
+            "options": {
+                "1": "Poor",
+                "2": "Mediocre",
+                "3": "Acceptable",
+                "4": "Good",
+                "5": "Great"
+            }
+        }
+    },
     "or_responsibility": {
         "key": "or_responsibility",
         "type": "combo",

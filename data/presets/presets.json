@@ -3279,7 +3279,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3308,7 +3309,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3329,7 +3331,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3371,7 +3374,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3388,7 +3392,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3434,7 +3439,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3465,7 +3471,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3482,7 +3489,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3499,7 +3507,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3521,7 +3530,8 @@
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3687,7 +3697,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3704,7 +3715,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3725,7 +3737,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3759,7 +3772,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3776,7 +3790,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3810,7 +3825,8 @@
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5340,7 +5356,8 @@
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5358,7 +5375,8 @@
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5376,7 +5394,8 @@
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5394,7 +5413,8 @@
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5412,7 +5432,8 @@
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5430,7 +5451,8 @@
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5448,7 +5470,8 @@
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
