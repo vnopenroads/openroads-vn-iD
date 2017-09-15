@@ -14755,6 +14755,9 @@ iD.data = {
                         "5": "Great"
                     }
                 },
+                "or_lock": {
+                    "label": "Lock to prevent further edits"
+                },
                 "or_responsibility": {
                     "label": "Road responsibility",
                     "options": {

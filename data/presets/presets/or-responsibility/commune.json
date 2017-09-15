@@ -1,6 +1,7 @@
 {
     "icon": "highway-unclassified",
     "fields": [
+        "or_lock",
         "or_condition",
         "or_width",
         "surface",

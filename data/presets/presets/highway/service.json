@@ -1,6 +1,7 @@
 {
     "icon": "highway-service",
     "fields": [
+        "or_lock",
         "or_responsibility",
         "or_condition",
         "or_width",
