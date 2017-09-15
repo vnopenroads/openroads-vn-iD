@@ -14745,6 +14745,16 @@ iD.data = {
                         "excellent": "Excellent"
                     }
                 },
+                "or_grade": {
+                    "label": "Openroads grade",
+                    "options": {
+                        "1": "Poor",
+                        "2": "Mediocre",
+                        "3": "Acceptable",
+                        "4": "Good",
+                        "5": "Great"
+                    }
+                },
                 "or_responsibility": {
                     "label": "Road responsibility",
                     "options": {
