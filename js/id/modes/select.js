@@ -101,7 +101,7 @@ iD.modes.Select = function(context, selectedIDs) {
             var target = d3.select(d3.event.target),
                 datum = target.datum();
 
-            if (datum instanceof iD.Way && !target.classed('fill')) {
+            if (datum instanceof iD.Way && !target.classed('fill') && !context.isLockedWay(datum)) {
                 var choice = iD.geo.chooseEdge(context.childNodes(datum), context.mouse(), context.projection),
                     node = iD.Node();
 
@@ -137,12 +137,13 @@ iD.modes.Select = function(context, selectedIDs) {
             }
         }
 
+        var lockInterface = context.containsLockedEntity(selectedIDs);
 
         behaviors.forEach(function(behavior) {
             context.install(behavior);
         });
 
-        var operations = context.containsLockedEntity(selectedIDs) ? [] :
+        var operations = lockInterface ? [] :
             d3.values(iD.operations)
                 .map(function(o) { return o(selectedIDs, context); })
                 .filter(function(o) { return o.available(); });
