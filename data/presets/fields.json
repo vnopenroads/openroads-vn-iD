@@ -815,7 +815,7 @@
     "or_lock": {
         "key": "or_lock",
         "type": "defaultcheck",
-        "label": "Lock to prevent further edits"
+        "label": "Lock geometry"
     },
     "or_responsibility": {
         "key": "or_responsibility",

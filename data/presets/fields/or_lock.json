@@ -1,5 +1,5 @@
 {
     "key": "or_lock",
     "type": "defaultcheck",
-    "label": "Lock to prevent further edits"
+    "label": "Lock geometry"
 }

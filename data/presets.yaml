@@ -383,7 +383,7 @@ en:
           "4": Good
           "5": Great
       or_lock:
-        label: Lock to prevent further edits
+        label: Lock geometry
       or_responsibility:
         label: Road responsibility
         options:

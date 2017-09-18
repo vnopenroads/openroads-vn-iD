@@ -14756,7 +14756,7 @@ iD.data = {
                     }
                 },
                 "or_lock": {
-                    "label": "Lock to prevent further edits"
+                    "label": "Lock geometry"
                 },
                 "or_responsibility": {
                     "label": "Road responsibility",
