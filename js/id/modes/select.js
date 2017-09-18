@@ -142,7 +142,8 @@ iD.modes.Select = function(context, selectedIDs) {
             context.install(behavior);
         });
 
-        var operations = d3.values(iD.operations)
+        var operations = context.containsLockedEntity(selectedIDs) ? [] :
+            d3.values(iD.operations)
                 .map(function(o) { return o(selectedIDs, context); })
                 .filter(function(o) { return o.available(); });
 
