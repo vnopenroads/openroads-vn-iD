@@ -1111,6 +1111,9 @@
                     "5": "Great"
                 }
             },
+            "or_lock": {
+                "label": "Lock geometry"
+            },
             "or_responsibility": {
                 "label": "Road responsibility",
                 "options": {

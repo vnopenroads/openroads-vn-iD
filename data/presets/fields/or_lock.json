@@ -1,0 +1,5 @@
+{
+    "key": "or_lock",
+    "type": "defaultcheck",
+    "label": "Lock geometry"
+}

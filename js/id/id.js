@@ -142,8 +142,35 @@ window.iD = function () {
         return history.graph().childNodes(way);
     };
 
+    context.parentWays = function(node) {
+        return history.graph().parentWays(node);
+    };
+
     context.geometry = function(id) {
         return context.entity(id).geometry(history.graph());
+    };
+
+    context.isLockedWay = function(way) {
+        return typeof way.tags === 'object' && !!way.tags.or_lock;
+    };
+
+    context.containsLockedEntity = function(ids) {
+        var all = ids.map(function(id) { return history.graph().entity(id); });
+        for (var i = 0, imax = all.length; i < imax; ++i) {
+            if (all[i].type === 'way' && context.isLockedWay(all[i])) {
+                // Return true if a way is locked.
+                return true;
+            } else if (all[i].type === 'node') {
+                // Find all the parent ways and return true if any are locked.
+                var parentWays = history.graph().parentWays(all[i]);
+                for (var k = 0, kmax = parentWays.length; k < kmax; ++k) {
+                    if (context.isLockedWay(parentWays[k])) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     };
 
     /* Modes */

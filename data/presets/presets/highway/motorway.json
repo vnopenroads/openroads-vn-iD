@@ -1,6 +1,7 @@
 {
     "icon": "highway-motorway",
     "fields": [
+        "or_lock",
         "or_responsibility",
         "or_condition",
         "surface",
