@@ -3,7 +3,7 @@ iD.openroads.WayTasks = function(context) {
     var loadedTasks = [];
 
     exp.load = function(wayid, cb) {
-        // Search to see 
+        // Search to see
         var waytask = exp.get(wayid);
 
         if (waytask) {
@@ -77,7 +77,9 @@ iD.openroads.WayTasks = function(context) {
         // This is just client side, but since this data is removed when
         // the workers run, it's not a problem.
         _.forEach(wayids, function(wid) {
-            exp.get(wid).state = 'pending';
+            var task = exp.get(wid);
+            if (task)
+                task.state = 'pending';
         });
 
         qwest.put(context.connection().base() + '/admin/waytasks/state', {
