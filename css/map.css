@@ -952,6 +952,10 @@ path.oneway {
     stroke-width: 6px;
 }
 
+path.shadow.tag-locked { stroke: #FFF; }
+path.casing.tag-locked { stroke: #BBB; }
+path.stroke.tag-locked { stroke: #AAA; }
+
 /* Buildings */
 
 path.stroke.tag-building,
