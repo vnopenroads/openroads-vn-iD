@@ -3276,10 +3276,12 @@
     "highway/motorway": {
         "icon": "highway-motorway",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3305,10 +3307,12 @@
     "highway/motorway_link": {
         "icon": "highway-motorway-link",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3326,10 +3330,12 @@
     "highway/path": {
         "icon": "highway-path",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3368,10 +3374,12 @@
     "highway/primary": {
         "icon": "highway-primary",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3385,10 +3393,12 @@
     "highway/primary_link": {
         "icon": "highway-primary-link",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3431,10 +3441,12 @@
     "highway/residential": {
         "icon": "highway-residential",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3462,10 +3474,12 @@
     "highway/road": {
         "icon": "highway-road",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3479,10 +3493,12 @@
     "highway/secondary": {
         "icon": "highway-secondary",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3496,10 +3512,12 @@
     "highway/secondary_link": {
         "icon": "highway-secondary-link",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3517,11 +3535,13 @@
     "highway/service": {
         "icon": "highway-service",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3684,10 +3704,12 @@
     "highway/tertiary": {
         "icon": "highway-tertiary",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3701,10 +3723,12 @@
     "highway/tertiary_link": {
         "icon": "highway-tertiary-link",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3722,10 +3746,12 @@
     "highway/track": {
         "icon": "highway-track",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3756,10 +3782,12 @@
     "highway/trunk": {
         "icon": "highway-trunk",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3773,10 +3801,12 @@
     "highway/trunk_link": {
         "icon": "highway-trunk-link",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -3807,10 +3837,12 @@
     "highway/unclassified": {
         "icon": "highway-unclassified",
         "fields": [
+            "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
-            "or_width"
+            "or_width",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5337,10 +5369,12 @@
     "or-responsibility/commune": {
         "icon": "highway-unclassified",
         "fields": [
+            "or_lock",
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5355,10 +5389,12 @@
     "or-responsibility/district": {
         "icon": "highway-tertiary",
         "fields": [
+            "or_lock",
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5373,10 +5409,12 @@
     "or-responsibility/national": {
         "icon": "highway-primary",
         "fields": [
+            "or_lock",
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5391,10 +5429,12 @@
     "or-responsibility/provincial": {
         "icon": "highway-secondary",
         "fields": [
+            "or_lock",
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5409,10 +5449,12 @@
     "or-responsibility/special": {
         "icon": "highway-unclassified",
         "fields": [
+            "or_lock",
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5427,10 +5469,12 @@
     "or-responsibility/urban": {
         "icon": "highway-unclassified",
         "fields": [
+            "or_lock",
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"
@@ -5445,10 +5489,12 @@
     "or-responsibility/village": {
         "icon": "highway-unclassified",
         "fields": [
+            "or_lock",
             "or_condition",
             "or_width",
             "surface",
-            "or_vpromms"
+            "or_vpromms",
+            "or_grade"
         ],
         "geometry": [
             "line"

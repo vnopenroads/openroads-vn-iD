@@ -3,9 +3,7 @@ iD.Connection = function() {
 
     var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
         url = 'https://www.openstreetmap.org',
-        openroads = 'https://openroads-vn-api.herokuapp.com',
-        // openroads = 'http://localhost:4000',
-        // openroads = 'http://50.16.162.86:4000',
+        openroads = 'http://54.255.146.89',
         testUrl = 'http://der.local:4000',
         connection = {},
         inflight = {},

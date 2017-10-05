@@ -37,6 +37,10 @@ iD.svg.TagClasses = function() {
                 classes += ' tag-' + k + ' tag-' + k + '-' + v;
             }
 
+            if (t.or_lock) {
+                classes += ' tag-locked';
+            }
+
             classes = classes.trim();
 
             if (classes !== value) {
