@@ -27,7 +27,7 @@
         "type": "tms",
         "description": "Roads by responsibility",
         "vector": true,
-        "template": "http://54.255.146.89:3000/{zoom}/{x}/{y}.png",
+        "template": "http://api.openroads-vn.com:3000/{zoom}/{x}/{y}.png",
         "scaleExtent": [
             0,
             16
