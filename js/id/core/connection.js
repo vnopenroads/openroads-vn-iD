@@ -437,13 +437,15 @@ iD.Connection = function() {
     };
 
     connection.authenticate = function(callback) {
+        // Accept authentication without user login.
+        // This is a temporary measure while a custom auth for openroads
+        // is not implemented.
         return callback();
-
-        function done(err, res) {
-            event.auth();
-            if (callback) callback(err, res);
-        }
-        return oauth.authenticate(done);
+        // function done(err, res) {
+        //     event.auth();
+        //     if (callback) callback(err, res);
+        // }
+        // return oauth.authenticate(done);
     };
 
     return d3.rebind(connection, event, 'on');
