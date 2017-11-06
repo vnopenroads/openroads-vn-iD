@@ -261,7 +261,7 @@ iD.Connection = function() {
         //console.log(JSON.stringify(connection.osmChangeJSON(1, changes)));
         userDetails = {
           id: 1245987,
-          display_name: 'test2'
+          display_name: 'dev@developmentseed.org'
         }
         qwest.put(openroads + '/changeset/create', {
             uid: userDetails.id,
@@ -437,11 +437,15 @@ iD.Connection = function() {
     };
 
     connection.authenticate = function(callback) {
-        function done(err, res) {
-            event.auth();
-            if (callback) callback(err, res);
-        }
-        return oauth.authenticate(done);
+        // Accept authentication without user login.
+        // This is a temporary measure while a custom auth for openroads
+        // is not implemented.
+        return callback();
+        // function done(err, res) {
+        //     event.auth();
+        //     if (callback) callback(err, res);
+        // }
+        // return oauth.authenticate(done);
     };
 
     return d3.rebind(connection, event, 'on');
