@@ -261,7 +261,7 @@ iD.Connection = function() {
         //console.log(JSON.stringify(connection.osmChangeJSON(1, changes)));
         userDetails = {
           id: 1245987,
-          display_name: 'test2'
+          display_name: 'dev@developmentseed.org'
         }
         qwest.put(openroads + '/changeset/create', {
             uid: userDetails.id,
@@ -437,6 +437,8 @@ iD.Connection = function() {
     };
 
     connection.authenticate = function(callback) {
+        return callback();
+
         function done(err, res) {
             event.auth();
             if (callback) callback(err, res);
