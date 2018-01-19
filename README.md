@@ -19,6 +19,10 @@ Or, with a Mac, you can enable Web Sharing and clone iD into your website direct
 
 For guidance on building a packaged version, running tests, and contributing to development, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Deployment
+
+To deploy to production, simply increment the version in `package.json`, push to `master`, and then update the version in the AWS configuration in the `orma/openroads-vn-api` repo accordingly (https://github.com/orma/openroads-vn-api/blob/develop/aws/app/config.yml).
+
 ## License
 iD is available under the [WTFPL](http://sam.zoy.org/wtfpl/), though obviously, if you want to dual-license any contributions that's cool. It includes [d3js](http://d3js.org/), which BSD-licensed.
 
