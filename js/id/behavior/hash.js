@@ -64,6 +64,7 @@ iD.behavior.Hash = function(context) {
         if (location.hash === s0) return; // ignore spurious hashchange events
         var q = iD.util.stringQs(location.hash.substring(1));
         if (q.bbox) return initialBbox(q);
+        if (q.id) context.loadEntity(q.id.split(',')[0], !q.map);
 
         if (parser(context.map(), (s0 = location.hash).substring(1))) {
             update(); // replace bogus hash
