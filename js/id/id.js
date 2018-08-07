@@ -45,7 +45,7 @@ window.iD = function () {
         mode,
         container,
         ui = iD.ui(context),
-        connection = iD.Connection(),
+        connection = iD.Connection(context),
         locale = iD.detect().locale,
         localePath;
 

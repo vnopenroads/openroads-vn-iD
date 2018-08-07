@@ -20,31 +20,31 @@ iD.openroads.WayTasks = function(context) {
             loadedTasks.push(placeholder);
 
             console.log('network request initiated');
-            qwest.get(context.connection().base() + '/way/' + wayid + '/waytasks')
-                .then(function(response) {
-                    return JSON.parse(response);
-                })
-                .then(function(json) {
-                    // Set state as loaded.
-                    json.loadingState = 'loaded';
-                    var wayIndex = exp.getIndex(json.way_id);
-                    if (wayIndex !== -1) {
-                        loadedTasks[wayIndex] = json;
-                    }
-                    else {
-                        loadedTasks.push(json);
-                    }
-                    return cb(null, json);
-                })
-                .catch(function(err) {
-                    var wayIndex = exp.getIndex(wayid);
-                    if (wayIndex !== -1) {
-                        loadedTasks.splice(wayIndex, 1);
-                    }
-                    return cb(err);
-                });
+            // qwest.get(context.connection().base() + '/way/' + wayid + '/waytasks')
+            //     .then(function(response) {
+            //         return JSON.parse(response);
+            //     })
+            //     .then(function(json) {
+            //         // Set state as loaded.
+            //         json.loadingState = 'loaded';
+            //         var wayIndex = exp.getIndex(json.way_id);
+            //         if (wayIndex !== -1) {
+            //             loadedTasks[wayIndex] = json;
+            //         }
+            //         else {
+            //             loadedTasks.push(json);
+            //         }
+            //         return cb(null, json);
+            //     })
+            //     .catch(function(err) {
+            //         var wayIndex = exp.getIndex(wayid);
+            //         if (wayIndex !== -1) {
+            //             loadedTasks.splice(wayIndex, 1);
+            //         }
+            //         return cb(err);
+            //     });
 
-            return cb(null, placeholder);
+            // return cb(null, placeholder);
         }
     };
 
@@ -82,16 +82,16 @@ iD.openroads.WayTasks = function(context) {
                 task.state = 'pending';
         });
 
-        qwest.put(context.connection().base() + '/admin/waytasks/state', {
-            pending: wayids
-        }, {
-            dataType: 'json',
-            responseType: 'json',
-        }).then(function(response) {
-            console.log('submitModifiedWays', response);
-        }).catch(function(error) {
-            console.error('submitModifiedWays', error);
-        });
+        // qwest.put(context.connection().base() + '/admin/waytasks/state', {
+        //     pending: wayids
+        // }, {
+        //     dataType: 'json',
+        //     responseType: 'json',
+        // }).then(function(response) {
+        //     console.log('submitModifiedWays', response);
+        // }).catch(function(error) {
+        //     console.error('submitModifiedWays', error);
+        // });
     };
 
     return exp;

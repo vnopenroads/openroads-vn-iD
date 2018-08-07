@@ -382,6 +382,9 @@ en:
           "3": Acceptable
           "4": Good
           "5": Great
+      or_link:
+        label: Link ID
+        placeholder: Link ID (if any)
       or_lock:
         label: Lock geometry
       or_responsibility:
@@ -394,6 +397,9 @@ en:
           village: Village
           urban: Urban
           special: Special
+      or_section:
+        label: Section ID
+        placeholder: Section ID (if any)
       or_vpromms:
         label: VProMMS ID
         placeholder: VProMMS ID (if any)
