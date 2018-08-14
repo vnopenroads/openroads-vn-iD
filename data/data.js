@@ -14755,6 +14755,10 @@ iD.data = {
                         "5": "Great"
                     }
                 },
+                "or_link": {
+                    "label": "Link ID",
+                    "placeholder": "Link ID (if any)"
+                },
                 "or_lock": {
                     "label": "Lock geometry"
                 },
@@ -14769,6 +14773,10 @@ iD.data = {
                         "urban": "Urban",
                         "special": "Special"
                     }
+                },
+                "or_section": {
+                    "label": "Section ID",
+                    "placeholder": "Section ID (if any)"
                 },
                 "or_vpromms": {
                     "label": "VProMMS ID",

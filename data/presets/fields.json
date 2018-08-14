@@ -812,6 +812,12 @@
             }
         }
     },
+    "or_link": {
+        "key": "or_link",
+        "type": "number",
+        "label": "Link ID",
+        "placeholder": "Link ID (if any)"
+    },
     "or_lock": {
         "key": "or_lock",
         "type": "defaultcheck",
@@ -841,6 +847,12 @@
                 "special": "Special"
             }
         }
+    },
+    "or_section": {
+        "key": "or_section",
+        "type": "number",
+        "label": "Section ID",
+        "placeholder": "Section ID (if any)"
     },
     "or_vpromms": {
         "key": "or_vpromms",

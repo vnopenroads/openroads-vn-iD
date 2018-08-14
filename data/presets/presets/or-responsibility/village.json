@@ -6,7 +6,9 @@
         "or_width",
         "surface",
         "or_vpromms",
-        "or_grade"
+        "or_grade",
+        "or_link",
+        "or_section"
     ],
     "geometry": [
         "line"
