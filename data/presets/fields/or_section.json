@@ -1,0 +1,6 @@
+{
+    "key": "or_section",
+    "type": "number",
+    "label": "Section ID",
+    "placeholder": "Section ID (if any)"
+}

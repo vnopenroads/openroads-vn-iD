@@ -1,0 +1,6 @@
+{
+    "key": "or_link",
+    "type": "number",
+    "label": "Link ID",
+    "placeholder": "Link ID (if any)"
+}
