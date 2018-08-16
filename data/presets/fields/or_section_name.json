@@ -1,0 +1,6 @@
+{
+    "key": "or_section_name",
+    "type": "text",
+    "label": "Section Name",
+    "placeholder": "Section Name (if any)"
+}

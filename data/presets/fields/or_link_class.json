@@ -1,0 +1,31 @@
+{
+    "key": "or_link_class",
+    "type": "combo",
+    "label": "Link Road Class",
+    "keys": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "A",
+        "B",
+        "C",
+        "D"
+    ],
+    "strings": {
+        "options": {
+            "1": "Class I",
+            "2": "Class II",
+            "3": "Class III",
+            "4": "Class IV",
+            "5": "Class V",
+            "6": "Class VI",
+            "7": "Class A",
+            "A": "Class B",
+            "B": "Class C",
+            "C": "Class D"
+        }
+    }
+}

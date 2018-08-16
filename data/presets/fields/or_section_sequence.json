@@ -1,0 +1,6 @@
+{
+    "key": "or_link_sequence",
+    "type": "number",
+    "label": "Section Sequence Number",
+    "placeholder": "Section Sequence Number"
+}

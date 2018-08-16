@@ -1,0 +1,6 @@
+{
+    "key": "or_link_name",
+    "type": "text",
+    "label": "Link Name",
+    "placeholder": "Link Name (if any)"
+}

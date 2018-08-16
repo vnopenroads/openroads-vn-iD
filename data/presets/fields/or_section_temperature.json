@@ -1,0 +1,21 @@
+{
+    "key": "or_section_temperature",
+    "type": "combo",
+    "label": "Section Temperature Class",
+    "keys": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    ],
+    "strings": {
+        "options": {
+            "1": "Tropical",
+            "2": "Sub-tropical Hot",
+            "3": "Sub-tropical Cool",
+            "4": "Temperature Cool",
+            "5": "Temperature Freeze"
+        }
+    }
+}

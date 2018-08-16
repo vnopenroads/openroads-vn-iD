@@ -1,0 +1,6 @@
+{
+    "key": "or_link_indirect_population",
+    "type": "number",
+    "label": "Link Indirect Population Service",
+    "placeholder": "Population served by this link indirectly"
+}

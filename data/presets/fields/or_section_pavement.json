@@ -1,0 +1,15 @@
+{
+    "key": "or_section_pavement",
+    "type": "combo",
+    "label": "Section Pavement Type",
+    "keys": [
+        "1",
+        "2"
+    ],
+    "strings": {
+        "options": {
+            "1": "Paved",
+            "2": "Unpaved"
+        }
+    }
+}

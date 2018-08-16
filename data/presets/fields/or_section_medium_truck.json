@@ -1,0 +1,6 @@
+{
+    "key": "or_section_medium_truck",
+    "type": "number",
+    "label": "Section Medium Truck Traffic (veh/day)",
+    "placeholder": "Section Medium Truck Traffic (veh/day)"
+}

@@ -1,0 +1,6 @@
+{
+    "key": "or_section_delivery_vehicle",
+    "type": "number",
+    "label": "Section Delivery Vehicle Traffic (veh/day)",
+    "placeholder": "Section Delivery Vehicle Traffic (veh/day)"
+}
