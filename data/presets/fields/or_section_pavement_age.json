@@ -1,0 +1,6 @@
+{
+    "key": "or_section_pavement_age",
+    "type": "number",
+    "label": "Section Pavement Age",
+    "placeholder": "Section Pavement Age (Years)"
+}

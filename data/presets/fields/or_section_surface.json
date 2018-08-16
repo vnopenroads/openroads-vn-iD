@@ -1,0 +1,25 @@
+{
+    "key": "or_section_surface",
+    "type": "combo",
+    "label": "Section Surface Type",
+    "keys": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+    ],
+    "strings": {
+        "options": {
+            "1": "Cement Concrete",
+            "2": "Asphalt Concrete",
+            "3": "Surface Treatment",
+            "4": "Gravel",
+            "5": "Earth",
+            "6": "Macadam",
+            "7": "Cobblestone"
+        }
+    }
+}

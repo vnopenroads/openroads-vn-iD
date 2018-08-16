@@ -1,0 +1,6 @@
+{
+    "key": "or_section_motorcycle",
+    "type": "number",
+    "label": "Section Motorcycle Traffic (veh/day)",
+    "placeholder": "Section Motorcycle Traffic (veh/day)"
+}

@@ -1,0 +1,6 @@
+{
+    "key": "or_section_articulated_truck",
+    "type": "number",
+    "label": "Section Articulated Truck Traffic (veh/day)",
+    "placeholder": "Section Articulated Truck Traffic (veh/day)"
+}

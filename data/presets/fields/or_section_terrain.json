@@ -1,0 +1,17 @@
+{
+    "key": "or_section_terrain",
+    "type": "combo",
+    "label": "Section Terrain Type",
+    "keys": [
+        "1",
+        "2",
+        "3"
+    ],
+    "strings": {
+        "options": {
+            "1": "Flat",
+            "2": "Hilly",
+            "3": "Mountainous"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "key": "or_link_direct_population",
+    "type": "number",
+    "label": "Link Direct Population Service",
+    "placeholder": "Population served by this link directly"
+}

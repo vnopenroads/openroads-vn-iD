@@ -3330,12 +3330,15 @@
     "highway/path": {
         "icon": "highway-path",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3374,12 +3377,15 @@
     "highway/primary": {
         "icon": "highway-primary",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3393,12 +3399,15 @@
     "highway/primary_link": {
         "icon": "highway-primary-link",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3482,7 +3491,40 @@
             "or_width",
             "or_grade",
             "or_link",
-            "or_section"
+            "or_link_name",
+            "or_link_district_gso",
+            "or_link_length",
+            "or_link_class",
+            "or_link_direct_population",
+            "or_link_indirect_population",
+            "or_section",
+            "or_section_sequence",
+            "or_section_name",
+            "or_section_commune_gso",
+            "or_section_length",
+            "or_section_lanes",
+            "or_section_carriageway",
+            "or_section_terrain",
+            "or_section_temperature",
+            "or_section_moisture",
+            "or_section_pavement",
+            "or_section_surface",
+            "or_section_pavement_condition",
+            "or_section_pavement_age",
+            "or_section_traffic",
+            "or_section_motorcycle",
+            "or_section_small_car",
+            "or_section_medium_car",
+            "or_section_delivery_vehicle",
+            "or_section_four_wheel",
+            "or_section_light_truck",
+            "or_section_medium_truck",
+            "or_section_heavy_truck",
+            "or_section_articulated_truck",
+            "or_section_small_bus",
+            "or_section_medium_bus",
+            "or_section_large_bus",
+            "or_section_traffic_growth"
         ],
         "geometry": [
             "line"
@@ -3496,12 +3538,15 @@
     "highway/secondary": {
         "icon": "highway-secondary",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3515,12 +3560,15 @@
     "highway/secondary_link": {
         "icon": "highway-secondary-link",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3538,13 +3586,15 @@
     "highway/service": {
         "icon": "highway-service",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
-            "or_width",
             "surface",
-            "or_vpromms",
-            "or_grade"
+            "or_width",
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3707,12 +3757,15 @@
     "highway/tertiary": {
         "icon": "highway-tertiary",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3726,12 +3779,15 @@
     "highway/tertiary_link": {
         "icon": "highway-tertiary-link",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3749,12 +3805,15 @@
     "highway/track": {
         "icon": "highway-track",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3785,12 +3844,15 @@
     "highway/trunk": {
         "icon": "highway-trunk",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3804,12 +3866,15 @@
     "highway/trunk_link": {
         "icon": "highway-trunk-link",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -3840,12 +3905,15 @@
     "highway/unclassified": {
         "icon": "highway-unclassified",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
