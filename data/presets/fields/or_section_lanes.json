@@ -1,0 +1,25 @@
+{
+    "key": "or_section_lanes",
+    "type": "combo",
+    "label": "Section Number of Lanes",
+    "keys": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+    ],
+    "strings": {
+        "options": {
+            "1": "One Lane",
+            "2": "Narrow Two Lanes",
+            "3": "Two Lanes",
+            "4": "Wide Two Lanes",
+            "5": "Four Lanes",
+            "6": "Six Lanes",
+            "7": "Eight Lanes"
+        }
+    }
+}

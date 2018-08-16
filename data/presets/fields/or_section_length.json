@@ -1,0 +1,6 @@
+{
+    "key": "or_section_length",
+    "type": "number",
+    "label": "Section Length",
+    "placeholder": "Section Length"
+}

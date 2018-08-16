@@ -1,0 +1,21 @@
+{
+    "key": "or_section_pavement_condition",
+    "type": "combo",
+    "label": "Section Pavement Condition Class",
+    "keys": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    ],
+    "strings": {
+        "options": {
+            "1": "Very Good",
+            "2": "Good",
+            "3": "Fair",
+            "4": "Poor",
+            "5": "Very Poor"
+        }
+    }
+}

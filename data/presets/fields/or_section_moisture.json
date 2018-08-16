@@ -1,0 +1,21 @@
+{
+    "key": "or_section_moisture",
+    "type": "combo",
+    "label": "Section Moisture Class",
+    "keys": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    ],
+    "strings": {
+        "options": {
+            "1": "Arid",
+            "2": "Semi-arid",
+            "3": "Sub-humid",
+            "4": "Humid",
+            "5": "Per-humid"
+        }
+    }
+}

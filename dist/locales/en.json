@@ -1115,6 +1115,41 @@
                 "label": "Link ID",
                 "placeholder": "Link ID (if any)"
             },
+            "or_link_class": {
+                "label": "Link Road Class",
+                "options": {
+                    "1": "Class I",
+                    "2": "Class II",
+                    "3": "Class III",
+                    "4": "Class IV",
+                    "5": "Class V",
+                    "6": "Class VI",
+                    "7": "Class A",
+                    "A": "Class B",
+                    "B": "Class C",
+                    "C": "Class D"
+                }
+            },
+            "or_link_direct_population": {
+                "label": "Link Direct Population Service",
+                "placeholder": "Population served by this link directly"
+            },
+            "or_link_district_gso": {
+                "label": "Link District GSO",
+                "placeholder": "Link District GSO"
+            },
+            "or_link_indirect_population": {
+                "label": "Link Indirect Population Service",
+                "placeholder": "Population served by this link indirectly"
+            },
+            "or_link_length": {
+                "label": "Link Length",
+                "placeholder": "Link Length"
+            },
+            "or_link_name": {
+                "label": "Link Name",
+                "placeholder": "Link Name (if any)"
+            },
             "or_lock": {
                 "label": "Lock geometry"
             },
@@ -1133,6 +1168,175 @@
             "or_section": {
                 "label": "Section ID",
                 "placeholder": "Section ID (if any)"
+            },
+            "or_section_articulated_truck": {
+                "label": "Section Articulated Truck Traffic (veh/day)",
+                "placeholder": "Section Articulated Truck Traffic (veh/day)"
+            },
+            "or_section_carriageway": {
+                "label": "Section Carraigeway Width",
+                "placeholder": "Section Carraigeway Width"
+            },
+            "or_section_commune_gso": {
+                "label": "Section Commune GSO",
+                "placeholder": "Section Commune GSO"
+            },
+            "or_section_delivery_vehicle": {
+                "label": "Section Delivery Vehicle Traffic (veh/day)",
+                "placeholder": "Section Delivery Vehicle Traffic (veh/day)"
+            },
+            "or_section_four_wheel": {
+                "label": "Section Four Wheel Traffic (veh/day)",
+                "placeholder": "Section Four Wheel Traffic (veh/day)"
+            },
+            "or_section_heavy_truck": {
+                "label": "Section Heavy Truck Traffic (veh/day)",
+                "placeholder": "Section Heavy Truck Traffic (veh/day)"
+            },
+            "or_section_lanes": {
+                "label": "Section Number of Lanes",
+                "options": {
+                    "1": "One Lane",
+                    "2": "Narrow Two Lanes",
+                    "3": "Two Lanes",
+                    "4": "Wide Two Lanes",
+                    "5": "Four Lanes",
+                    "6": "Six Lanes",
+                    "7": "Eight Lanes"
+                }
+            },
+            "or_section_large_bus": {
+                "label": "Section Large Bus Traffic (veh/day)",
+                "placeholder": "Section Large Bus Traffic (veh/day)"
+            },
+            "or_section_length": {
+                "label": "Section Length",
+                "placeholder": "Section Length"
+            },
+            "or_section_light_truck": {
+                "label": "Section Light Truck Traffic (veh/day)",
+                "placeholder": "Section Light Truck Traffic (veh/day)"
+            },
+            "or_section_medium_bus": {
+                "label": "Section Medium Bus Traffic (veh/day)",
+                "placeholder": "Section Medium Bus Traffic (veh/day)"
+            },
+            "or_section_medium_car": {
+                "label": "Section Medium Car Traffic (veh/day)",
+                "placeholder": "Section Medium Car Traffic (veh/day)"
+            },
+            "or_section_medium_truck": {
+                "label": "Section Medium Truck Traffic (veh/day)",
+                "placeholder": "Section Medium Truck Traffic (veh/day)"
+            },
+            "or_section_moisture": {
+                "label": "Section Moisture Class",
+                "options": {
+                    "1": "Arid",
+                    "2": "Semi-arid",
+                    "3": "Sub-humid",
+                    "4": "Humid",
+                    "5": "Per-humid"
+                }
+            },
+            "or_section_motorcycle": {
+                "label": "Section Motorcycle Traffic (veh/day)",
+                "placeholder": "Section Motorcycle Traffic (veh/day)"
+            },
+            "or_section_name": {
+                "label": "Section Name",
+                "placeholder": "Section Name (if any)"
+            },
+            "or_section_pavement": {
+                "label": "Section Pavement Type",
+                "options": {
+                    "1": "Paved",
+                    "2": "Unpaved"
+                }
+            },
+            "or_section_pavement_age": {
+                "label": "Section Pavement Age",
+                "placeholder": "Section Pavement Age (Years)"
+            },
+            "or_section_pavement_condition": {
+                "label": "Section Pavement Condition Class",
+                "options": {
+                    "1": "Very Good",
+                    "2": "Good",
+                    "3": "Fair",
+                    "4": "Poor",
+                    "5": "Very Poor"
+                }
+            },
+            "or_section_sequence": {
+                "label": "Section Sequence Number",
+                "placeholder": "Section Sequence Number"
+            },
+            "or_section_small_bus": {
+                "label": "Section Small Bus Traffic (veh/day)",
+                "placeholder": "Section Small Bus Traffic (veh/day)"
+            },
+            "or_section_small_car": {
+                "label": "Section Small Car Traffic (veh/day)",
+                "placeholder": "Section Small Car Traffic (veh/day)"
+            },
+            "or_section_surface": {
+                "label": "Section Surface Type",
+                "options": {
+                    "1": "Cement Concrete",
+                    "2": "Asphalt Concrete",
+                    "3": "Surface Treatment",
+                    "4": "Gravel",
+                    "5": "Earth",
+                    "6": "Macadam",
+                    "7": "Cobblestone"
+                }
+            },
+            "or_section_temperature": {
+                "label": "Section Temperature Class",
+                "options": {
+                    "1": "Tropical",
+                    "2": "Sub-tropical Hot",
+                    "3": "Sub-tropical Cool",
+                    "4": "Temperature Cool",
+                    "5": "Temperature Freeze"
+                }
+            },
+            "or_section_terrain": {
+                "label": "Section Terrain Type",
+                "options": {
+                    "1": "Flat",
+                    "2": "Hilly",
+                    "3": "Mountainous"
+                }
+            },
+            "or_section_traffic": {
+                "label": "Section Traffic Level",
+                "options": {
+                    "1": "< 50",
+                    "2": "51 - 100",
+                    "3": "101 - 250",
+                    "4": "251 - 500",
+                    "5": "501 - 1000",
+                    "6": "1001 - 3000",
+                    "7": "3001 - 5000",
+                    "8": "5001 - 7000",
+                    "9": "7001 - 9000",
+                    "10": "9001 - 12000",
+                    "11": "12001 - 15000",
+                    "12": "15001 - 20000",
+                    "13": "20001 - 30000"
+                }
+            },
+            "or_section_traffic_growth": {
+                "label": "Section Traffic Annual Growth Scenario",
+                "options": {
+                    "1": "Very Low",
+                    "2": "Low",
+                    "3": "Medium",
+                    "4": "High",
+                    "5": "Very High"
+                }
             },
             "or_vpromms": {
                 "label": "VProMMS ID",

@@ -1,0 +1,6 @@
+{
+    "key": "or_link_length",
+    "type": "number",
+    "label": "Link Length",
+    "placeholder": "Link Length"
+}
