@@ -3474,12 +3474,15 @@
     "highway/road": {
         "icon": "highway-road",
         "fields": [
+            "or_vpromms",
             "or_lock",
             "or_responsibility",
             "or_condition",
             "surface",
             "or_width",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -5414,7 +5417,9 @@
             "or_width",
             "surface",
             "or_vpromms",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -5434,7 +5439,9 @@
             "or_width",
             "surface",
             "or_vpromms",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -5454,7 +5461,9 @@
             "or_width",
             "surface",
             "or_vpromms",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -5474,7 +5483,9 @@
             "or_width",
             "surface",
             "or_vpromms",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
@@ -5494,7 +5505,9 @@
             "or_width",
             "surface",
             "or_vpromms",
-            "or_grade"
+            "or_grade",
+            "or_link",
+            "or_section"
         ],
         "geometry": [
             "line"
