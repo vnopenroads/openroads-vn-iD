@@ -60,29 +60,42 @@
                 });
             }
 
-            if (typeof iD == 'undefined') {
-                document.getElementById('id-container').innerHTML = 'Sorry, Internet Explorer is not currently supported. Please use Potlatch 2 to edit the map.';
-                document.getElementById('id-container').className = 'unsupported';
-            } else {
-                var id = iD()
-                  .presets(iD.data.presets)
-                  .imagery(iD.data.imagery)
-                  .taginfo(iD.taginfo())
-                  .minEditableZoom(12);
+            function startID (data, cb) {
+                if (typeof iD == 'undefined') {
+                    document.getElementById('id-container').innerHTML = 'Sorry, Internet Explorer is not currently supported. Please use Potlatch 2 to edit the map.';
+                    document.getElementById('id-container').className = 'unsupported';
+                } else {
+                    var id = iD()
+                      .presets(iD.data.presets)
+                      .imagery(iD.data.imagery)
+                      .taginfo(iD.taginfo())
+                      .minEditableZoom(12);
+    
+                    d3.select('#id-container')
+                        .call(id.ui());
+                    
+                    if (data.center) {
+                        id.map().centerZoom(data.center, data.zoom);
+                    }
+                }
 
-                d3.select('#id-container')
-                    .call(id.ui());
+                cb && cb();
             }
         </script>
+        <script src='//ec2-52-55-132-50.compute-1.amazonaws.com/OR_frame_notifier.js'></script>
         <script>
-          (function(r, o, a, d, s){
-            r.ORFrame = function(i){r.ORFID = i};
-            d = o.createElement(a);
-            d.src = '//ec2-52-55-132-50.compute-1.amazonaws.com/OR_frame_notifier.js';
-            s = o.getElementsByTagName(a)[0];
-            s.parentNode.insertBefore(d, s);
-          })(window, document, 'script');
-          ORFrame('or-editor');
+            if (window === window.parent) {
+                console.warn('Not inside an iframe. ORFrameNotifier won\'t be initialized.');
+                startID({});
+            } else {
+                const orFrame = new ORFrameNotifier('orma-vn', window.parent);
+                orFrame
+                .send('loaded')
+                .on('settings', data => {
+                    console.log('Settings received. Init');
+                    startID(data, () => orFrame.send('ready'));
+                });
+            }
         </script>
     </body>
 </html>

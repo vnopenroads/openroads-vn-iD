@@ -275,34 +275,25 @@
                         id.map().centerZoom(data.center, data.zoom);
                     }
 
-                    cb(id);
+                    cb && cb(id);
                 });
             }
         </script>
-        <script>
-        (function(r, o, a, d, s){
-            d = o.createElement(a);
-            d.src = '//localhost:3000/OR_frame_notifier.js';
-            d.onload = () => r.onORFrameNotifierLoaded();
-            s = o.getElementsByTagName(a)[0];
-            s.parentNode.insertBefore(d, s);
-        })(window, document, 'script');
 
-        function onORFrameNotifierLoaded () {
+        <script src='//localhost:3000/OR_frame_notifier.js'></script>
+        <script>
             if (window === window.parent) {
                 console.warn('Not inside an iframe. ORFrameNotifier won\'t be initialized.');
-                startID();
-                return;
-            }
-
-            const orFrame = new ORFrameNotifier('id', window.parent);
-            orFrame
+                startID({});
+            } else {
+                const orFrame = new ORFrameNotifier('orma-vn', window.parent);
+                orFrame
                 .send('loaded')
                 .on('settings', data => {
                     console.log('Settings received. Init');
                     startID(data, () => orFrame.send('ready'));
                 });
-        }
+            }
         </script>
     </body>
 </html>
