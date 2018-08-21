@@ -13,9 +13,9 @@
 
         <script src='//d3nslu0hdya83q.cloudfront.net/dist/1.0/raven.min.js'></script>
 
-        <script>
+        <!-- <script>
             Raven.config('https://af8ce79129b24fa28d91ede59302369c@app.getsentry.com/6009').install();
-        </script>
+        </script> -->
 
         <!--[if !IE]>-->
         <script src='iD.js'></script>
@@ -43,22 +43,22 @@
             a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
             // Adding a canary for https://app.getsentry.com/id/id/group/5138888/
-            if (Object.defineProperty) {
-                var windowFocus = window.focus;
-                Object.defineProperty(window, 'focus', {
-                    get: function() {
-                        return windowFocus;
-                    },
+            // if (Object.defineProperty) {
+            //     var windowFocus = window.focus;
+            //     Object.defineProperty(window, 'focus', {
+            //         get: function() {
+            //             return windowFocus;
+            //         },
 
-                    set: function() {
-                        try {
-                            throw new Error("tried to overwrite window.focus");
-                        } catch(e) {
-                            Raven.captureException(e);
-                        }
-                    }
-                });
-            }
+            //         set: function() {
+            //             try {
+            //                 throw new Error("tried to overwrite window.focus");
+            //             } catch(e) {
+            //                 Raven.captureException(e);
+            //             }
+            //         }
+            //     });
+            // }
 
             function startID (data, cb) {
                 if (typeof iD == 'undefined') {
@@ -75,6 +75,8 @@
                         .call(id.ui());
                     
                     if (data.center) {
+                        console.log('line 78', data);
+                        window.someid = id;
                         id.map().centerZoom(data.center, data.zoom);
                     }
                 }
@@ -82,17 +84,19 @@
                 cb && cb();
             }
         </script>
-        <script src='//ec2-52-55-132-50.compute-1.amazonaws.com/OR_frame_notifier.js'></script>
+        <script src='https://cdn.rawgit.com/orma/openroads-vn-analytics/78cf7dd2db0b6b7933abb8b00961783e18f6d5fc/app/OR_frame_notifier.js'></script>
         <script>
             if (window === window.parent) {
                 console.warn('Not inside an iframe. ORFrameNotifier won\'t be initialized.');
                 startID({});
             } else {
+                console.log('something is happening here.');
                 const orFrame = new ORFrameNotifier('orma-vn', window.parent);
                 orFrame
                 .send('loaded')
                 .on('settings', data => {
                     console.log('Settings received. Init');
+                    console.log(data);
                     startID(data, () => orFrame.send('ready'));
                 });
             }
