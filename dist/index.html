@@ -73,11 +73,13 @@
     
                     d3.select('#id-container')
                         .call(id.ui());
-                    
+
                     if (data.center) {
-                        console.log('line 78', data);
-                        window.someid = id;
-                        id.map().centerZoom(data.center, data.zoom);
+                        // Add a delay to ensure the map is fully initialized
+                        // before trying to set center and zoom.
+                        setTimeout(() => {
+                            id.map().centerZoom(data.center, data.zoom);
+                        }, 100);
                     }
                 }
 
@@ -90,13 +92,11 @@
                 console.warn('Not inside an iframe. ORFrameNotifier won\'t be initialized.');
                 startID({});
             } else {
-                console.log('something is happening here.');
                 const orFrame = new ORFrameNotifier('orma-vn', window.parent);
                 orFrame
                 .send('loaded')
                 .on('settings', data => {
                     console.log('Settings received. Init');
-                    console.log(data);
                     startID(data, () => orFrame.send('ready'));
                 });
             }
