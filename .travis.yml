@@ -7,9 +7,8 @@ script:
 
 deploy:
   - provider: s3
-    access_key_id: AKIAJO4FQAPAWT7FF7RQ
-    secret_access_key:
-      secure: pL0Xk8DiCU/SLLOXDjyvFefiSFMDPQ6FyR/5JFPWAkmaP/1zwMsweCeXziti9MAA3uKO1z0X6DySPQj5XHYHECoTg3pHIZXqVwzBcPfrI1xKphClXpgJKtKrVeMdlFFRMh/UZYBq2hB85UBTnpR1X/Pw5CMM3VpdOJYkHH80r+iV+6eOuZ6tb38guYh9Kdgsf1nGk3CEwcrgr1Fd3QH1SU3DMwthEBU+0svedgIznpvdYZpMPDwp9la3a6JlP0EQbpoY9I7/g2XSbJrqrBaJg7xvjYlJh1skRO3C2xS3FtuxgLKL2ihf23I7fdeRuo7f45MFwTnZECQUVFxCkri152sCEMI/xtx5cI5zBw71iacM1wtqxO5CebsHLbBxXkbMKOxbcgXDqJnmfmRPu3DApgooh8EVCkbj308+5synle8WBG1Tw/75xDCW9iRqH8vTMY5q4KiCZnp8tf3CUvEC0Booe4Is1AuJlvjr32DEWqCc9dvzlz2NUOPSJH7XIyMm4GviYUPGh2ZaI5p3BFBCX3vasx3vYxyfDUNGmo07iuLsVXnuCN9bQSbQMLPtT9ve6lXekyJpcFXGa+8jydFlzlpxM++86j2LLSpROhDKL0KGEkjou+Y1pQ5vq1FA4V0JM8mQegCpgtvinc+J5zkA8BEXI2Ei92tSMWq4yYeitOg=
+    access_key_id: ${AWS_ACCESS}
+    secret_access_key: ${AWS_SECRET}
     bucket: editor.openroads-vn.com
     region: ap-southeast-1
     acl: public_read
