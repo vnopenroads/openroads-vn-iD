@@ -27,7 +27,7 @@ iD.util.entityOrMemberSelector = function(ids, graph) {
 
 iD.util.displayName = function(entity) {
     var localeName = 'name:' + iD.detect().locale.toLowerCase().split('-')[0];
-    return entity.tags[localeName] || entity.tags.name || entity.tags.ref;
+    return entity.tags[localeName] || entity.tags.name || entity.tags.ref || entity.tags.or_vpromms;
 };
 
 iD.util.stringQs = function(str) {
