@@ -286,12 +286,19 @@
                 console.warn('Not inside an iframe. ORFrameNotifier won\'t be initialized.');
                 startID({});
             } else {
+                let idInstance;
                 const orFrame = new ORFrameNotifier('orma-vn', window.parent);
                 orFrame
                 .send('loaded')
                 .on('settings', data => {
                     console.log('Settings received. Init');
-                    startID(data, () => orFrame.send('ready'));
+                    startID(data, (id) => {
+                        idInstance = id; 
+                        orFrame.send('ready')
+                    });
+                })
+                .on('setPosition', data => {
+                    idInstance.map().centerZoom(data.center, data.zoom);
                 });
             }
         </script>
