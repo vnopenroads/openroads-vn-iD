@@ -45,7 +45,7 @@
                     }
                 }
 
-                cb && cb();
+                cb && cb(id);
             }
         </script>
         <script src='https://cdn.rawgit.com/orma/openroads-vn-analytics/master/app/OR_frame_notifier.js'></script>
@@ -55,11 +55,18 @@
                 startID({});
             } else {
                 const orFrame = new ORFrameNotifier('orma-vn', window.parent);
+                let idInstance;
                 orFrame
                 .send('loaded')
                 .on('settings', data => {
                     console.log('Settings received. Init');
-                    startID(data, () => orFrame.send('ready'));
+                    startID(data, (id) => {
+                        idInstance = id; 
+                        orFrame.send('ready')
+                    });
+                })
+                .on('setPosition', data => {
+                    idInstance.map().centerZoom(data.center, data.zoom);
                 });
             }
         </script>
