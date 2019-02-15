@@ -249,7 +249,7 @@
                         .presets(iD.data.presets)
                         .imagery(iD.data.imagery)
                         .taginfo(iD.taginfo())
-                        .minEditableZoom(12)
+                        .minEditableZoom(14)
                         .assetPath('dist/');
     
                     d3.select('#id-container')
@@ -283,7 +283,6 @@
         <script src='https://cdn.rawgit.com/orma/openroads-vn-analytics/master/app/OR_frame_notifier.js'></script>
         <script>
             if (window === window.parent) {
-                console.warn('Not inside an iframe. ORFrameNotifier won\'t be initialized.');
                 startID({});
             } else {
                 let idInstance;
@@ -291,14 +290,17 @@
                 orFrame
                 .send('loaded')
                 .on('settings', data => {
-                    console.log('Settings received. Init');
                     startID(data, (id) => {
                         idInstance = id; 
                         orFrame.send('ready')
                     });
                 })
                 .on('setPosition', data => {
-                    idInstance.map().centerZoom(data.center, data.zoom);
+                    if (data.way) {
+                        idInstance.loadEntity(data.way, true);
+                    } else {
+                        idInstance.map().centerZoom(data.center, 14);
+                    }
                 });
             }
         </script>
