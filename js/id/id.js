@@ -32,7 +32,7 @@ window.iD = function () {
 
     /* Accessor for setting minimum zoom for editing features. */
 
-    var minEditableZoom = 16;
+    var minEditableZoom = 14;
     context.minEditableZoom = function(_) {
         if (!arguments.length) return minEditableZoom;
         minEditableZoom = _;
