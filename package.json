@@ -1,6 +1,6 @@
 {
   "name": "iD",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "description": "an editor for the OpenRoads project, based off OSM iD",
   "main": "iD.js",
   "directories": {
