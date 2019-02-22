@@ -10,7 +10,8 @@ iD.ui.TagReference = function(tag, context) {
             localized;
 
         localized = _.find(docs, function(d) {
-            return d.lang.toLowerCase() === locale;
+            // return d.lang.toLowerCase() === locale;
+            return true;
         });
         if (localized) return localized;
 
