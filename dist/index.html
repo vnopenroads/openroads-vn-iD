@@ -64,10 +64,10 @@
                     });
                 })
                 .on('setPosition', data => {
+                    idInstance.map().centerZoom(data.center, data.zoom);
+
                     if (data.way) {
-                        idInstance.loadEntity(data.way, true);
-                    } else {
-                        idInstance.map().centerZoom(data.center, 14);
+                        setTimeout(idInstance.loadEntity(data.way, true), 1000);
                     }
                 });
             }
