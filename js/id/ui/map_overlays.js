@@ -9,9 +9,9 @@ iD.ui.MapOverlay = function(context) {
     var background = context.background()
         .sources(context.map().extent());
 
-    var gridSource = background.find(function (d) {
-        return d.id === 'grid';
-    });
+    // var gridSource = background.find(function (d) {
+    //     return d.id === 'grid';
+    // });
 
     var roadSource = background.filter(function (d) {
         return d.id === 'ornetwork';
@@ -117,8 +117,8 @@ iD.ui.MapOverlay = function(context) {
             //     function () {},
             //     description('destination'));
 
-            content.select('.toggle-switch input')
-                .property('checked', context.background().showsLayer(gridSource));
+            // content.select('.toggle-switch input')
+            //     .property('checked', context.background().showsLayer(gridSource));
         }
 
         function hidePanel() { setVisible(false); }
@@ -261,25 +261,25 @@ iD.ui.MapOverlay = function(context) {
 
         // destinationToggle.on('click', toggleDropdown(destinationContainer));
 
-        if (gridSource) {
-            content.append('span')
-                .text(t('map_overlay.grid'));
+        // if (gridSource) {
+        //     content.append('span')
+        //         .text(t('map_overlay.grid'));
 
-            var toggleSwitch = content.append('div')
-                .attr('class', 'toggle-switch')
-                .datum(gridSource)
+        //     var toggleSwitch = content.append('div')
+        //         .attr('class', 'toggle-switch')
+        //         .datum(gridSource)
 
-            toggleSwitch.append('input')
-                .attr('id', 'grid-toggle')
-                .attr('type', 'checkbox')
-                .on('change', toggleOverlay);
+        //     toggleSwitch.append('input')
+        //         .attr('id', 'grid-toggle')
+        //         .attr('type', 'checkbox')
+        //         .on('change', toggleOverlay);
 
-            toggleSwitch.append('label')
-                .attr('for', 'grid-toggle');
+        //     toggleSwitch.append('label')
+        //         .attr('for', 'grid-toggle');
 
-            context.features()
-                .on('change.map_overlays-update', update);
-        }
+        //     context.features()
+        //         .on('change.map_overlays-update', update);
+        // }
 
         update();
 
