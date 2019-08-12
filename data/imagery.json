@@ -9,7 +9,7 @@
             22
         ],
         "default": true,
-        "template": "https://api.mapbox.com/v4/digitalglobe.nal0g75k/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNpbWdrZjhlZjAwMnd0emtvNXYzYmFwZm4ifQ.5owPkJs5HMvoB8IQPyuwEw"
+        "template": "https://api.mapbox.com/v4/mapbox.satellite/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoibmdkbmdoaWEyOCIsImEiOiJjano4emx6NmwwM3J6M2Vtbjd2cjF4ZDNoIn0.ytQffAlYX9LFRMZ46YZHhg"
     },
     {
         "name": "Minimal",
