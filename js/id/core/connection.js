@@ -3,7 +3,7 @@ iD.Connection = function() {
 
     var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
         url = 'https://www.openstreetmap.org',
-        openroads = 'http://api.openroads-vn.com',
+        openroads = 'http://orma.drvn.vn/api',
         testUrl = 'http://der.local:4000',
         connection = {},
         inflight = {},
