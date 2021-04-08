@@ -9,7 +9,7 @@
             22
         ],
         "default": true,
-        "template": "https://api.mapbox.com/v4/mapbox.satellite/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoibmdkbmdoaWEyOCIsImEiOiJjano4emx6NmwwM3J6M2Vtbjd2cjF4ZDNoIn0.ytQffAlYX9LFRMZ46YZHhg"
+        "template": "https://api.mapbox.com/v4/mapbox.satellite/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoibmdkbmdoaWEyOCIsImEiOiJja2traXh0eGQxaWQwMndxdHR2Y2wwdnAyIn0.YPB4d7udn_zbzBYQdoSVnQ"
     },
     {
         "name": "Minimal",
@@ -27,7 +27,7 @@
         "type": "tms",
         "description": "Roads by responsibility",
         "vector": true,
-        "template": "http://orma.drvn.vn/tilemap/{zoom}/{x}/{y}.png",
+        "template": "http://orma.drvn.gov.vn/tilemap/{zoom}/{x}/{y}.png",
         "scaleExtent": [
             0,
             16
